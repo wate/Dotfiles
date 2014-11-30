@@ -2,7 +2,7 @@ if [ -f ~/.bashrc ]; then
     source ~/.bashrc
 fi
 
-PATH=$(brew --prefix homebrew/php/php55)/bin:$PATH:$HOME/bin
+PATH=$(brew --prefix homebrew/php/php55)/bin:$PATH:~/.composer/vendor/bin
 export PATH
 
 # Turn off standout; turn off underline
