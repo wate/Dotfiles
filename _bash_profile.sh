@@ -114,3 +114,5 @@ PS1+="${STYLE_PATH}\w " # Working directory
 PS1+="\$(prompt_git)" # Git details
 PS1+="${STYLE_CHARS}\$ \[${RESET}\]" # $ (and reset color)
 export PS1
+
+export ANDROID_HOME=/usr/local/opt/android-sdk
