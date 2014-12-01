@@ -11,24 +11,24 @@ tput sgr 0 0
 # Base styles and color palette
 # If you want to check color code, run `./testcolor.sh'
 RESET=$(tput sgr0)
-FS_BOLD=$(tput bold)
-FC_BLACK=$(tput setaf 0)
-FC_RED=$(tput setaf 1)
-FC_GREEN=$(tput setaf 2)
-FC_YELLOW=$(tput setaf 3)
-FC_BLUE=$(tput setaf 4)
-FC_MAGENTA=$(tput setaf 5)
-FC_CYAN=$(tput setaf 6)
-FC_WHITE=$(tput setaf 255)
-FC_ORANGE=$(tput setaf 172)
+BOLD=$(tput bold)
+BLACK=$(tput setaf 0)
+RED=$(tput setaf 1)
+GREEN=$(tput setaf 2)
+YELLOW=$(tput setaf 3)
+BLUE=$(tput setaf 4)
+MAGENTA=$(tput setaf 5)
+CYAN=$(tput setaf 6)
+WHITE=$(tput setaf 255)
+ORANGE=$(tput setaf 172)
 
-STYLE_TIME="\[${FS_BOLD}${FC_GREEN}\]"
-STYLE_HOST="\[${RESET}${FC_MAGENTA}\]"
-STYLE_USER="\[${RESET}${FC_ORANGE}\]"
-STYLE_PATH="\[${RESET}${FC_BLUE}\]"
-STYLE_CHARS="\[${RESET}${FC_WHITE}\]"
-STYLE_GIT_BRANCH="${FC_YELLOW}"
-STYLE_GIT_STATE="${FC_GREEN}"
+STYLE_TIME="\[${BOLD}${GREEN}\]"
+STYLE_HOST="\[${RESET}${MAGENTA}\]"
+STYLE_USER="\[${RESET}${ORANGE}\]"
+STYLE_PATH="\[${BOLD}${BLUE}\]"
+STYLE_CHARS="\[${RESET}${WHITE}\]"
+STYLE_GIT_BRANCH="${YELLOW}"
+STYLE_GIT_STATE="${GREEN}"
  
 function is_git_repo() {
     $(git rev-parse --is-inside-work-tree &> /dev/null)
@@ -100,7 +100,7 @@ if [[ "$SSH_TTY" ]]; then
     # connected via ssh
     if [[ "$USER" == "root" ]]; then
         # logged in as root
-        STYLE_USER="\[${FS_BOLD}${FC_RED}\]"
+        STYLE_USER="\[${BOLD}${RED}\]"
     fi
     PS1+="${STYLE_USER}\u" # Username
     PS1+="${STYLE_CHARS}@" # @
