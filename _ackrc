@@ -1,0 +1,6 @@
+--ignore-dir=.idea/
+--ignore-dir=node_modules/
+
+--type-set=markdown=.md
+--type-add=markdown=.mkd
+--type-add=markdown=.markdown
