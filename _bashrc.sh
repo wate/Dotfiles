@@ -6,17 +6,26 @@ source $(brew --repository)/Library/Contributions/brew_bash_completion.sh
 BREW_PREFIX=$(brew --prefix)
 # Git
 if [ -f ${BREW_PREFIX}/etc/bash_completion.d/git-completion.bash ]; then
-    source `brew --prefix`/etc/bash_completion.d/git-completion.bash
+    source ${BREW_PREFIX}/etc/bash_completion.d/git-completion.bash
 fi
 # Git Flow
 if [ -f ${BREW_PREFIX}/etc/bash_completion.d/git-flow-completion.bash ]; then
-    source `brew --prefix`/etc/bash_completion.d/git-flow-completion.bash
+    source ${BREW_PREFIX}/etc/bash_completion.d/git-flow-completion.bash
 fi
 # Vagrant
 if [ -f ${BREW_PREFIX}/etc/bash_completion.d/vagrant ]; then
-    source `brew --prefix`/etc/bash_completion.d/vagrant
+    source ${BREW_PREFIX}/etc/bash_completion.d/vagrant
 fi
 # WP-CLI
 if [ -f ${BREW_PREFIX}/etc/bash_completion.d/wp ]; then
-    source `brew --prefix`/etc/bash_completion.d/wp
+    source ${BREW_PREFIX}/etc/bash_completion.d/wp
 fi
+# gem
+if [ -f ${BREW_PREFIX}/etc/bash_completion.d/gem ]; then
+    source ${BREW_PREFIX}/etc/bash_completion.d/gem
+fi
+# npm
+if [ -f ${BREW_PREFIX}/etc/bash_completion.d/npm ]; then
+    source ${BREW_PREFIX}/etc/bash_completion.d/npm
+fi
+
