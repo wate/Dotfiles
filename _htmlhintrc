@@ -1,4 +1,5 @@
 {
+	//Standard
 	"tagname-lowercase": true,
 	"attr-lowercase": true,
 	"attr-value-double-quotes": true,
@@ -10,8 +11,14 @@
 	"spec-char-escape": true,
 	"id-unique": true,
 	"src-not-empty": true,
+	
+	//Performance
 	"head-script-disabled": true,
+
+	//Accessibility
 	"img-alt-require": true,
+
+	//Specification
 	"doctype-html5": true,
 	"id-class-value": true,
 	"style-disabled": true,
@@ -20,6 +27,7 @@
 	"href-abs-or-rel": true,
 	"attr-unsafe-chars": true,
 	
+	//Other
 	"csslint": true,
 	"jshint": true
 }
