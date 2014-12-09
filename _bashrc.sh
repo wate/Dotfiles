@@ -28,4 +28,11 @@ fi
 if [ -f ${BREW_PREFIX}/etc/bash_completion.d/npm ]; then
     source ${BREW_PREFIX}/etc/bash_completion.d/npm
 fi
-
+# tig
+if [ -f ${BREW_PREFIX}/etc/bash_completion.d/tig-completion.bash ]; then
+    source ${BREW_PREFIX}/etc/bash_completion.d/tig-completion.bash
+fi
+# tig
+if [ -f ${BREW_PREFIX}/etc/bash_completion.d/packer ]; then
+    source ${BREW_PREFIX}/etc/bash_completion.d/packer
+fi
