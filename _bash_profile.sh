@@ -5,8 +5,6 @@ fi
 PATH=$(brew --prefix homebrew/php/php55)/bin:$PATH:~/.composer/vendor/bin
 export PATH
 
-function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
-
 # Turn off standout; turn off underline
 tput sgr 0 0
  
