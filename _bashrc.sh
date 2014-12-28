@@ -1,6 +1,5 @@
 alias ls='ls -GF'
 alias ll='ls -GFAl'
-alias rm='rmtrash'
 
 source $(brew --repository)/Library/Contributions/brew_bash_completion.sh
 
