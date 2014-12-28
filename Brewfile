@@ -96,6 +96,7 @@ install icu4c
 install imagemagick
 install jpeg
 install jq
+install legit
 install libpng
 install libtool
 install libyaml
