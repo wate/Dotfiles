@@ -116,3 +116,6 @@ PS1+="${STYLE_CHARS}\$ \[${RESET}\]" # $ (and reset color)
 export PS1
 
 export ANDROID_HOME=/usr/local/opt/android-sdk
+
+# gitignore.io
+function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}

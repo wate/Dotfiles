@@ -40,8 +40,4 @@ fi
 if [ -f ${BREW_PREFIX}/etc/bash_completion.d/packer ]; then
     source ${BREW_PREFIX}/etc/bash_completion.d/packer
 fi
-# gibo
-if [ -f ${BREW_PREFIX}/etc/bash_completion.d/gibo-completion.bash ]; then
-    source ${BREW_PREFIX}/etc/bash_completion.d/gibo-completion.bash
-fi
 
