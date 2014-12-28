@@ -86,7 +86,6 @@ install curl
 install freetype
 install gettext
 install gflags
-install gibo
 install git
 install git-flow
 install glog
