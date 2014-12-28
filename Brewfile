@@ -12,7 +12,6 @@ cask install box-sync
 cask install coteditor
 cask install cyberduck
 cask install dash
-cask install doxygen
 cask install gimp
 cask install google-chrome
 cask install imageoptim
