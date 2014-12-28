@@ -38,7 +38,7 @@ cask install quiterss
 cask install seil
 cask install sequel-pro
 cask install sourcetree
-cask install sqlitebrowser
+cask install sqlitestudio
 cask install vagrant-manager
 cask install vagrant
 cask install virtualbox
