@@ -1,23 +1,9 @@
 <?xml version="1.0"?>
 <root>
-	<appdef>
-		<appname>SPOTLIGHT</appname>
-		<equal>com.apple.Spotlight</equal>
-	</appdef>
-	<appdef>
-		<appname>LAUNCHY</appname>
-		<equal>Code Jelly's Launchy</equal>
-	</appdef>
-	<appdef>
-		<appname>CHROME</appname>
-		<equal>com.google.Chrome</equal>
-	</appdef>
-	<appdef>
-		<appname>COTEDITOR</appname>
-		<equal>com.coteditor.CotEditor</equal>
-	</appdef>
-	<windownamedef>
-		<name>Launchy</name>
-		<equal>Launchy</equal>
-	</windownamedef>
+    <include path="define/app.xml" />
+    <include path="define/window.xml" />
+    <!--
+    private.xml Reference Manual
+    https://pqrs.org/osx/karabiner/xml.html.ja
+    -->
 </root>

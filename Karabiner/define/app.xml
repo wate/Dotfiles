@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <appdef>
+        <appname>LAUNCHY</appname>
+        <equal>Code Jelly's Launchy</equal>
+    </appdef>
+    <appdef>
+        <appname>COTEDITOR</appname>
+        <equal>com.coteditor.CotEditor</equal>
+    </appdef>
+    <appdef>
+        <appname>NETBEANS</appname>
+        <prefix>~org.netbeans.ide.baseide</prefix>
+    </appdef>
+</root>
