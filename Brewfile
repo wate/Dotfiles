@@ -125,6 +125,7 @@ install wget
 install xz
 
 # App Store applications
+appstore Growl
 appstore Janetter
 appstore Keynote
 appstore Simplenote
