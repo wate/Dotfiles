@@ -14,6 +14,7 @@ cask install cyberduck
 cask install dash
 cask install gimp
 cask install google-chrome
+cask install haroopad
 cask install imageoptim
 cask install inkscape
 cask install iterm2
