@@ -2,7 +2,7 @@ if [ -f ~/.bashrc ]; then
     source ~/.bashrc
 fi
 
-PATH=$(brew --prefix homebrew/php/php55)/bin:$PATH:~/.composer/vendor/bin
+PATH=$(brew --prefix homebrew/php/php55)/bin:$PATH:$HOME/.node/bin:$HOME/.composer/vendor/bin
 export PATH
 
 # Turn off standout; turn off underline
@@ -112,6 +112,7 @@ else
 fi
 PS1+="${STYLE_PATH}\w " # Working directory
 PS1+="\$(prompt_git)" # Git details
+PS1+="\n"
 PS1+="${STYLE_CHARS}\$ \[${RESET}\]" # $ (and reset color)
 export PS1
 
