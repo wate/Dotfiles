@@ -6,6 +6,7 @@ tap caskroom/cask
 install brew-cask
 cask install amethyst
 cask install appcleaner
+cask install asepsis
 cask install atom
 cask install bettertouchtool
 cask install betterzipql
@@ -19,7 +20,6 @@ cask install haroopad
 cask install imageoptim
 cask install inkscape
 cask install iterm2
-cask install karabiner
 cask install keepassx
 cask install launchy
 cask install libreoffice
@@ -37,7 +37,6 @@ cask install qlstephen
 cask install quicklook-csv
 cask install quicklook-json
 cask install quiterss
-cask install seil
 cask install sequel-pro
 cask install sourcetree
 cask install sqlitestudio
@@ -45,7 +44,6 @@ cask install vagrant-manager
 cask install vagrant
 cask install virtualbox
 cask install vlc
-cask install wkhtmltopdf
 cask install xmind
 cask install xquartz
 cask install xtrafinder
@@ -104,7 +102,6 @@ install lz4
 install mecab
 install mecab-ipadic
 install openssl
-install osquery
 install pandoc
 install pcre
 install pkg-config
