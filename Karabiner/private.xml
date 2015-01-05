@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<root>
-    <include path="define/app.xml" />
-    <include path="define/window.xml" />
-    <!--
-    private.xml Reference Manual
-    https://pqrs.org/osx/karabiner/xml.html.ja
-    -->
-</root>
