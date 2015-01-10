@@ -6,7 +6,6 @@ tap caskroom/cask
 install brew-cask
 cask install amethyst
 cask install appcleaner
-cask install asepsis
 cask install atom
 cask install bettertouchtool
 cask install betterzipql
