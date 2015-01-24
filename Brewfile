@@ -35,10 +35,9 @@ cask install qlprettypatch
 cask install qlstephen
 cask install quicklook-csv
 cask install quicklook-json
-cask install quiterss
 cask install sequel-pro
 cask install sourcetree
-cask install sqlitestudio
+cask install sqlitebrowser
 cask install vagrant-manager
 cask install vagrant
 cask install virtualbox
