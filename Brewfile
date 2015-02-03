@@ -6,6 +6,7 @@ tap caskroom/cask
 install brew-cask
 cask install amethyst
 cask install appcleaner
+cask install asepsis
 cask install atom
 cask install bettertouchtool
 cask install betterzipql
@@ -80,7 +81,9 @@ install autoconf
 install bash-completion
 install bison
 install boost
+install cmake
 install curl
+install editorconfig
 install freetype
 install gettext
 install gflags
@@ -126,6 +129,7 @@ appstore Growl
 appstore Janetter
 appstore Keynote
 appstore Simplenote
+appstore Tweetbot
 appstore Xcode
 
 # Other commands
