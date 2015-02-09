@@ -22,6 +22,7 @@ let format_allow_over_tw = 1    " ぶら下り可能幅
 " シンタックスハイライト
 syntax on
 
+colorscheme molokai
 "---------------------------------------------------------------------------
 " GUI固有ではない画面表示の設定:
 "
@@ -68,6 +69,9 @@ NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'flazz/vim-colorschemes'
+NeoBundle 'editorconfig/editorconfig-vim'
+NeoBundle 'mileszs/ack.vim'
+NeoBundle 'Shougo/unite.vim'
 
 " You can specify revision/branch/tag.
 NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
@@ -82,6 +86,3 @@ filetype plugin indent on
 " this will conveniently prompt you to install them.
 NeoBundleCheck
 "End NeoBundle Scripts-------------------------
-
-NeoBundle 'editorconfig/editorconfig-vim'
-NeoBundle 'scrooloose/nerdtree'
