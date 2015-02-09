@@ -4,7 +4,6 @@
 ## caskroom/cask
 tap caskroom/cask
 install brew-cask
-cask install amethyst
 cask install appcleaner
 cask install asepsis
 cask install atom
@@ -14,6 +13,7 @@ cask install box-sync
 cask install coteditor
 cask install cyberduck
 cask install dash
+cask install flashlight
 cask install gimp
 cask install google-chrome
 cask install haroopad
