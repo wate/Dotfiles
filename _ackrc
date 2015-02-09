@@ -1,4 +1,3 @@
---ignore-dir=node_modules/
---ignore-dir=bower_components/
-
---type-add=md:ext:md,markdown
+--ignore-dir=node_modules
+--ignore-dir=bower_components
+--type-set=md=.md
