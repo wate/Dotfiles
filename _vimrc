@@ -22,7 +22,6 @@ let format_allow_over_tw = 1    " ぶら下り可能幅
 " シンタックスハイライト
 syntax on
 
-
 "---------------------------------------------------------------------------
 " GUI固有ではない画面表示の設定:
 "
@@ -85,3 +84,4 @@ NeoBundleCheck
 "End NeoBundle Scripts-------------------------
 
 NeoBundle 'editorconfig/editorconfig-vim'
+NeoBundle 'scrooloose/nerdtree'
