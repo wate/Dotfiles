@@ -4,6 +4,7 @@
 ## caskroom/cask
 tap caskroom/cask
 install brew-cask
+cask install amethyst
 cask install appcleaner
 cask install asepsis
 cask install atom
