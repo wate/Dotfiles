@@ -22,6 +22,7 @@ cask install imageoptim
 cask install inkscape
 cask install iterm2
 cask install keepassx
+cask install keka
 cask install launchy
 cask install libreoffice
 cask install licecap
@@ -103,7 +104,9 @@ install libyaml
 install lz4
 install mecab
 install mecab-ipadic
+install nkf
 install openssl
+install p7zip
 install pandoc
 install pcre
 install pkg-config
