@@ -18,9 +18,11 @@ cask install flashlight
 cask install gimp
 cask install google-chrome
 cask install haroopad
+cask install hipchat
 cask install imageoptim
 cask install inkscape
 cask install iterm2
+cask install josm
 cask install keepassx
 cask install keka
 cask install launchy
