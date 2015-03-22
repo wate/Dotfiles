@@ -20,7 +20,6 @@ cask install google-chrome
 cask install haroopad
 cask install hipchat
 cask install imageoptim
-cask install inkscape
 cask install iterm2
 cask install josm
 cask install keepassx
@@ -108,6 +107,7 @@ install mecab
 install mecab-ipadic
 install nkf
 install openssl
+install osquery
 install p7zip
 install pandoc
 install pcre
@@ -131,6 +131,7 @@ install wget
 install xz
 
 # App Store applications
+appstore Go2Shell
 appstore Growl
 appstore Janetter
 appstore Keynote
