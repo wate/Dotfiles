@@ -66,6 +66,7 @@ tap homebrew/php
 install composer
 install php55-imagick
 install php55-mecab
+install php55-opcache
 install php55-phalcon
 install php55-twig
 install php55-xdebug
@@ -133,6 +134,7 @@ install xz
 # App Store applications
 appstore Go2Shell
 appstore Growl
+appstore Install OS X Yosemite
 appstore Janetter
 appstore Keynote
 appstore Simplenote
