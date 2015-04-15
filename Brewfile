@@ -4,26 +4,25 @@
 ## caskroom/cask
 tap caskroom/cask
 install brew-cask
-cask install amethyst
 cask install appcleaner
 cask install asepsis
 cask install atom
-cask install bettertouchtool
 cask install betterzipql
 cask install box-sync
+cask install clamxav
 cask install coteditor
 cask install cyberduck
 cask install dash
 cask install flashlight
 cask install gimp
 cask install google-chrome
-cask install haroopad
 cask install hipchat
 cask install imageoptim
 cask install iterm2
 cask install josm
 cask install keepassx
 cask install keka
+cask install keycastr
 cask install launchy
 cask install libreoffice
 cask install licecap
@@ -108,7 +107,6 @@ install mecab
 install mecab-ipadic
 install nkf
 install openssl
-install osquery
 install p7zip
 install pandoc
 install pcre
