@@ -4,26 +4,25 @@
 ## caskroom/cask
 tap caskroom/cask
 install brew-cask
-cask install amethyst
 cask install appcleaner
 cask install asepsis
 cask install atom
-cask install bettertouchtool
 cask install betterzipql
 cask install box-sync
+cask install clamxav
 cask install coteditor
 cask install cyberduck
 cask install dash
 cask install flashlight
 cask install gimp
 cask install google-chrome
-cask install haroopad
 cask install hipchat
 cask install imageoptim
 cask install iterm2
 cask install josm
 cask install keepassx
 cask install keka
+cask install keycastr
 cask install launchy
 cask install libreoffice
 cask install licecap
@@ -66,6 +65,7 @@ tap homebrew/php
 install composer
 install php55-imagick
 install php55-mecab
+install php55-opcache
 install php55-phalcon
 install php55-twig
 install php55-xdebug
@@ -107,7 +107,6 @@ install mecab
 install mecab-ipadic
 install nkf
 install openssl
-install osquery
 install p7zip
 install pandoc
 install pcre
@@ -133,6 +132,7 @@ install xz
 # App Store applications
 appstore Go2Shell
 appstore Growl
+appstore Install OS X Yosemite
 appstore Janetter
 appstore Keynote
 appstore Simplenote
