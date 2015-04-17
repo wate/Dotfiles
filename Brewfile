@@ -63,14 +63,14 @@ install zlib
 ## homebrew/php
 tap homebrew/php
 install composer
-install php55-imagick
-install php55-mecab
-install php55-opcache
-install php55-phalcon
-install php55-twig
-install php55-xdebug
-install php55-xhprof
-install php55
+install php56-imagick
+install php56-mecab
+install php56-opcache
+install php56-phalcon
+install php56-twig
+install php56-xdebug
+install php56-xhprof
+install php56
 
 ## rcmdnk/file
 tap rcmdnk/file
