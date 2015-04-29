@@ -9,15 +9,16 @@ cask install asepsis
 cask install atom
 cask install betterzipql
 cask install box-sync
+cask install ccleaner
 cask install clamxav
 cask install coteditor
 cask install cyberduck
 cask install dash
+cask install doxygen
 cask install flashlight
 cask install gimp
 cask install google-chrome
 cask install hipchat
-cask install imageoptim
 cask install iterm2
 cask install josm
 cask install keepassx
@@ -28,6 +29,7 @@ cask install libreoffice
 cask install licecap
 cask install macwinzipper
 cask install mysqlworkbench
+cask install netbeans-php
 cask install node
 cask install owasp-zap
 cask install p4merge
@@ -132,7 +134,6 @@ install xz
 # App Store applications
 appstore Go2Shell
 appstore Growl
-appstore Install OS X Yosemite
 appstore Janetter
 appstore Keynote
 appstore Simplenote
