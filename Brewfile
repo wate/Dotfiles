@@ -9,6 +9,7 @@ cask install asepsis
 cask install atom
 cask install betterzipql
 cask install box-sync
+cask install brackets
 cask install ccleaner
 cask install clamxav
 cask install coteditor
@@ -67,6 +68,7 @@ tap homebrew/php
 install composer
 install php56-imagick
 install php56-mecab
+install php56-mongo
 install php56-opcache
 install php56-phalcon
 install php56-twig
