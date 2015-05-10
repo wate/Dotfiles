@@ -3,135 +3,139 @@
 
 ## caskroom/cask
 tap caskroom/cask
-install brew-cask
-cask install appcleaner
-cask install asepsis
-cask install atom
-cask install betterzipql
-cask install box-sync
-cask install brackets
-cask install ccleaner
-cask install clamxav
-cask install coteditor
-cask install cyberduck
-cask install dash
-cask install doxygen
-cask install flashlight
-cask install gimp
-cask install google-chrome
-cask install hipchat
-cask install iterm2
-cask install josm
-cask install keepassx
-cask install keka
-cask install keycastr
-cask install launchy
-cask install libreoffice
-cask install licecap
-cask install macwinzipper
-cask install mysqlworkbench
-cask install netbeans-php
-cask install node
-cask install owasp-zap
-cask install p4merge
-cask install packer
-cask install qlcolorcode
-cask install qlmarkdown
-cask install qlprettypatch
-cask install qlstephen
-cask install quicklook-csv
-cask install quicklook-json
-cask install sequel-pro
-cask install sourcetree
-cask install sqlitebrowser
-cask install vagrant-manager
-cask install vagrant
-cask install virtualbox
-cask install vlc
-cask install xmind
-cask install xquartz
-cask install xtrafinder
+brew brew-cask
+cask appcleaner
+cask asepsis
+cask atom
+cask betterzipql
+cask box-sync
+cask brackets
+cask ccleaner
+cask clamxav
+cask coteditor
+cask cyberduck
+cask dash
+cask doxygen
+cask flashlight
+cask gimp
+cask google-chrome
+cask hipchat
+cask iterm2
+cask karabiner
+cask keepassx
+cask keka
+cask keycastr
+cask launchy
+cask libreoffice
+cask licecap
+cask macwinzipper
+cask mysqlworkbench
+cask netbeans-php
+cask node
+cask owasp-zap
+cask p4merge
+cask packer
+cask qlcolorcode
+cask qlmarkdown
+cask qlprettypatch
+cask qlstephen
+cask quicklook-csv
+cask quicklook-json
+cask seil
+cask sequel-pro
+cask sourcetree
+cask sqlitebrowser
+cask vagrant
+cask virtualbox
+cask vlc
+cask xmind
+cask xquartz
+cask xtrafinder
 
 ## homebrew/completions
 tap homebrew/completions
-install gem-completion
-install packer-completion
-install vagrant-completion
-install wpcli-completion
+brew gem-completion
+brew packer-completion
+brew vagrant-completion
+brew wpcli-completion
 
 ## homebrew/dupes
 tap homebrew/dupes
-install zlib
+brew zlib
 
 ## homebrew/php
 tap homebrew/php
-install composer
-install php56-imagick
-install php56-mecab
-install php56-mongo
-install php56-opcache
-install php56-phalcon
-install php56-twig
-install php56-xdebug
-install php56-xhprof
-install php56
+brew composer
+brew php56-imagick
+brew php56-mecab
+brew php56-mongo
+brew php56-opcache
+brew php56-phalcon
+brew php56-twig
+brew php56-xdebug
+brew php56-xhprof
+brew php56
 
 ## rcmdnk/file
 tap rcmdnk/file
-install brew-file
+brew brew-file
 
 # Other Homebrew packages
-install ack
-install android-sdk
-install ansible
-install autoconf
-install bash-completion
-install bison
-install boost
-install cmake
-install curl
-install editorconfig
-install freetype
-install gettext
-install gflags
-install git
-install git-flow
-install glog
-install gmp
-install icu4c
-install imagemagick
-install jpeg
-install jq
-install legit
-install libpng
-install libtool
-install libyaml
-install lz4
-install mecab
-install mecab-ipadic
-install nkf
-install openssl
-install p7zip
-install pandoc
-install pcre
-install pkg-config
-install q
-install readline
-install rmtrash
-install rocksdb
-install shellcheck
-install snappy
-install sqlite
-install subversion
-install the_silver_searcher
-install thrift
-install tig
-install tree
-install unixodbc
-install unrar
-install vim
-install wget
-install xz
+brew ack
+brew android-sdk
+brew ansible
+brew autoconf
+brew bash-completion
+brew bison
+brew boost
+brew cmake
+brew curl
+brew editorconfig
+brew freetype
+brew gettext
+brew gflags
+brew ghostscript
+brew git
+brew git-flow
+brew glog
+brew gmp
+brew icu4c
+brew imagemagick
+brew jbig2dec
+brew jpeg
+brew jq
+brew legit
+brew libpng
+brew libtiff
+brew libtool
+brew libyaml
+brew little-cms2
+brew lz4
+brew mecab
+brew mecab-ipadic
+brew nkf
+brew openssl
+brew p7zip
+brew pandoc
+brew pcre
+brew pkg-config
+brew q
+brew readline
+brew rmtrash
+brew rocksdb
+brew shellcheck
+brew snappy
+brew sqlite
+brew subversion
+brew the_silver_searcher
+brew thrift
+brew tig
+brew tree
+brew unixodbc
+brew unrar
+brew vim
+brew wget
+brew xz
 
 # App Store applications
 appstore Go2Shell
