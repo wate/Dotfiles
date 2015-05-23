@@ -20,6 +20,7 @@ cask flashlight
 cask gimp
 cask google-chrome
 cask hipchat
+cask inkscape
 cask iterm2
 cask karabiner
 cask keepassx
@@ -104,7 +105,6 @@ brew imagemagick
 brew jbig2dec
 brew jpeg
 brew jq
-brew legit
 brew libpng
 brew libtiff
 brew libtool
@@ -126,6 +126,7 @@ brew rocksdb
 brew shellcheck
 brew snappy
 brew sqlite
+brew ssh-copy-id
 brew subversion
 brew the_silver_searcher
 brew thrift
