@@ -12,10 +12,6 @@ fi
 if [ -f ${BREW_PREFIX}/etc/bash_completion.d/git-flow-completion.bash ]; then
     source ${BREW_PREFIX}/etc/bash_completion.d/git-flow-completion.bash
 fi
-# legit
-if [ -f ${BREW_PREFIX}/etc/bash_completion.d/legit ]; then
-    source ${BREW_PREFIX}/etc/bash_completion.d/legit
-fi
 # Vagrant
 if [ -f ${BREW_PREFIX}/etc/bash_completion.d/vagrant ]; then
     source ${BREW_PREFIX}/etc/bash_completion.d/vagrant
