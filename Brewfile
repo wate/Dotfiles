@@ -12,6 +12,7 @@ cask box-sync
 cask brackets
 cask ccleaner
 cask clamxav
+cask clipmenu
 cask coteditor
 cask cyberduck
 cask dash
