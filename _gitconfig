@@ -2,6 +2,8 @@
 	prune = true
 [push]
 	default = simple
+[pull]
+	rebase = true
 [core]
 	excludesfile = /Users/wate/.gitignore_global
 	editor = vim
