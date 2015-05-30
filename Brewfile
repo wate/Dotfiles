@@ -21,7 +21,6 @@ cask flashlight
 cask gimp
 cask google-chrome
 cask hipchat
-cask inkscape
 cask iterm2
 cask karabiner
 cask keepassx
@@ -51,7 +50,6 @@ cask vagrant
 cask virtualbox
 cask vlc
 cask xmind
-cask xquartz
 cask xtrafinder
 
 ## homebrew/completions
