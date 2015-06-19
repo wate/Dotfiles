@@ -17,6 +17,7 @@ cask coteditor
 cask cyberduck
 cask dash
 cask doxygen
+cask exa
 cask flashlight
 cask gimp
 cask google-chrome
@@ -86,6 +87,7 @@ brew android-sdk
 brew ansible
 brew autoconf
 brew bash-completion
+brew bash-git-prompt
 brew bison
 brew boost
 brew cmake
@@ -102,8 +104,10 @@ brew gmp
 brew icu4c
 brew imagemagick
 brew jbig2dec
+brew jmeter
 brew jpeg
 brew jq
+brew libgit2
 brew libpng
 brew libtiff
 brew libtool
