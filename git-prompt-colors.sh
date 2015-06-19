@@ -19,7 +19,7 @@ override_git_prompt_colors() {
   GIT_PROMPT_CHANGED="${Green}M"        # the number of changed files
 
   GIT_PROMPT_REMOTE=" "                 # the remote branch name (if any) and the symbols for ahead and behind
-  GIT_PROMPT_UNTRACKED="${Yellow}U"       # the number of untracked files/dirs
+  GIT_PROMPT_UNTRACKED="${White}U"       # the number of untracked files/dirs
   GIT_PROMPT_STASHED="${BoldMagenta}⚑ "    # the number of stashed files/dir
   GIT_PROMPT_CLEAN="${BoldGreen}✔"      # a colored flag indicating a "clean" repo
 
