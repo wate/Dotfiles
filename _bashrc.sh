@@ -1,7 +1,12 @@
-alias ls='ls -GF'
-alias ll='ls -GFAl'
+alias ls='exa'
+alias ll='exa -l --git'
+alias la='exa -la --git'
 
 source "$(brew --repository)"/Library/Contributions/brew_bash_completion.sh
+
+if [ -f "$(brew --prefix bash-git-prompt)/share/gitprompt.sh" ]; then
+  source "$(brew --prefix bash-git-prompt)/share/gitprompt.sh"
+fi
 
 BREW_PREFIX=$(brew --prefix)
 # Git
