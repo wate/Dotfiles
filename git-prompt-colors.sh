@@ -9,9 +9,9 @@ override_git_prompt_colors() {
   # PathShort="\w";
 
   ## These are the color definitions used by gitprompt.sh
-  GIT_PROMPT_PREFIX="("                 # start of the git info string
-  GIT_PROMPT_SUFFIX=")"                 # the end of the git info string
-  GIT_PROMPT_SEPARATOR="|"              # separates each item
+  GIT_PROMPT_PREFIX="( "                 # start of the git info string
+  GIT_PROMPT_SUFFIX=" )"                 # the end of the git info string
+  GIT_PROMPT_SEPARATOR=" | "              # separates each item
 
   GIT_PROMPT_BRANCH="${BoldYellow}"        # the git branch that is active in the current directory
   GIT_PROMPT_STAGED="${Cyan}S"           # the number of staged files/directories
