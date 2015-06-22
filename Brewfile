@@ -33,7 +33,6 @@ cask licecap
 cask macwinzipper
 cask mysqlworkbench
 cask netbeans-php
-cask node
 cask owasp-zap
 cask p4merge
 cask packer
@@ -117,6 +116,7 @@ brew lz4
 brew mecab
 brew mecab-ipadic
 brew nkf
+brew nodebrew
 brew openssl
 brew p7zip
 brew pandoc
