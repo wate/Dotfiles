@@ -46,6 +46,7 @@ cask seil
 cask sequel-pro
 cask sourcetree
 cask sqlitebrowser
+cask terraform
 cask vagrant
 cask virtualbox
 cask vlc
@@ -90,6 +91,7 @@ brew bash-git-prompt
 brew bison
 brew boost
 brew cmake
+brew ctags
 brew curl
 brew editorconfig
 brew freetype
@@ -124,6 +126,7 @@ brew pcre
 brew pkg-config
 brew q
 brew readline
+brew rename
 brew rmtrash
 brew rocksdb
 brew shellcheck
