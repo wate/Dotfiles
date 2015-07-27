@@ -148,7 +148,6 @@ brew xz
 # App Store applications
 appstore Go2Shell
 appstore Growl
-appstore Janetter
 appstore Keynote
 appstore Simplenote
 appstore Tweetbot
