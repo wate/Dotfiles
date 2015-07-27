@@ -12,7 +12,7 @@ cask box-sync
 cask brackets
 cask ccleaner
 cask clamxav
-cask clipmenu
+cask clipy
 cask coteditor
 cask cyberduck
 cask dash
@@ -102,6 +102,7 @@ brew git
 brew git-flow
 brew glog
 brew gmp
+brew hubflow
 brew icu4c
 brew imagemagick
 brew jbig2dec
