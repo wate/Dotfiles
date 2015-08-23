@@ -118,8 +118,10 @@ brew little-cms2
 brew lz4
 brew mecab
 brew mecab-ipadic
+brew mycli
 brew nkf
 brew nodebrew
+brew oniguruma
 brew openssl
 brew p7zip
 brew pandoc
@@ -135,6 +137,7 @@ brew snappy
 brew sqlite
 brew ssh-copy-id
 brew subversion
+brew terraform
 brew the_silver_searcher
 brew thrift
 brew tig
