@@ -17,10 +17,6 @@ fi
 if [ -f "${BREW_PREFIX}"/etc/bash_completion.d/git-flow-completion.bash ]; then
     source "${BREW_PREFIX}"/etc/bash_completion.d/git-flow-completion.bash
 fi
-# Hubflow
-if [ -f "${BREW_PREFIX}"/etc/bash_completion.d/git-hubflow-completion.bash ]; then
-    source "${BREW_PREFIX}"/etc/bash_completion.d/git-hubflow-completion.bash
-fi
 # Vagrant
 if [ -f "${BREW_PREFIX}"/etc/bash_completion.d/vagrant ]; then
     source "${BREW_PREFIX}"/etc/bash_completion.d/vagrant
