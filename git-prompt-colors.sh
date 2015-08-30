@@ -8,6 +8,9 @@ override_git_prompt_colors() {
   Time12a="\$(date +%H:%M:%S)"
   # PathShort="\w";
 
+  REMOTE_USER="\u" # Username
+  REMOTE_HOST="\h" # Host
+
   ## These are the color definitions used by gitprompt.sh
   GIT_PROMPT_PREFIX="( "                 # start of the git info string
   GIT_PROMPT_SUFFIX=" )"                 # the end of the git info string
@@ -38,7 +41,12 @@ override_git_prompt_colors() {
   # GIT_PROMPT_VIRTUALENV="(${Blue}_VIRTUALENV_${ResetColor}) "
 
   ## _LAST_COMMAND_INDICATOR_ will be replaced by the appropriate GIT_PROMPT_COMMAND_OK OR GIT_PROMPT_COMMAND_FAIL
-  GIT_PROMPT_START_USER="${BoldGreen}[${Time12a}]${ResetColor} ${BoldBlue}${PathShort}${ResetColor}"
+  if [ -z "$SSH_TTY" ]; then
+    GIT_PROMPT_START_USER="${BoldGreen}[${Time12a}]${ResetColor} ${BoldBlue}${PathShort}${ResetColor}"
+  else
+    GIT_PROMPT_START_USER="${BoldGreen}[${Time12a}]${ResetColor} ${Yellow}\u${ResetColor}@${Red}\h${ResetColor} ${BoldBlue}${PathShort}${ResetColor}"
+  fi
+
   # GIT_PROMPT_START_ROOT="_LAST_COMMAND_INDICATOR_ ${GIT_PROMPT_START_USER}"
   GIT_PROMPT_END_USER=" \n$ "
   # GIT_PROMPT_END_ROOT=" \n${White}${Time12a}${ResetColor} # "
