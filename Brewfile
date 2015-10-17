@@ -5,7 +5,6 @@
 tap caskroom/cask
 brew brew-cask
 cask appcleaner
-cask asepsis
 cask atom
 cask betterzipql
 cask box-sync
@@ -33,6 +32,7 @@ cask licecap
 cask macwinzipper
 cask mysqlworkbench
 cask netbeans-php
+cask octohub
 cask owasp-zap
 cask p4merge
 cask packer
@@ -53,6 +53,9 @@ cask vlc
 cask xmind
 cask xtrafinder
 
+## caskroom/fonts
+tap caskroom/fonts
+
 ## homebrew/completions
 tap homebrew/completions
 brew gem-completion
@@ -62,14 +65,10 @@ brew wpcli-completion
 
 ## homebrew/dupes
 tap homebrew/dupes
-brew zlib
 
 ## homebrew/php
 tap homebrew/php
-brew composer
 brew php56-imagick
-brew php56-mecab
-brew php56-mongo
 brew php56-opcache
 brew php56-phalcon
 brew php56-twig
@@ -91,6 +90,7 @@ brew bash-git-prompt
 brew bison
 brew boost
 brew cmake
+brew composer
 brew ctags
 brew curl
 brew editorconfig
@@ -113,6 +113,7 @@ brew libgit2
 brew libpng
 brew libtiff
 brew libtool
+brew libxml2
 brew libyaml
 brew little-cms2
 brew lz4
@@ -126,6 +127,7 @@ brew openssl
 brew p7zip
 brew pandoc
 brew pcre
+brew php56-mecab
 brew pkg-config
 brew q
 brew readline
@@ -147,6 +149,7 @@ brew unrar
 brew vim
 brew wget
 brew xz
+brew zlib
 
 # App Store applications
 appstore Go2Shell
