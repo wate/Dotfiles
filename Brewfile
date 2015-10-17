@@ -55,6 +55,10 @@ cask xtrafinder
 
 ## caskroom/fonts
 tap caskroom/fonts
+cask font-myrica
+cask font-myricam
+cask font-ricty-diminished
+cask font-source-han-sans
 
 ## homebrew/completions
 tap homebrew/completions
@@ -73,7 +77,6 @@ brew php56-opcache
 brew php56-phalcon
 brew php56-twig
 brew php56-xdebug
-brew php56-xhprof
 brew php56
 
 ## rcmdnk/file
