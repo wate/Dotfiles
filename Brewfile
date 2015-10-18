@@ -142,7 +142,6 @@ brew snappy
 brew sqlite
 brew ssh-copy-id
 brew subversion
-brew terraform
 brew the_silver_searcher
 brew thrift
 brew tig
