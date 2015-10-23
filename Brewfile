@@ -33,6 +33,7 @@ cask macwinzipper
 cask mysqlworkbench
 cask netbeans-php
 cask octohub
+cask otto
 cask owasp-zap
 cask p4merge
 cask packer
@@ -88,6 +89,7 @@ brew ack
 brew android-sdk
 brew ansible
 brew autoconf
+brew awscli
 brew bash-completion
 brew bash-git-prompt
 brew bison
@@ -142,7 +144,6 @@ brew snappy
 brew sqlite
 brew ssh-copy-id
 brew subversion
-brew terraform
 brew the_silver_searcher
 brew thrift
 brew tig
