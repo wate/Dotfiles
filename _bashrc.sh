@@ -8,6 +8,10 @@ if [ -f "$(brew --prefix bash-git-prompt)/share/gitprompt.sh" ]; then
   source "$(brew --prefix bash-git-prompt)/share/gitprompt.sh"
 fi
 
+function command_exists { command -v "$1" > /dev/null; }
+# gitignore.io
+function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
+
 BREW_PREFIX=$(brew --prefix)
 # Git
 if [ -f "${BREW_PREFIX}"/etc/bash_completion.d/git-completion.bash ]; then
@@ -29,10 +33,6 @@ fi
 if [ -f "${BREW_PREFIX}"/etc/bash_completion.d/gem ]; then
     source "${BREW_PREFIX}"/etc/bash_completion.d/gem
 fi
-# npm
-if [ -f "${BREW_PREFIX}"/etc/bash_completion.d/npm ]; then
-    source "${BREW_PREFIX}"/etc/bash_completion.d/npm
-fi
 # tig
 if [ -f "${BREW_PREFIX}"/etc/bash_completion.d/tig-completion.bash ]; then
     source "${BREW_PREFIX}"/etc/bash_completion.d/tig-completion.bash
@@ -40,4 +40,7 @@ fi
 # packer
 if [ -f "${BREW_PREFIX}"/etc/bash_completion.d/packer ]; then
     source "${BREW_PREFIX}"/etc/bash_completion.d/packer
+fi
+if command_exists aws ; then
+    complete -C aws_completer aws
 fi
