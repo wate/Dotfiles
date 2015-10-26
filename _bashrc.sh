@@ -1,6 +1,7 @@
 alias ls='exa'
 alias ll='exa -l --git'
 alias la='exa -la --git'
+alias rm='trash'
 
 source "$(brew --repository)"/Library/Contributions/brew_bash_completion.sh
 
