@@ -137,7 +137,6 @@ brew pkg-config
 brew q
 brew readline
 brew rename
-brew rmtrash
 brew rocksdb
 brew shellcheck
 brew snappy
@@ -147,6 +146,7 @@ brew subversion
 brew the_silver_searcher
 brew thrift
 brew tig
+brew trash
 brew tree
 brew unixodbc
 brew unrar
