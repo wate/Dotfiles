@@ -17,7 +17,6 @@ cask cyberduck
 cask dash
 cask doxygen
 cask exa
-cask flashlight
 cask gimp
 cask google-chrome
 cask hipchat
@@ -52,7 +51,6 @@ cask vagrant
 cask virtualbox
 cask vlc
 cask xmind
-cask xtrafinder
 
 ## caskroom/fonts
 tap caskroom/fonts
