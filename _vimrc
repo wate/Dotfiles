@@ -2,7 +2,7 @@
 " 編集に関する設定:
 "
 " タブの画面上での幅
-set tabstop=2
+set tabstop=4
 " タブをスペースに展開する (noexpandtab:展開しない)
 set expandtab
 " 自動的にインデントする (noautoindent:インデントしない)
@@ -49,6 +49,12 @@ set showcmd
 "set notitle
 " シンタックスハイライト
 syntax on
+
+augroup highlightIdegraphicSpace
+  autocmd!
+  autocmd Colorscheme * highlight IdeographicSpace term=underline ctermbg=Green guibg=Green
+  autocmd VimEnter,WinEnter * match IdeographicSpace /　/
+augroup END
 
 "NeoBundle Scripts-----------------------------
 if has('vim_starting')
