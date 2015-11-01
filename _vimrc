@@ -1,3 +1,7 @@
+
+" vi 互換モードで動作させない
+set nocompatible
+
 "---------------------------------------------------------------------------
 " 編集に関する設定:
 "
@@ -41,14 +45,19 @@ highlight SpecialKey guifg=#606060
 set wrap
 " 常にステータス行を表示 (詳細は:he laststatus)
 set laststatus=2
+set statusline=%F%m%r%h%w%=(%{&ff}/%Y)\ (line\ %l\/%L,\ col\ %c)\
+
 " コマンドラインの高さ
 set cmdheight=2
 " コマンドをステータス行に表示
 set showcmd
 " タイトルバーの表示を消す
-"set notitle
-" シンタックスハイライト
+set notitle
+
+" シンタックスハイライトを有効にする
 syntax on
+" 検索語句のハイライト
+set hlsearch
 
 augroup highlightIdegraphicSpace
   autocmd!
