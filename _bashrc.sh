@@ -15,6 +15,14 @@ BREW_PREFIX=$(brew --prefix)
 if [ -f "${BREW_PREFIX}"/etc/bash_completion.d/brew_bash_completion.sh ]; then
     source "${BREW_PREFIX}"/etc/bash_completion.d/brew_bash_completion.sh
 fi
+# brew-cask
+if [ -f "${BREW_PREFIX}"/etc/bash_completion.d/brew-cask ]; then
+    source "${BREW_PREFIX}"/etc/bash_completion.d/brew-cask
+fi
+# brew-file
+if [ -f "${BREW_PREFIX}"/etc/bash_completion.d/brew-file ]; then
+    source "${BREW_PREFIX}"/etc/bash_completion.d/brew-file
+fi
 # Git
 if [ -f "${BREW_PREFIX}"/etc/bash_completion.d/git-completion.bash ]; then
     source "${BREW_PREFIX}"/etc/bash_completion.d/git-completion.bash
