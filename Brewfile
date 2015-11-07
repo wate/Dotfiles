@@ -29,6 +29,7 @@ cask launchy
 cask libreoffice
 cask licecap
 cask macwinzipper
+cask manuscripts
 cask mysqlworkbench
 cask netbeans-php
 cask octohub
@@ -61,6 +62,7 @@ cask font-source-han-sans
 
 ## homebrew/completions
 tap homebrew/completions
+brew brew-cask-completion
 brew gem-completion
 brew packer-completion
 brew vagrant-completion
@@ -134,6 +136,7 @@ brew php56-mecab
 brew pkg-config
 brew q
 brew readline
+brew redpen
 brew rename
 brew rocksdb
 brew shellcheck
