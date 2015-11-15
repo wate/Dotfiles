@@ -11,7 +11,7 @@
 	"spec-char-escape": true,
 	"id-unique": true,
 	"src-not-empty": true,
-	
+
 	//Performance
 	"head-script-disabled": true,
 
@@ -26,7 +26,6 @@
 	"id-class-ad-disabled": true,
 	"href-abs-or-rel": true,
 	"attr-unsafe-chars": true,
-	
 	//Other
 	"csslint": true,
 	"jshint": true

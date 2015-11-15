@@ -1,0 +1,53 @@
+---
+plugins:
+  - jtf-style
+rules:
+  max-ten:
+    max: 3
+  spellcheck-tech-word: true
+  no-mix-dearu-desumasu: true
+  no-start-duplicated-conjunction:
+    interval: 2
+  prh:
+    rulePaths:
+      - prh.yml
+  max-number-of-lines:
+    max: 300
+  no-todo: true
+  jtf-style/1.1.1.本文: true
+  jtf-style/1.1.2.見出し: true
+  jtf-style/1.1.3.箇条書き: true
+  jtf-style/1.1.5.図表のキャプション: true
+  jtf-style/1.2.1.句点(。)と読点(、): true
+  jtf-style/1.2.2.ピリオド(.)とカンマ(,): true
+  jtf-style/2.1.2.漢字: true
+  jtf-style/2.1.5.カタカナ: true
+  jtf-style/2.1.6.カタカナの長音: true
+  jtf-style/2.1.8.算用数字: true
+  jtf-style/2.1.9.アルファベット: true
+  jtf-style/2.1.10.算用数字の位取りの表記: true
+  jtf-style/2.2.1.ひらがなと漢字の使い分け: true
+  jtf-style/2.2.2.算用数字と漢数字の使い分け: true
+  jtf-style/2.2.3.一部の助数詞の表記: true
+  jtf-style/3.1.1.全角文字と半角文字の間: true
+  jtf-style/3.1.2.全角文字どうし: true
+  jtf-style/3.2.カタカナ語間のスペースの有無: true
+  jtf-style/3.3.かっこ類と隣接する文字の間のスペースの有無: true
+  jtf-style/4.1.1.句点(。): true
+  jtf-style/4.1.3.ピリオド(.)、カンマ(,): true
+  jtf-style/4.2.1.感嘆符(！): true
+  jtf-style/4.2.2.疑問符(？): true
+  jtf-style/4.2.4.中黒(・): true
+  jtf-style/4.2.5.波線(〜): true
+  jtf-style/4.2.6.ハイフン(-): true
+  jtf-style/4.2.7.コロン(：): true
+  jtf-style/4.2.8.セミコロン(;): true
+  jtf-style/4.2.9.ダッシュ(-): true
+  jtf-style/4.3.1.丸かっこ（）: true
+  jtf-style/4.3.2.大かっこ［］: true
+  jtf-style/4.3.3.かぎかっこ「」: true
+  jtf-style/4.3.4.二重かぎかっこ『』: true
+  jtf-style/4.3.5.二重引用符: true
+  jtf-style/4.3.6.中かっこ{ }: true
+  jtf-style/4.3.7.山かっこ<>: true
+  jtf-style/4.3.8.一重引用符: true

@@ -39,6 +39,8 @@ fi
 if [ -f "${BREW_PREFIX}"/etc/bash_completion.d/wp ]; then
     source "${BREW_PREFIX}"/etc/bash_completion.d/wp
 fi
+# rbenv
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 # gem
 if [ -f "${BREW_PREFIX}"/etc/bash_completion.d/gem ]; then
     source "${BREW_PREFIX}"/etc/bash_completion.d/gem
@@ -51,6 +53,7 @@ fi
 if [ -f "${BREW_PREFIX}"/etc/bash_completion.d/packer ]; then
     source "${BREW_PREFIX}"/etc/bash_completion.d/packer
 fi
+# aws cli
 if command_exists aws ; then
     complete -C aws_completer aws
 fi
