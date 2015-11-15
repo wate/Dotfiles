@@ -10,7 +10,6 @@ cask betterzipql
 cask box-sync
 cask brackets
 cask ccleaner
-cask clamxav
 cask clipy
 cask coteditor
 cask cyberduck
