@@ -135,10 +135,12 @@ brew pcre
 brew php56-mecab
 brew pkg-config
 brew q
+brew rbenv
 brew readline
 brew redpen
 brew rename
 brew rocksdb
+brew ruby-build
 brew shellcheck
 brew snappy
 brew sqlite
@@ -149,6 +151,7 @@ brew thrift
 brew tig
 brew trash
 brew tree
+brew unar
 brew unixodbc
 brew unrar
 brew vim
