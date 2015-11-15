@@ -151,6 +151,7 @@ brew thrift
 brew tig
 brew trash
 brew tree
+brew unar
 brew unixodbc
 brew unrar
 brew vim
