@@ -1,0 +1,8 @@
+---
+# typo
+version: 1
+rules:
+  - expected: する
+    pattern:  刷る
+  - expected: の
+    pattern:  のの

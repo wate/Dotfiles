@@ -1,0 +1,6 @@
+---
+# 表記統一
+version: 1
+rules:
+  - expected: いえ
+    pattern:  言え
