@@ -2,6 +2,7 @@
 plugins:
   - jtf-style
 rules:
+  no-todo: true
   max-ten:
     max: 3
   spellcheck-tech-word: true
@@ -13,7 +14,8 @@ rules:
       - prh.yml
   max-number-of-lines:
     max: 300
-  no-todo: true
+  sentence-length:
+    max: 100
   # 目的に応じて敬体、常体のどちらかに統一する。
   jtf-style/1.1.1.本文: true
   # 常体または体言止め。
@@ -28,8 +30,7 @@ rules:
   jtf-style/1.2.2.ピリオド(.)とカンマ(,): true
   # 常用漢字表にゆるやかに準じる。(辞書ベース)
   jtf-style/2.1.2.漢字: true
-  # 全角(辞書ベース)
-  # 半角カタカナは特殊用途を除いて使わない
+  # 全角(辞書ベース)　半角カタカナは特殊用途を除いて使わない
   jtf-style/2.1.5.カタカナ: true
   # 原則として省略しない。(辞書ベース)
   jtf-style/2.1.6.カタカナの長音: true
@@ -37,8 +38,7 @@ rules:
   jtf-style/2.1.8.算用数字: true
   # 半角
   jtf-style/2.1.9.アルファベット: true
-  # 桁区切りには「カンマ」、小数点には「ピリオド」を使う。
-  # ただし桁区切りの「カンマ」は省略する場合がある。
+  # 桁区切りには「カンマ」、小数点には「ピリオド」を使う。ただし桁区切りの「カンマ」は省略する場合がある。
   jtf-style/2.1.10.算用数字の位取りの表記: true
   # 参考文献に従う(辞書ベース)
   jtf-style/2.2.1.ひらがなと漢字の使い分け: true
