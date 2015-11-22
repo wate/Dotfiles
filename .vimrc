@@ -35,10 +35,10 @@ set number
 " カーソルが何行目の何列目に置かれているかを表示する
 set ruler
 " タブや改行を表示 (nolist:表示しない)
-set list
+set nolist
 " どの文字でタブや改行を表示するかを設定(表示しないように)
 " set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
-set listchars=eol:¬,tab:»\ ,space:·,trail:~,extends:<
+"set listchars=eol:¬,tab:»\ ,space:·,trail:~,extends:<
 " listcharsの文字色
 highlight SpecialKey guifg=#606060
 " 長い行を折り返して表示 (nowrap:折り返さない)
