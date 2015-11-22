@@ -1,3 +1,0 @@
---ignore-directory=is:node_modules
---ignore-directory=is:bower_components
---type-set=md=.md
