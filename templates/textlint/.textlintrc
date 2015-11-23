@@ -16,6 +16,9 @@ rules:
     max: 300
   sentence-length:
     max: 100
+  no-doubled-joshi:
+    min_interval: 4
+    strict: false
   # 目的に応じて敬体、常体のどちらかに統一する。
   jtf-style/1.1.1.本文: true
   # 常体または体言止め。
@@ -47,7 +50,7 @@ rules:
   # 「〜か月」、「〜か所」
   jtf-style/2.2.3.一部の助数詞の表記: true
   # スペースなし
-  jtf-style/3.1.1.全角文字と半角文字の間: true
+  jtf-style/3.1.1.全角文字と半角文字の間: false
   # スペースなし
   jtf-style/3.1.2.全角文字どうし: true
   # 中黒または半角スペースを入れる。
