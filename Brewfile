@@ -13,7 +13,6 @@ cask ccleaner
 cask clipy
 cask coteditor
 cask cyberduck
-cask dash
 cask doxygen
 cask exa
 cask gimp
@@ -159,6 +158,7 @@ brew xz
 brew zlib
 
 # App Store applications
+appstore Dash
 appstore Go2Shell
 appstore Growl
 appstore Keynote
