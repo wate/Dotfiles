@@ -62,7 +62,7 @@ rules:
   - expected: こと
     pattern:  /事(?!情|項|件|前|後|例)/
   - expected: $1とき
-    pattern:  /(の)時(?!点|代|項|実|間)/
+    pattern:  /(の)時(?!点|代|項|実|間|刻)/
     specs:
       - from: その時
         to:   そのとき

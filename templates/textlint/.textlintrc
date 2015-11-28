@@ -1,6 +1,4 @@
 ---
-plugins:
-  - jtf-style
 rules:
   no-todo: true
   max-ten:
@@ -19,77 +17,8 @@ rules:
   no-doubled-joshi:
     min_interval: 4
     strict: false
-  # 目的に応じて敬体、常体のどちらかに統一する。
-  jtf-style/1.1.1.本文: true
-  # 常体または体言止め。
-  jtf-style/1.1.2.見出し: true
-  # 「本文」の文体に合わせる。
-  jtf-style/1.1.3.箇条書き: true
-  # 「本文」の文体に合わせる。
-  jtf-style/1.1.5.図表のキャプション: true
-  # 全角の「、」と「。」を使う。
-  jtf-style/1.2.1.句点(。)と読点(、): true
-  # 和文の句読点として使用しない。
-  jtf-style/1.2.2.ピリオド(.)とカンマ(,): true
-  # 常用漢字表にゆるやかに準じる。(辞書ベース)
-  jtf-style/2.1.2.漢字: true
-  # 全角(辞書ベース)　半角カタカナは特殊用途を除いて使わない
-  jtf-style/2.1.5.カタカナ: true
-  # 原則として省略しない。(辞書ベース)
-  jtf-style/2.1.6.カタカナの長音: true
-  # 半角
-  jtf-style/2.1.8.算用数字: true
-  # 半角
-  jtf-style/2.1.9.アルファベット: true
-  # 桁区切りには「カンマ」、小数点には「ピリオド」を使う。ただし桁区切りの「カンマ」は省略する場合がある。
-  jtf-style/2.1.10.算用数字の位取りの表記: true
-  # 参考文献に従う(辞書ベース)
-  jtf-style/2.2.1.ひらがなと漢字の使い分け: true
-  # 数えられるものは算用数字。慣用句は漢数字。
-  jtf-style/2.2.2.算用数字と漢数字の使い分け: true
-  # 「〜か月」、「〜か所」
-  jtf-style/2.2.3.一部の助数詞の表記: true
-  # スペースなし
-  jtf-style/3.1.1.全角文字と半角文字の間: false
-  # スペースなし
-  jtf-style/3.1.2.全角文字どうし: true
-  # 中黒または半角スペースを入れる。
-  jtf-style/3.2.カタカナ語間のスペースの有無: true
-  # スペースなし
-  jtf-style/3.3.かっこ類と隣接する文字の間のスペースの有無: true
-  # 全角
-  jtf-style/4.1.1.句点(。): true
-  # 半角
-  jtf-style/4.1.3.ピリオド(.)、カンマ(,): true
-  # 全角。和文では多用しない。
-  jtf-style/4.2.1.感嘆符(！): false
-  # 全角。和文では多用しない。
-  jtf-style/4.2.2.疑問符(？): false
-  # 全角
-  jtf-style/4.2.4.中黒(・): true
-  # 全角
-  jtf-style/4.2.5.波線(〜): true
-  # 原則として和文では使用しない。
-  jtf-style/4.2.6.ハイフン(-): false
-  # 全角。和文では多用しない。
-  jtf-style/4.2.7.コロン(：): true
-  # 原則として和文では使用しない。
-  jtf-style/4.2.8.セミコロン(;): false
-  # 原則として和文では使用しない。
-  jtf-style/4.2.9.ダッシュ(-): false
-  # 全角
-  jtf-style/4.3.1.丸かっこ（）: false
-  # 全角
-  jtf-style/4.3.2.大かっこ［］: false
-  # 全角
-  jtf-style/4.3.3.かぎかっこ「」: true
-  # 全角
-  jtf-style/4.3.4.二重かぎかっこ『』: true
-  # 半角。和文では多用しない。
-  jtf-style/4.3.5.二重引用符: true
-  # 原則として和文では使用しない。
-  jtf-style/4.3.6.中かっこ{ }: false
-  # 原則として和文では使用しない。
-  jtf-style/4.3.7.山かっこ<>: false
-  # 原則として和文では使用しない。
-  jtf-style/4.3.8.一重引用符: true
+  no-dropping-the-ra: true
+  # ja-yahoo-kousei:
+  #   ignores: {
+  #       "用字": ["彼方"]
+  #     }
