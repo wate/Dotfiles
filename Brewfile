@@ -133,6 +133,7 @@ brew pandoc
 brew pcre
 brew php56-mecab
 brew pkg-config
+brew pre-commit
 brew q
 brew rbenv
 brew readline
