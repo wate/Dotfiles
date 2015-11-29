@@ -4,3 +4,15 @@
 --exclude=.svn
 --exclude=logs?
 --exclude=tests?
+
+--langdef=css
+--langmap=css:.css
+--regex-css=/^[ \t]*(([A-Za-z0-9_-]+[ \t\n,]+)+)\{/\1/t,tag,tags/
+--regex-css=/^[ \t]*#([A-Za-z0-9_-]+)/#\1/i,id,ids/
+--regex-css=/^[ \t]*\.([A-Za-z0-9_-]+)/.\1/c,class,classes/
+
+--langdef=sass
+--langmap=sass:.scss
+--regex-sass=/(\$[^ :]+)/\1/v,variable/
+--regex-sass=/@mixin +([^ ({]+)/\1/m,mixin/
+--regex-sass=/@function +([^ ({]+)/\1/f,function/
