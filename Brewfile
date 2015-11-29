@@ -105,6 +105,7 @@ brew git
 brew git-flow
 brew glog
 brew gmp
+brew httpie
 brew hubflow
 brew icu4c
 brew imagemagick
