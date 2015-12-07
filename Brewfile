@@ -56,6 +56,7 @@ tap caskroom/fonts
 cask font-myrica
 cask font-myricam
 cask font-ricty-diminished
+cask font-source-han-code-jp
 cask font-source-han-sans
 
 ## homebrew/completions
