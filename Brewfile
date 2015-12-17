@@ -4,6 +4,7 @@
 ## caskroom/cask
 tap caskroom/cask
 brew brew-cask
+cask anki
 cask appcleaner
 cask atom
 cask betterzipql
@@ -138,7 +139,6 @@ brew pre-commit
 brew q
 brew rbenv
 brew readline
-brew redpen
 brew rename
 brew rocksdb
 brew ruby-build
