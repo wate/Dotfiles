@@ -9,28 +9,22 @@
 	editor = vim
 	autocrlf = input
 [alias]
+	au = add --update
+	aa = add --all
+	ap = add --patch
+	ai = add --interactive
 	br = branch
-	ci = commit
-	cp = cherry-pick
 	co = checkout
-	dc = diff --cached
+	ci = commit
+	ca = commit --amend
 	st = status -s
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue<%an>%Creset' --abbrev-commit --date=relative --all --decorate
+	cp = cherry-pick
+	dc = diff --cached
+	dw = diff --word-diff
 	last = log -1 --stat
 	unstage = reset HEAD --
-	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue<%an>%Creset' --abbrev-commit --date=relative --all --decorate
-	dw = diff --word-diff
 	ignore = "!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi"
-	switch = !legit switch \"$@\"
-	branches = !legit branches
-	sprout = !legit sprout \"$@\"
-	unpublish = !legit unpublish \"$@\"
-	harvest = !legit harvest \"$@\"
-	sync = !legit sync \"$@\"
-	publish = !legit publish \"$@\"
-	graft = !legit graft \"$@\"
-	aa = add --all
-	ca = commit --amend
-	au = add --update
 	assume = update-index --assume-unchanged
 	unassume = update-index --no-assume-unchanged
 	assumed = !git ls-files -v | grep ^h | cut -c 3-
