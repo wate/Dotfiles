@@ -27,4 +27,4 @@
 	ignore = "!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi"
 	assume = update-index --assume-unchanged
 	unassume = update-index --no-assume-unchanged
-  assumed = !git ls-files -v | grep ^h | cut -c 3-
+	assumed = !git ls-files -v | grep ^h | cut -c 3-
