@@ -3,7 +3,6 @@
 
 ## caskroom/cask
 tap caskroom/cask
-brew brew-cask
 cask anki
 cask appcleaner
 cask atom
@@ -73,12 +72,21 @@ tap homebrew/dupes
 
 ## homebrew/php
 tap homebrew/php
+brew behat
+brew codeception
+brew pdepend
 brew php56-imagick
+brew php56-intl
 brew php56-opcache
 brew php56-phalcon
 brew php56-twig
 brew php56-xdebug
+brew php56-yaml
 brew php56
+brew phpcpd
+brew phploc
+brew phpmd
+brew phpmetrics
 
 ## rcmdnk/file
 tap rcmdnk/file
@@ -133,7 +141,10 @@ brew openssl
 brew p7zip
 brew pandoc
 brew pcre
+brew php-code-sniffer
+brew php-cs-fixer
 brew php56-mecab
+brew phpdocumentor
 brew pkg-config
 brew pre-commit
 brew q
