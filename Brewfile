@@ -87,10 +87,14 @@ brew phpcpd
 brew phploc
 brew phpmd
 brew phpmetrics
+brew phpunit
 
 ## rcmdnk/file
 tap rcmdnk/file
 brew brew-file
+
+## tldr-pages/tldr
+tap tldr-pages/tldr
 
 # Other Homebrew packages
 brew ack
@@ -115,6 +119,7 @@ brew git
 brew git-flow
 brew glog
 brew gmp
+brew graphviz
 brew httpie
 brew hubflow
 brew icu4c
@@ -145,6 +150,7 @@ brew php-code-sniffer
 brew php-cs-fixer
 brew php56-mecab
 brew phpdocumentor
+brew phpunit-skeleton-generator
 brew pkg-config
 brew pre-commit
 brew q
@@ -161,6 +167,7 @@ brew subversion
 brew the_silver_searcher
 brew thrift
 brew tig
+brew tldr
 brew trash
 brew tree
 brew unar
