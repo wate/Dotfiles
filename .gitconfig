@@ -19,6 +19,9 @@
 	ca = commit --amend
 	st = status -s
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue<%an>%Creset' --abbrev-commit --date=relative --all --decorate
+	lsw = log --pretty=format:'%Cgreen(%ci) %Cblue<%an>%Creset %Cred%h%Creset %s' --grep
+	lsf = log --pretty=format:'%Cgreen(%ci) %Cblue<%an>%Creset %Cred%h%Creset %s' --follow
+	ls = lsw
 	cp = cherry-pick
 	dc = diff --cached
 	dw = diff --word-diff
