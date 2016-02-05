@@ -100,6 +100,7 @@ brew bash-completion
 brew bash-git-prompt
 brew bison
 brew boost
+brew caddy
 brew cmake
 brew composer
 brew ctags
