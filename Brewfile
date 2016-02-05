@@ -1,8 +1,8 @@
 
 # tap repositories and their packages
 
-## caskroom/cask
 tap caskroom/cask
+brew brew-cask
 cask anki
 cask appcleaner
 cask atom
@@ -47,11 +47,11 @@ cask sourcetree
 cask sqlitebrowser
 cask terraform
 cask vagrant
+cask vault
 cask virtualbox
 cask vlc
 cask xmind
 
-## caskroom/fonts
 tap caskroom/fonts
 cask font-myrica
 cask font-myricam
@@ -59,18 +59,14 @@ cask font-ricty-diminished
 cask font-source-han-code-jp
 cask font-source-han-sans
 
-## homebrew/completions
 tap homebrew/completions
 brew brew-cask-completion
-brew gem-completion
 brew packer-completion
 brew vagrant-completion
 brew wpcli-completion
 
-## homebrew/dupes
 tap homebrew/dupes
 
-## homebrew/php
 tap homebrew/php
 brew behat
 brew codeception
@@ -89,11 +85,9 @@ brew phpmd
 brew phpmetrics
 brew phpunit
 
-## rcmdnk/file
 tap rcmdnk/file
 brew brew-file
 
-## tldr-pages/tldr
 tap tldr-pages/tldr
 
 # Other Homebrew packages
@@ -106,6 +100,7 @@ brew bash-completion
 brew bash-git-prompt
 brew bison
 brew boost
+brew caddy
 brew cmake
 brew composer
 brew ctags
@@ -120,6 +115,7 @@ brew git-flow
 brew glog
 brew gmp
 brew graphviz
+brew highlight
 brew httpie
 brew hubflow
 brew icu4c
@@ -134,7 +130,9 @@ brew libtiff
 brew libtool
 brew libxml2
 brew libyaml
+brew libzip
 brew little-cms2
+brew lua
 brew lz4
 brew mecab
 brew mecab-ipadic
@@ -177,6 +175,9 @@ brew vim
 brew wget
 brew xz
 brew zlib
+
+# gem packages
+gem completion
 
 # App Store applications
 appstore Dash
