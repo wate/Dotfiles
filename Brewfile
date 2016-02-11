@@ -30,7 +30,6 @@ cask macwinzipper
 cask manuscripts
 cask mysqlworkbench
 cask netbeans-php
-cask octohub
 cask otto
 cask owasp-zap
 cask p4merge
@@ -165,7 +164,6 @@ brew subversion
 brew the_silver_searcher
 brew thrift
 brew tig
-brew tldr
 brew trash
 brew tree
 brew unar
