@@ -70,14 +70,10 @@ tap homebrew/php
 brew behat
 brew codeception
 brew pdepend
-brew php56-imagick
-brew php56-intl
-brew php56-opcache
-brew php56-phalcon
-brew php56-twig
-brew php56-xdebug
-brew php56-yaml
-brew php56
+brew php70-imagick
+brew php70-opcache
+brew php70-xdebug
+brew php70
 brew phpcpd
 brew phploc
 brew phpmd
@@ -88,6 +84,9 @@ tap rcmdnk/file
 brew brew-file
 
 tap tldr-pages/tldr
+
+tap argon/mas
+brew mas
 
 # Other Homebrew packages
 brew ack
@@ -145,7 +144,8 @@ brew pandoc
 brew pcre
 brew php-code-sniffer
 brew php-cs-fixer
-brew php56-mecab
+brew php70-mecab
+brew php70-mongodb
 brew phpdocumentor
 brew phpunit-skeleton-generator
 brew pkg-config
@@ -178,13 +178,13 @@ brew zlib
 gem completion
 
 # App Store applications
-appstore Dash
-appstore Go2Shell
-appstore Growl
-appstore Keynote
-appstore Simplenote
-appstore Tweetbot
-appstore Xcode
+appstore 449589707 Dash
+appstore 445770608 Go2Shell
+appstore 467939042 Growl
+appstore 409183694 Keynote
+appstore 692867256 Simplenote
+appstore 557168941 Tweetbot
+appstore 497799835 Xcode
 
 # Other commands
 but not corresponding casks were found.
