@@ -185,6 +185,3 @@ appstore 409183694 Keynote
 appstore 692867256 Simplenote
 appstore 557168941 Tweetbot
 appstore 497799835 Xcode
-
-# Other commands
-but not corresponding casks were found.
