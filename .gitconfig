@@ -1,16 +1,18 @@
 [user]
 	name = wate
 	email = pc.poisoning@gmail.com
+[core]
+	editor = vim
+	autocrlf = input
+	quotepath = false
+	excludesfile = ~/.gitignore
+	attributesfile = ~/.gitattributes
 [fetch]
 	prune = true
 [push]
 	default = current
 [pull]
 	rebase = true
-[core]
-	excludesfile = /Users/wate/.gitignore_global
-	editor = vim
-	autocrlf = input
 [alias]
 	au = add --update
 	aa = add --all
