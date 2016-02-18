@@ -25,7 +25,6 @@
 	lsw = log --pretty=format:'%Cgreen(%ci) %Cblue<%an>%Creset %Cred%h%Creset %s' --grep
 	lsf = log --pretty=format:'%Cgreen(%ci) %Cblue<%an>%Creset %Cred%h%Creset %s' --follow
 	lsfp = log --pretty=format:'%Cgreen(%ci) %Cblue<%an>%Creset %Cred%h%Creset %s' --follow --patch
-	ls = lsw
 	cp = cherry-pick
 	dc = diff --cached
 	dw = diff --word-diff
