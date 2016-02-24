@@ -57,7 +57,3 @@ fi
 if [ -f "${BREW_PREFIX}"/etc/bash_completion.d/pandoc ]; then
     source "${BREW_PREFIX}"/etc/bash_completion.d/pandoc
 fi
-# aws cli
-if command_exists aws ; then
-    complete -C aws_completer aws
-fi

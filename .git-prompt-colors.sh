@@ -32,8 +32,8 @@ override_git_prompt_colors() {
   ## GIT_PROMPT_COMMAND_OK="${Green}✔-_LAST_COMMAND_STATE_ "    # indicator if the last command returned with an exit code of 0
   ## GIT_PROMPT_COMMAND_FAIL="${Red}✘-_LAST_COMMAND_STATE_ "    # indicator if the last command returned with an exit code of other than 0
 
-  # GIT_PROMPT_COMMAND_OK="${Green}✔"    # indicator if the last command returned with an exit code of 0
-  # GIT_PROMPT_COMMAND_FAIL="${Red}✘-_LAST_COMMAND_STATE_"    # indicator if the last command returned with an exit code of other than 0
+  GIT_PROMPT_COMMAND_OK="${Green}[${Time12a}]${ResetColor}"    # indicator if the last command returned with an exit code of 0
+  GIT_PROMPT_COMMAND_FAIL="${Red}[${Time12a}]${ResetColor}"    # indicator if the last command returned with an exit code of other than 0
 
   ## template for displaying the current virtual environment
   ## use the placeholder _VIRTUALENV_ will be replaced with
@@ -42,9 +42,9 @@ override_git_prompt_colors() {
 
   ## _LAST_COMMAND_INDICATOR_ will be replaced by the appropriate GIT_PROMPT_COMMAND_OK OR GIT_PROMPT_COMMAND_FAIL
   if [ -z "$SSH_TTY" ]; then
-    GIT_PROMPT_START_USER="${BoldGreen}[${Time12a}]${ResetColor} ${BoldBlue}${PathShort}${ResetColor}"
+    GIT_PROMPT_START_USER="_LAST_COMMAND_INDICATOR_ ${BoldBlue}${PathShort}${ResetColor}"
   else
-    GIT_PROMPT_START_USER="${BoldGreen}[${Time12a}]${ResetColor} ${Yellow}\u${ResetColor}@${Red}\h${ResetColor} ${BoldBlue}${PathShort}${ResetColor}"
+    GIT_PROMPT_START_USER="_LAST_COMMAND_INDICATOR_ ${BoldGreen}[${Time12a}]${ResetColor} ${Yellow}\u${ResetColor}@${Red}\h${ResetColor} ${BoldBlue}${PathShort}${ResetColor}"
   fi
 
   # GIT_PROMPT_START_ROOT="_LAST_COMMAND_INDICATOR_ ${GIT_PROMPT_START_USER}"
