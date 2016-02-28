@@ -1,12 +1,16 @@
 
 # tap repositories and their packages
 
+tap argon/mas
+brew mas
+
 tap caskroom/cask
 brew brew-cask
 cask anki
 cask appcleaner
 cask atom
 cask betterzipql
+cask bitbar
 cask box-sync
 cask brackets
 cask ccleaner
@@ -16,6 +20,7 @@ cask cyberduck
 cask doxygen
 cask exa
 cask gimp
+cask gitkraken
 cask google-chrome
 cask hipchat
 cask iterm2
@@ -28,6 +33,7 @@ cask libreoffice
 cask licecap
 cask macwinzipper
 cask manuscripts
+cask markright
 cask mysqlworkbench
 cask netbeans-php
 cask otto
@@ -85,20 +91,17 @@ brew brew-file
 
 tap tldr-pages/tldr
 
-tap argon/mas
-brew mas
-
 # Other Homebrew packages
 brew ack
 brew android-sdk
 brew ansible
 brew autoconf
-brew awscli
 brew bash-completion
 brew bash-git-prompt
 brew bison
 brew boost
 brew caddy
+brew cheat
 brew cmake
 brew composer
 brew ctags
@@ -110,6 +113,7 @@ brew gflags
 brew ghostscript
 brew git
 brew git-flow
+brew git-lfs
 brew glog
 brew gmp
 brew graphviz
