@@ -44,7 +44,7 @@ override_git_prompt_colors() {
   if [ -z "$SSH_TTY" ]; then
     GIT_PROMPT_START_USER="_LAST_COMMAND_INDICATOR_ ${BoldBlue}${PathShort}${ResetColor}"
   else
-    GIT_PROMPT_START_USER="_LAST_COMMAND_INDICATOR_ ${BoldGreen}[${Time12a}]${ResetColor} ${Yellow}\u${ResetColor}@${Red}\h${ResetColor} ${BoldBlue}${PathShort}${ResetColor}"
+    GIT_PROMPT_START_USER="_LAST_COMMAND_INDICATOR_ ${Yellow}\u${ResetColor}@${Red}\h${ResetColor} ${BoldBlue}${PathShort}${ResetColor}"
   fi
 
   # GIT_PROMPT_START_ROOT="_LAST_COMMAND_INDICATOR_ ${GIT_PROMPT_START_USER}"
