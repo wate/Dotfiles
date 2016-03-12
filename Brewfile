@@ -66,6 +66,7 @@ cask font-source-han-sans
 
 tap homebrew/completions
 brew brew-cask-completion
+brew composer-completion
 brew packer-completion
 brew vagrant-completion
 brew wpcli-completion
@@ -78,7 +79,6 @@ brew codeception
 brew pdepend
 brew php70-imagick
 brew php70-opcache
-brew php70-xdebug
 brew php70
 brew phpcpd
 brew phploc
@@ -149,7 +149,6 @@ brew pcre
 brew php-code-sniffer
 brew php-cs-fixer
 brew php70-mecab
-brew php70-mongodb
 brew phpdocumentor
 brew phpunit-skeleton-generator
 brew pkg-config
@@ -185,8 +184,10 @@ gem completion
 appstore 449589707 Dash
 appstore 445770608 Go2Shell
 appstore 467939042 Growl
+appstore 1018109117 Install OS X El Capitan
 appstore 409183694 Keynote
 appstore 692867256 Simplenote
+appstore 803453959 Slack
 appstore 557168941 Tweetbot
 appstore 497799835 Xcode
 
