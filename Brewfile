@@ -79,6 +79,8 @@ brew codeception
 brew pdepend
 brew php70-imagick
 brew php70-opcache
+brew php70-xdebug
+brew php70-yaml
 brew php70
 brew phpcpd
 brew phploc
@@ -96,11 +98,12 @@ brew ack
 brew android-sdk
 brew ansible
 brew autoconf
+brew aws-shell
+brew awscli
 brew bash-completion
 brew bash-git-prompt
 brew bison
 brew boost
-brew caddy
 brew cheat
 brew cmake
 brew composer
@@ -184,7 +187,6 @@ gem completion
 appstore 449589707 Dash
 appstore 445770608 Go2Shell
 appstore 467939042 Growl
-appstore 1018109117 Install OS X El Capitan
 appstore 409183694 Keynote
 appstore 692867256 Simplenote
 appstore 803453959 Slack
