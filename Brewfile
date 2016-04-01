@@ -53,6 +53,7 @@ cask sqlitebrowser
 cask terraform
 cask vagrant
 cask vault
+cask virtualbox-extension-pack
 cask virtualbox
 cask vlc
 cask xmind
