@@ -1,6 +1,7 @@
 alias ls='exa'
 alias ll='exa -l --git'
 alias la='exa -la --git'
+alias php='php -dzend_extension="/usr/local/opt/php70-xdebug/xdebug.so"'
 
 function command_exists { command -v "$1" > /dev/null; }
 # gitignore.io
