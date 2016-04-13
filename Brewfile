@@ -12,7 +12,6 @@ cask atom
 cask betterzipql
 cask bitbar
 cask box-sync
-cask brackets
 cask ccleaner
 cask clipy
 cask coteditor
@@ -31,7 +30,6 @@ cask launchy
 cask libreoffice
 cask licecap
 cask macwinzipper
-cask manuscripts
 cask mysqlworkbench
 cask netbeans-php
 cask otto
