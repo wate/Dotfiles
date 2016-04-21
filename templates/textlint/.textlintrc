@@ -20,4 +20,3 @@ rules:
   common-misspellings: true
   ja-yahoo-kousei:
     appID: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-  max-appearence-count-of-words: true
