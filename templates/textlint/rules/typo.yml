@@ -1,8 +1,14 @@
+# 誤植
 ---
-# typo
 version: 1
 rules:
   - expected: する
     pattern:  刷る
   - expected: の
     pattern:  のの
+  - expected: を
+    pattern:  をを
+  - expected: に
+    pattern:  にに
+  - expected: 商品
+    pattern: (諸品|書品)

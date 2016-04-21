@@ -1,7 +1,7 @@
 ---
-  # 開き
 version: 1
 rules:
+  # 開き
   - expected: いえ
     pattern:  言え
   - expected: さまざま
@@ -23,7 +23,7 @@ rules:
   - expected: ただ
     pattern:  只
   - expected: など
-    pattern:  等
+    pattern:  (?!同)等
   - expected: ならびに
     pattern:  並びに
   - expected: そば
@@ -38,31 +38,24 @@ rules:
     pattern:  迄
   - expected: もっとも
     pattern:  尤も
-  # 良い のまま開いてない場合も結構ある
   - expected: よい
     pattern:  良い
   - expected: もつ
     pattern:  持つ
-  - expected: とおり
-    pattern:  通り
   - expected: 他の
     pattern:  ほかの
   - expected: すでに
     pattern:  既に
   - expected: 分かる
     pattern:  わかる
-  - expected: すべて
-    pattern:  全て
   - expected: たとえば
     pattern:  例えば
   - expected: $1中
     pattern:  /(その)なか/
   - expected: きれい
     pattern:  綺麗
-  - expected: こと
-    pattern:  /事(?!情|項|件|前|後|例)/
   - expected: $1とき
-    pattern:  /(の)時(?!点|代|項|実|間|刻)/
+    pattern:  /(の)時(?!点|代|項|実|間)/
     specs:
       - from: その時
         to:   そのとき
@@ -85,15 +78,6 @@ rules:
     pattern:  従って
   - expected: $1ように
     pattern:  /(の)様に/
-  - expected: 次$1
-    pattern:  /以下(の|に)/
-    specs:
-      - from: 以下の
-        to:   次の
-      - from: 以下に
-        to:   次に
-      - from: 次回
-        to:   次回
   - expected: かかわらず
     pattern:  関わらず
   - expected: なる

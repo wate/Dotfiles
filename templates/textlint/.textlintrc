@@ -1,24 +1,23 @@
 ---
 rules:
-  no-todo: true
+  prh:
+    rulePaths:
+      - prh.yml
   max-ten:
     max: 3
   spellcheck-tech-word: true
   no-mix-dearu-desumasu: true
-  no-start-duplicated-conjunction:
-    interval: 2
-  prh:
-    rulePaths:
-      - prh.yml
-  max-number-of-lines:
-    max: 300
   sentence-length:
-    max: 100
-  no-doubled-joshi:
-    min_interval: 4
-    strict: false
+    max: 140
+  no-start-duplicated-conjunction:
+    interval: 4
+  no-doubled-conjunctive-particle-ga: true
+  no-double-negative-ja: true
+  no-doubled-joshi: false
   no-dropping-the-ra: true
-  # ja-yahoo-kousei:
-  #   ignores: {
-  #       "用字": ["彼方"]
-  #     }
+  web-plus-db: true
+  max-appearence-count-of-words: true
+  common-misspellings: true
+  ja-yahoo-kousei:
+    appID: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+  max-appearence-count-of-words: true
