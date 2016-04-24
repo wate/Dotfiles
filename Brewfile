@@ -5,7 +5,6 @@ tap argon/mas
 brew mas
 
 tap caskroom/cask
-brew brew-cask
 cask anki
 cask appcleaner
 cask atom
@@ -32,10 +31,8 @@ cask licecap
 cask macwinzipper
 cask mysqlworkbench
 cask netbeans-php
-cask otto
 cask owasp-zap
 cask p4merge
-cask packer
 cask pingendo
 cask qlcolorcode
 cask qlmarkdown
@@ -43,13 +40,10 @@ cask qlprettypatch
 cask qlstephen
 cask quicklook-csv
 cask quicklook-json
-cask seil
 cask sequel-pro
 cask sourcetree
 cask sqlitebrowser
-cask terraform
 cask vagrant
-cask vault
 cask virtualbox-extension-pack
 cask virtualbox
 cask vlc
@@ -119,6 +113,7 @@ brew nkf
 brew nodebrew
 brew oniguruma
 brew openssl
+brew otto
 brew p7zip
 brew pandoc
 brew pcre
@@ -134,11 +129,13 @@ brew snappy
 brew sqlite
 brew ssh-copy-id
 brew subversion
+brew terraform
 brew thrift
 brew tig
 brew trash
 brew tree
 brew unixodbc
+brew vault
 brew vim
 brew wget
 brew xz
@@ -158,7 +155,6 @@ brew phpcpd
 brew phploc
 brew phpmd
 brew phpmetrics
-brew phpunit
 
 tap rcmdnk/file
 brew brew-file
@@ -169,11 +165,11 @@ tap tldr-pages/tldr
 brew composer
 brew jmeter
 brew mecab
+brew packer
 brew php-cs-fixer
 brew php70-mecab
 brew phpdocumentor
 brew phpunit-skeleton-generator
-brew rocksdb
 brew the_silver_searcher
 brew unar
 brew unrar
