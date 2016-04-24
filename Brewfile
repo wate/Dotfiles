@@ -5,7 +5,6 @@ tap argon/mas
 brew mas
 
 tap caskroom/cask
-brew brew-cask
 cask anki
 cask appcleaner
 cask atom
@@ -134,6 +133,7 @@ brew snappy
 brew sqlite
 brew ssh-copy-id
 brew subversion
+brew terraform
 brew thrift
 brew tig
 brew trash
@@ -158,7 +158,6 @@ brew phpcpd
 brew phploc
 brew phpmd
 brew phpmetrics
-brew phpunit
 
 tap rcmdnk/file
 brew brew-file
@@ -169,11 +168,11 @@ tap tldr-pages/tldr
 brew composer
 brew jmeter
 brew mecab
+brew packer
 brew php-cs-fixer
 brew php70-mecab
 brew phpdocumentor
 brew phpunit-skeleton-generator
-brew rocksdb
 brew the_silver_searcher
 brew unar
 brew unrar
