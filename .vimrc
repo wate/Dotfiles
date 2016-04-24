@@ -59,51 +59,47 @@ syntax on
 " 検索語句のハイライト
 set hlsearch
 
-augroup highlightIdegraphicSpace
+" reset augroup
+augroup MyAutoCmd
   autocmd!
-  autocmd Colorscheme * highlight IdeographicSpace term=underline ctermbg=Green guibg=Green
-  autocmd VimEnter,WinEnter * match IdeographicSpace /　/
 augroup END
 
-"NeoBundle Scripts-----------------------------
-if has('vim_starting')
-	if &compatible
-		set nocompatible               " Be iMproved
-	endif
-
-	" Required:
-	set runtimepath+=~/.vim/bundle/neobundle.vim/
+" Start dein Scripts-----------------------------
+if &compatible
+  set nocompatible               " Be iMproved
 endif
 
-" Required:
-call neobundle#begin(expand('~/.vim/bundle'))
+" プラグインが実際にインストールされるディレクトリ
+let s:dein_dir = expand('~/.vim/dein')
+" dein.vim 本体
+let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
 
-" Let NeoBundle manage NeoBundle
-" Required:
-NeoBundleFetch 'Shougo/neobundle.vim'
+" dein.vim がなければ github から落としてくる
+if &runtimepath !~# '/dein.vim'
+  if !isdirectory(s:dein_repo_dir)
+    execute '!git clone https://github.com/Shougo/dein.vim' s:dein_repo_dir
+  endif
+  execute 'set runtimepath^=' . fnamemodify(s:dein_repo_dir, ':p')
+endif
 
-" Add or remove your Bundles here:
-NeoBundle 'Shougo/neocomplete'
-NeoBundle 'Shougo/neosnippet.vim'
-NeoBundle 'Shougo/neosnippet-snippets'
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'ctrlpvim/ctrlp.vim'
-NeoBundle 'editorconfig/editorconfig-vim'
-NeoBundle 'mileszs/ack.vim'
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'tomasr/molokai'
+" 設定開始
+if dein#load_state(s:dein_dir)
+  call dein#begin(s:dein_dir)
 
-" You can specify revision/branch/tag.
-NeoBundle 'Shougo/vimshell'
+  " プラグインリストを収めた TOML ファイル
+  let s:toml = '~/.dein.toml'
+  let s:lazy_toml = '~/.dein_lazy.toml'
+  call dein#load_toml(s:toml, {'lazy': 0})
+  call dein#load_toml(s:lazy_toml, {'lazy': 1})
 
-" Required:
-call neobundle#end()
+  " 設定終了
+  call dein#end()
+  call dein#save_state()
+endif
 
-" Required:
 filetype plugin indent on
 
-" If there are uninstalled bundles found on startup,
-" this will conveniently prompt you to install them.
-NeoBundleCheck
-
-colorscheme molokai
+if dein#check_install()
+  call dein#install()
+endif
+" End dein Scripts-------------------------
