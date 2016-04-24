@@ -31,10 +31,8 @@ cask licecap
 cask macwinzipper
 cask mysqlworkbench
 cask netbeans-php
-cask otto
 cask owasp-zap
 cask p4merge
-cask packer
 cask pingendo
 cask qlcolorcode
 cask qlmarkdown
@@ -42,13 +40,10 @@ cask qlprettypatch
 cask qlstephen
 cask quicklook-csv
 cask quicklook-json
-cask seil
 cask sequel-pro
 cask sourcetree
 cask sqlitebrowser
-cask terraform
 cask vagrant
-cask vault
 cask virtualbox-extension-pack
 cask virtualbox
 cask vlc
@@ -118,6 +113,7 @@ brew nkf
 brew nodebrew
 brew oniguruma
 brew openssl
+brew otto
 brew p7zip
 brew pandoc
 brew pcre
@@ -139,6 +135,7 @@ brew tig
 brew trash
 brew tree
 brew unixodbc
+brew vault
 brew vim
 brew wget
 brew xz
