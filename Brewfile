@@ -156,6 +156,8 @@ brew phploc
 brew phpmd
 brew phpmetrics
 
+tap homebrew/services
+
 tap rcmdnk/file
 brew brew-file
 
