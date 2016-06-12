@@ -1,7 +1,7 @@
 alias ls='exa'
 alias ll='exa -l --git'
 alias la='exa -la --git'
-alias php='php -dzend_extension="/usr/local/opt/php70-xdebug/xdebug.so"'
+alias php='php -dzend_extension="/usr/local/opt/php56-xdebug/xdebug.so"'
 
 function command_exists { command -v "$1" > /dev/null; }
 # gitignore.io
@@ -36,10 +36,6 @@ fi
 if [ -f "${BREW_PREFIX}"/etc/bash_completion.d/vagrant ]; then
     source "${BREW_PREFIX}"/etc/bash_completion.d/vagrant
 fi
-# WP-CLI
-if [ -f "${BREW_PREFIX}"/etc/bash_completion.d/wp ]; then
-    source "${BREW_PREFIX}"/etc/bash_completion.d/wp
-fi
 # rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 # gem
@@ -61,4 +57,8 @@ fi
 # composer
 if [ -f "${BREW_PREFIX}"/etc/bash_completion.d/composer-completion.sh ]; then
     source "${BREW_PREFIX}"/etc/bash_completion.d/composer-completion.sh
+fi
+# Phalcon Developer Tools
+if [ -f ~/phalcon-devtools/phalcon-completion.bash ]; then
+    source ~/phalcon-devtools/phalcon-completion.bash
 fi
