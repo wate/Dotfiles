@@ -59,9 +59,9 @@ cask font-source-han-sans
 tap homebrew/completions
 brew brew-cask-completion
 brew composer-completion
+brew gem-completion
 brew packer-completion
 brew vagrant-completion
-brew wpcli-completion
 
 tap homebrew/core
 brew ack
@@ -95,6 +95,7 @@ brew hubflow
 brew icu4c
 brew imagemagick
 brew jbig2dec
+brew jmeter
 brew jpeg
 brew jq
 brew libgit2
@@ -108,6 +109,7 @@ brew little-cms2
 brew lua
 brew lz4
 brew mecab-ipadic
+brew mecab
 brew mycli
 brew nkf
 brew nodebrew
@@ -115,6 +117,7 @@ brew oniguruma
 brew openssl
 brew otto
 brew p7zip
+brew packer
 brew pandoc
 brew pcre
 brew pkg-config
@@ -122,6 +125,7 @@ brew pre-commit
 brew q
 brew rbenv
 brew readline
+brew remarshal
 brew rename
 brew ruby-build
 brew shellcheck
@@ -130,50 +134,48 @@ brew sqlite
 brew ssh-copy-id
 brew subversion
 brew terraform
+brew the_silver_searcher
 brew thrift
 brew tig
 brew trash
 brew tree
+brew unar
 brew unixodbc
+brew unrar
 brew vault
 brew vim
 brew wget
 brew xz
 
 tap homebrew/dupes
+brew zlib
 
 tap homebrew/php
 brew behat
 brew codeception
+brew composer
 brew pdepend
-brew php70-imagick
-brew php70-opcache
-brew php70-xdebug
-brew php70-yaml
-brew php70
+brew php-cs-fixer
+brew php56-imagick
+brew php56-mecab
+brew php56-opcache
+brew php56-phalcon
+brew php56-xdebug
+brew php56-yaml
+brew php56
 brew phpcpd
+brew phpdocumentor
 brew phploc
 brew phpmd
 brew phpmetrics
+brew phpunit-skeleton-generator
+
+tap homebrew/services
 
 tap rcmdnk/file
 brew brew-file
 
 tap tldr-pages/tldr
-
-# Other Homebrew packages
-brew composer
-brew jmeter
-brew mecab
-brew packer
-brew php-cs-fixer
-brew php70-mecab
-brew phpdocumentor
-brew phpunit-skeleton-generator
-brew the_silver_searcher
-brew unar
-brew unrar
-brew zlib
 
 # gem packages
 gem completion
