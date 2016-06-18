@@ -179,6 +179,7 @@ tap tldr-pages/tldr
 gem completion
 
 # App Store applications
+appstore 1024640650 CotEditor
 appstore 449589707 Dash
 appstore 445770608 Go2Shell
 appstore 467939042 Growl
