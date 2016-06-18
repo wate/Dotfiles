@@ -13,7 +13,6 @@ cask bitbar
 cask box-sync
 cask ccleaner
 cask clipy
-cask coteditor
 cask cyberduck
 cask exa
 cask gimp
@@ -44,7 +43,6 @@ cask sequel-pro
 cask sourcetree
 cask sqlitebrowser
 cask vagrant
-cask virtualbox-extension-pack
 cask virtualbox
 cask vlc
 cask xmind
