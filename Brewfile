@@ -13,7 +13,6 @@ cask bitbar
 cask box-sync
 cask ccleaner
 cask clipy
-cask coteditor
 cask cyberduck
 cask exa
 cask gimp
@@ -44,7 +43,6 @@ cask sequel-pro
 cask sourcetree
 cask sqlitebrowser
 cask vagrant
-cask virtualbox-extension-pack
 cask virtualbox
 cask vlc
 cask xmind
@@ -80,6 +78,7 @@ brew ctags
 brew curl
 brew editorconfig
 brew freetype
+brew gdbm
 brew gettext
 brew gflags
 brew ghostscript
@@ -100,6 +99,7 @@ brew jpeg
 brew jq
 brew libgit2
 brew libpng
+brew libssh2
 brew libtiff
 brew libtool
 brew libxml2
@@ -120,14 +120,17 @@ brew p7zip
 brew packer
 brew pandoc
 brew pcre
+brew perl
 brew pkg-config
 brew pre-commit
+brew python
 brew q
 brew rbenv
 brew readline
 brew remarshal
 brew rename
 brew ruby-build
+brew ruby
 brew shellcheck
 brew snappy
 brew sqlite
@@ -181,6 +184,7 @@ tap tldr-pages/tldr
 gem completion
 
 # App Store applications
+appstore 1024640650 CotEditor
 appstore 449589707 Dash
 appstore 445770608 Go2Shell
 appstore 467939042 Growl
