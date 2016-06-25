@@ -78,6 +78,7 @@ brew ctags
 brew curl
 brew editorconfig
 brew freetype
+brew gdbm
 brew gettext
 brew gflags
 brew ghostscript
@@ -98,6 +99,7 @@ brew jpeg
 brew jq
 brew libgit2
 brew libpng
+brew libssh2
 brew libtiff
 brew libtool
 brew libxml2
@@ -118,14 +120,17 @@ brew p7zip
 brew packer
 brew pandoc
 brew pcre
+brew perl
 brew pkg-config
 brew pre-commit
+brew python
 brew q
 brew rbenv
 brew readline
 brew remarshal
 brew rename
 brew ruby-build
+brew ruby
 brew shellcheck
 brew snappy
 brew sqlite
