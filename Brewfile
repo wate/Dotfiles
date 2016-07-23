@@ -67,7 +67,6 @@ brew android-sdk
 brew ansible
 brew autoconf
 brew aws-shell
-brew awscli
 brew bash-completion
 brew bash-git-prompt
 brew bison
@@ -124,6 +123,7 @@ brew perl
 brew pkg-config
 brew pre-commit
 brew python
+brew python3
 brew q
 brew rbenv
 brew readline
@@ -159,7 +159,6 @@ brew codeception
 brew composer
 brew pdepend
 brew php-cs-fixer
-brew php56-imagick
 brew php56-mecab
 brew php56-opcache
 brew php56-phalcon
