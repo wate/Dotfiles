@@ -107,6 +107,7 @@ brew libzip
 brew little-cms2
 brew lua
 brew lz4
+brew m-cli
 brew mecab-ipadic
 brew mecab
 brew mycli
@@ -136,7 +137,6 @@ brew snappy
 brew sqlite
 brew ssh-copy-id
 brew subversion
-brew terraform
 brew the_silver_searcher
 brew thrift
 brew tig
@@ -190,6 +190,7 @@ appstore 467939042 Growl
 appstore 409183694 Keynote
 appstore 692867256 Simplenote
 appstore 803453959 Slack
+appstore 1122008420 Table Tool
 appstore 557168941 Tweetbot
 appstore 497799835 Xcode
 
