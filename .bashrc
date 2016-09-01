@@ -61,3 +61,8 @@ fi
 if [ -f ~/phalcon-devtools/phalcon-completion.bash ]; then
     source ~/phalcon-devtools/phalcon-completion.bash
 fi
+# aws
+if [ -f "${BREW_PREFIX}"/etc/bash_completion.d/aws_bash_completer ]; then
+    source "${BREW_PREFIX}"/etc/bash_completion.d/aws_bash_completer
+fi
+
