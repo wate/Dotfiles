@@ -1,6 +1,16 @@
 
 # tap repositories and their packages
 
+tap ==> Auto-updated Homebrew!
+
+tap Updated 1 tap (homebrew/core).
+
+tap ==> Updated Formulae
+
+tap syncthing
+
+tap 
+
 tap argon/mas
 brew mas
 
