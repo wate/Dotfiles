@@ -1,16 +1,6 @@
 
 # tap repositories and their packages
 
-tap ==> Auto-updated Homebrew!
-
-tap Updated 1 tap (homebrew/core).
-
-tap ==> Updated Formulae
-
-tap syncthing
-
-tap 
-
 tap argon/mas
 brew mas
 
@@ -98,6 +88,7 @@ brew git-lfs
 brew glog
 brew gmp
 brew graphviz
+brew gron
 brew highlight
 brew httpie
 brew hubflow
@@ -133,7 +124,6 @@ brew pandoc
 brew pcre
 brew perl
 brew pkg-config
-brew pre-commit
 brew python
 brew python3
 brew q
@@ -148,6 +138,7 @@ brew snappy
 brew sqlite
 brew ssh-copy-id
 brew subversion
+brew terraform
 brew the_silver_searcher
 brew thrift
 brew tig
