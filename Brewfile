@@ -1,6 +1,14 @@
 
 # tap repositories and their packages
 
+tap ==> Auto-updated Homebrew!
+
+tap Updated Homebrew from 7926114 to 5654100.
+
+tap No changes to formulae.
+
+tap 
+
 tap argon/mas
 brew mas
 
@@ -10,6 +18,7 @@ cask appcleaner
 cask atom
 cask betterzipql
 cask bitbar
+cask boostnote
 cask box-sync
 cask ccleaner
 cask clipy
@@ -67,7 +76,6 @@ brew ansible
 brew autoconf
 brew aws-shell
 brew awscli
-brew bash
 brew bash-completion
 brew bash-git-prompt
 brew bison
@@ -83,10 +91,11 @@ brew gettext
 brew gflags
 brew ghostscript
 brew git
-brew git-flow
+brew git-flow-avh
 brew git-lfs
 brew glog
 brew gmp
+brew gnu-getopt
 brew graphviz
 brew gron
 brew highlight
@@ -114,6 +123,7 @@ brew mecab
 brew mecab-ipadic
 brew mycli
 brew nkf
+brew nmap
 brew nodebrew
 brew oniguruma
 brew openssl
@@ -124,6 +134,7 @@ brew pandoc
 brew pcre
 brew perl
 brew pkg-config
+brew pre-commit
 brew python
 brew python3
 brew q
@@ -161,12 +172,10 @@ brew codeception
 brew composer
 brew pdepend
 brew php-cs-fixer
-brew php56
-brew php56-mecab
-brew php56-opcache
-brew php56-phalcon
-brew php56-xdebug
-brew php56-yaml
+brew php70
+brew php70-opcache
+brew php70-phalcon
+brew php70-xdebug
 brew phpcpd
 brew phpdocumentor
 brew phploc
