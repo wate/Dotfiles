@@ -1,19 +1,10 @@
 
 # tap repositories and their packages
 
-tap ==> Auto-updated Homebrew!
-
-tap Updated Homebrew from 7926114 to 5654100.
-
-tap No changes to formulae.
-
-tap 
-
 tap argon/mas
 brew mas
 
 tap caskroom/cask
-cask anki
 cask appcleaner
 cask atom
 cask betterzipql
@@ -96,6 +87,7 @@ brew git-lfs
 brew glog
 brew gmp
 brew gnu-getopt
+brew go
 brew graphviz
 brew gron
 brew highlight
@@ -127,7 +119,6 @@ brew nmap
 brew nodebrew
 brew oniguruma
 brew openssl
-brew otto
 brew p7zip
 brew packer
 brew pandoc
