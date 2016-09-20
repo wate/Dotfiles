@@ -2,6 +2,8 @@ PATH=$HOME/.nodebrew/current/bin:$HOME/.rbenv/bin:$(brew --prefix)/sbin:$PATH:$H
 export PATH
 export ANDROID_HOME=/usr/local/opt/android-sdk
 export JAVA_HOME=`/System/Library/Frameworks/JavaVM.framework/Versions/A/Commands/java_home`
+export GOROOT=/usr/local/opt/go/libexec
+export GOPATH=$HOME/go
 
 if [ -f ~/.bashrc ]; then
     source ~/.bashrc
