@@ -100,6 +100,7 @@ brew jbig2dec
 brew jmeter
 brew jpeg
 brew jq
+brew lego
 brew libgit2
 brew libpng
 brew libssh2
@@ -126,7 +127,6 @@ brew pandoc
 brew pcre
 brew perl
 brew pkg-config
-brew pre-commit
 brew python
 brew python3
 brew q
@@ -185,15 +185,15 @@ tap tldr-pages/tldr
 gem completion
 
 # App Store applications
-appstore 1024640650 CotEditor (3.0.0)
+appstore 1024640650 CotEditor (3.0.3)
 appstore 412448059 ForkLift (2.6.6)
 appstore 445770608 Go2Shell (1.2.2)
 appstore 467939042 Growl (2.1.3)
 appstore 1127487414 Install macOS Sierra (12.0.49)
 appstore 409183694 Keynote (6.6.2)
 appstore 692867256 Simplenote (1.1.7)
-appstore 803453959 Slack (2.0.3)
-appstore 1122008420 Table Tool (1.1.1)
+appstore 803453959 Slack (2.3.1)
+appstore 1122008420 Table Tool (1.1.2)
 appstore 557168941 Tweetbot (2.4.4)
 appstore 497799835 Xcode (8.0)
 
