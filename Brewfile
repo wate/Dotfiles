@@ -48,8 +48,6 @@ cask vlc
 cask xmind
 
 tap caskroom/fonts
-cask font-myrica
-cask font-myricam
 cask font-ricty-diminished
 cask font-source-han-code-jp
 cask font-source-han-sans
@@ -121,12 +119,14 @@ brew nmap
 brew nodebrew
 brew oniguruma
 brew openssl
+brew openssl@1.1
 brew p7zip
 brew packer
 brew pandoc
 brew pcre
 brew perl
 brew pkg-config
+brew plantuml
 brew python
 brew python3
 brew q
@@ -185,7 +185,7 @@ tap tldr-pages/tldr
 gem completion
 
 # App Store applications
-appstore 1024640650 CotEditor (3.0.3)
+appstore 1024640650 CotEditor (3.0.4)
 appstore 412448059 ForkLift (2.6.6)
 appstore 445770608 Go2Shell (1.2.2)
 appstore 467939042 Growl (2.1.3)
@@ -195,7 +195,7 @@ appstore 692867256 Simplenote (1.1.7)
 appstore 803453959 Slack (2.3.1)
 appstore 1122008420 Table Tool (1.1.2)
 appstore 557168941 Tweetbot (2.4.4)
-appstore 497799835 Xcode (8.0)
+appstore 497799835 Xcode (8.1)
 
 # Other commands
 but not corresponding casks were found.
