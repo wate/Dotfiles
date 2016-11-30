@@ -17,7 +17,6 @@ cask cyberduck
 cask dash
 cask exa
 cask gimp
-cask gitkraken
 cask google-chrome
 cask hipchat
 cask iterm2
@@ -51,6 +50,9 @@ tap caskroom/fonts
 cask font-ricty-diminished
 cask font-source-han-code-jp
 cask font-source-han-sans
+
+tap git-time-metric/gtm
+brew gtm
 
 tap homebrew/completions
 brew brew-cask-completion
@@ -129,7 +131,6 @@ brew pkg-config
 brew plantuml
 brew python
 brew python3
-brew q
 brew rbenv
 brew readline
 brew remarshal
@@ -140,7 +141,6 @@ brew shellcheck
 brew snappy
 brew sqlite
 brew ssh-copy-id
-brew subversion
 brew terraform
 brew the_silver_searcher
 brew thrift
@@ -166,7 +166,6 @@ brew php-cs-fixer
 brew php70
 brew php70-opcache
 brew php70-phalcon
-brew php70-xdebug
 brew phpcpd
 brew phpdocumentor
 brew phploc
@@ -185,14 +184,14 @@ tap tldr-pages/tldr
 gem completion
 
 # App Store applications
-appstore 1024640650 CotEditor (3.0.4)
+appstore 1024640650 CotEditor (3.1.1)
 appstore 412448059 ForkLift (2.6.6)
 appstore 445770608 Go2Shell (1.2.2)
 appstore 467939042 Growl (2.1.3)
 appstore 1127487414 Install macOS Sierra (12.0.49)
 appstore 409183694 Keynote (6.6.2)
 appstore 692867256 Simplenote (1.1.7)
-appstore 803453959 Slack (2.3.1)
+appstore 803453959 Slack (2.3.2)
 appstore 1122008420 Table Tool (1.1.2)
 appstore 557168941 Tweetbot (2.4.4)
 appstore 497799835 Xcode (8.1)
