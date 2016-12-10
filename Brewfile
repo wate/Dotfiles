@@ -139,6 +139,7 @@ brew remarshal
 brew rename
 brew ruby
 brew ruby-build
+brew s3cmd
 brew shellcheck
 brew snappy
 brew sqlite
