@@ -1,9 +1,6 @@
 
 # tap repositories and their packages
 
-tap argon/mas
-brew mas
-
 tap caskroom/cask
 cask appcleaner
 cask atom
@@ -114,6 +111,7 @@ brew little-cms2
 brew lua
 brew lz4
 brew m-cli
+brew mas
 brew mecab
 brew mecab-ipadic
 brew mycli
@@ -184,13 +182,11 @@ tap homebrew/services
 tap rcmdnk/file
 brew brew-file
 
-tap tldr-pages/tldr
-
 # gem packages
 gem completion
 
 # App Store applications
-appstore 1024640650 CotEditor (3.1.1)
+appstore 1024640650 CotEditor (3.1.2)
 appstore 412448059 ForkLift (2.6.6)
 appstore 445770608 Go2Shell (1.2.2)
 appstore 467939042 Growl (2.1.3)
