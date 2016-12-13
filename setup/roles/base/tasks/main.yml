@@ -1,0 +1,25 @@
+---
+- name: add brew tap
+  homebrew_tap:
+    name: "{{ item }}"
+  with_items: "{{ base_taps }}"
+- name: install/update brew packages
+  homebrew:
+    name: "{{ item }}"
+    state: latest
+  with_items: "{{ base_core_packages }}"
+- name: install brew cask packages
+  homebrew_cask:
+    name: "{{ item }}"
+    update_homebrew: yes
+  with_items: "{{ base_cask_packages }}"
+- shell: cd ~/ && pwd
+  register: result
+  changed_when: false
+- set_fact:
+    home_dir: "{{ result.stdout }}"
+- name: create secret environment variables define file
+  file:
+    path: "{{ home_dir }}/.secret"
+    state: touch
+    mode: 0600
