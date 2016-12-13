@@ -1,6 +1,0 @@
-version: 1
-imports:
-  - rules/typo.yml
-  - rules/terms_consistently.yml
-  - rules/open.yml
-rules:

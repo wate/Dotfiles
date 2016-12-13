@@ -1,0 +1,128 @@
+---
+version: 1
+rules:
+  # 開く漢字
+  - expected: あまりに
+    pattern: 余り
+  - expected: あらかじめ
+    pattern: 予め
+  - expected: あらためて
+    pattern: 改めて
+  - expected: いかに
+    pattern: 如何に
+  - expected: いずれ
+    pattern: 何れ
+  - expected: いたって
+    pattern: 至って
+  - expected: いっそう
+    pattern: 一層
+  - expected: いったん
+    pattern: 一旦
+  - expected: いまだ
+    pattern: 未だ
+  - expected: おおむね
+    pattern: 概ね
+  - expected: おのおの
+    pattern: 各々
+  - expected: きわめて
+    pattern: 極めて
+  - expected: さらに
+    pattern: 更に
+  - expected: じかに
+    pattern: 直に
+  - expected: しだいに
+    pattern: 次第に
+  - expected: すぐに
+    pattern: 直ぐに
+  - expected: すでに
+    pattern: 既に
+  - expected: すべて
+    pattern: 全て
+  - expected: たいへん
+    pattern:  大変
+  - expected: たびたび
+    pattern: 度々
+  - expected: ついに
+    pattern: 遂に
+  - expected: ともに
+    pattern: 共に
+  - expected: なぜ
+    pattern: 何故
+  - expected: なんら
+    patterns: 何(等|ら)
+  - expected: はたして
+    pattern:  果たして
+  - expected: ほとんど
+    pattern: 殆ど
+  - expected: まず
+    pattern: 先ず
+  - expected: まだ
+    pattern: 未だ
+  - expected: まったく
+    pattern: 全く
+  - expected: もっとも
+    pattern: 最も
+  - expected: わずか
+    pattern: 僅か
+  - expected: とくに
+    pattern: 特に
+  - expected: たとえば
+    pattern: 例えば
+  - expected: あるいは
+    pattern: 或いは
+  - expected: あわせて
+    pattern: 併せて
+  - expected: および
+    pattern: 及び
+  - expected: かつ
+    pattern: 且つ
+  - expected: したがって
+    pattern: 従って
+  - expected: ただし
+    pattern: 但し
+  - expected: なお
+    pattern: 尚
+  - expected: ならびに
+    pattern: 並びに
+  - expected: また$1
+    pattern: 又／又は
+  - expected: もしくは
+    pattern: 若しくは
+  - expected: ゆえに
+    pattern: 故に
+  - expected: よって
+    pattern: (因|依|拠)って
+  - expected: あきらか
+    pattern: 明らか
+  - expected: あたり
+    pattern: 当たり
+  - expected: あらた
+    pattern: 新た
+  - expected: おもな
+    pattern: 主な
+  - expected: かかわる
+    pattern: 関わる
+  - expected: ヶ所
+    pattern: (箇|か)所
+  - expected: じゅうぶん
+    pattern: 十分
+  - expected: するさい
+    pattern: する際
+  - expected: すくない
+    pattern: 少ない
+  - expected: にそって
+    pattern: に沿って
+  - expected: たがいに
+    pattern: 互いに
+  - expected: ついで
+    pattern: 次いで
+  - expected: つづき
+    pattern: 続き
+  - expected: のなかで
+    pattern: の中で
+  - expected: はじめに
+    pattern: 初めに
+  - expected: はじめる
+    pattern: 始める
+  - expected: もとに
+    pattern: 基に
