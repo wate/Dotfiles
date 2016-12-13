@@ -63,7 +63,6 @@ brew packer-completion
 brew vagrant-completion
 
 tap homebrew/core
-brew ack
 brew android-sdk
 brew ansible
 brew autoconf
