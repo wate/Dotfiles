@@ -37,7 +37,7 @@
   unstage = reset HEAD --
   ignore = "!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi"
   assume = update-index --assume-unchanged
+  assumed = !git ls-files -v | grep "^[[:lower:]]"
   unassume = update-index --no-assume-unchanged
-  assumed = !git ls-files -v | grep ^h | cut -c 3-
   delete-merged-remote-branches = !git branch -a --merged | grep -vE \"master|develop\" | sed -e \"s% *remotes/origin/%%\" | xargs -I% git push origin :%
   delete-merged-branches = !git branch --merged | grep -vE \"master|develop\"  | xargs -I % git branch -d %
