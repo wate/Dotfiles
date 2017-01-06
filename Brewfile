@@ -30,6 +30,7 @@ cask mysqlworkbench
 cask netbeans-php
 cask owasp-zap
 cask p4merge
+cask postman
 cask qlcolorcode
 cask qlmarkdown
 cask qlprettypatch
@@ -48,6 +49,9 @@ tap caskroom/fonts
 cask font-ricty-diminished
 cask font-source-han-code-jp
 cask font-source-han-sans
+
+tap cloudfoundry/tap
+brew cf-cli
 
 tap git-time-metric/gtm
 brew gtm
@@ -75,7 +79,9 @@ brew cmake
 brew ctags
 brew curl
 brew editorconfig
+brew fontconfig
 brew freetype
+brew gd
 brew gdbm
 brew gettext
 brew gflags
@@ -155,6 +161,7 @@ brew unixodbc
 brew unrar
 brew vault
 brew vim
+brew webp
 brew wget
 brew xz
 
@@ -165,6 +172,7 @@ tap homebrew/php
 brew codeception
 brew composer
 brew pdepend
+brew phing
 brew php-cs-fixer
 brew php71
 brew php71-mecab
@@ -172,6 +180,7 @@ brew php71-opcache
 brew php71-yaml
 brew phpcpd
 brew phpdocumentor
+brew phpdox
 brew phploc
 brew phpmd
 brew phpmetrics
@@ -192,10 +201,10 @@ appstore 445770608 Go2Shell (1.2.2)
 appstore 467939042 Growl (2.1.3)
 appstore 409183694 Keynote (6.6.2)
 appstore 692867256 Simplenote (1.1.7)
-appstore 803453959 Slack (2.3.3)
+appstore 803453959 Slack (2.3.4)
 appstore 1122008420 Table Tool (1.1.2)
 appstore 557168941 Tweetbot (2.4.5)
-appstore 497799835 Xcode (8.1)
+appstore 497799835 Xcode (8.2.1)
 
 # Other commands
 but not corresponding casks were found.
