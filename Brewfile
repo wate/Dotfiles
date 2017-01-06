@@ -150,7 +150,6 @@ brew ssh-copy-id
 brew supervisor
 brew terraform
 brew terraform-inventory
-brew terraform-provisioner-ansible
 brew the_silver_searcher
 brew thrift
 brew tig
