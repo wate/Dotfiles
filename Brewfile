@@ -46,22 +46,15 @@ cask vlc
 cask xmind
 
 tap caskroom/fonts
+cask font-fira-code
 cask font-ricty-diminished
 cask font-source-han-code-jp
 cask font-source-han-sans
-
-tap cloudfoundry/tap
-brew cf-cli
 
 tap git-time-metric/gtm
 brew gtm
 
 tap homebrew/completions
-brew brew-cask-completion
-brew composer-completion
-brew gem-completion
-brew packer-completion
-brew vagrant-completion
 
 tap homebrew/core
 brew android-sdk
@@ -73,11 +66,13 @@ brew bash-completion
 brew bash-git-prompt
 brew bison
 brew boost
+brew brew-cask-completion
 brew caddy
 brew cheat
 brew cmake
 brew ctags
 brew curl
+brew duck
 brew editorconfig
 brew fontconfig
 brew freetype
@@ -114,6 +109,7 @@ brew libxml2
 brew libyaml
 brew libzip
 brew little-cms2
+brew lsyncd
 brew lua
 brew lz4
 brew m-cli
@@ -129,6 +125,7 @@ brew openssl
 brew openssl@1.1
 brew p7zip
 brew packer
+brew packer-completion
 brew pandoc
 brew pcre
 brew perl
@@ -158,6 +155,7 @@ brew tree
 brew unar
 brew unixodbc
 brew unrar
+brew vagrant-completion
 brew vault
 brew vim
 brew webp
@@ -165,6 +163,7 @@ brew wget
 brew xz
 
 tap homebrew/dupes
+brew rsync
 brew zlib
 
 tap homebrew/php
@@ -194,15 +193,17 @@ brew brew-file
 gem completion
 
 # App Store applications
-appstore 1024640650 CotEditor (3.1.2)
+appstore 1024640650 CotEditor (3.1.3)
 appstore 412448059 ForkLift (2.6.6)
 appstore 445770608 Go2Shell (1.2.2)
 appstore 467939042 Growl (2.1.3)
+appstore 1127487414 Install macOS Sierra (12.2.06)
 appstore 409183694 Keynote (6.6.2)
-appstore 692867256 Simplenote (1.1.7)
-appstore 803453959 Slack (2.3.4)
+appstore 692867256 Simplenote (1.1.8)
+appstore 425955336 Skitch (2.8)
+appstore 803453959 Slack (2.4.1)
 appstore 1122008420 Table Tool (1.1.2)
-appstore 557168941 Tweetbot (2.4.5)
+appstore 557168941 Tweetbot (2.4.6)
 appstore 497799835 Xcode (8.2.1)
 
 # Other commands
