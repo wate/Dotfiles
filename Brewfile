@@ -43,6 +43,7 @@ cask sqlitebrowser
 cask vagrant
 cask virtualbox
 cask vlc
+cask wkhtmltopdf
 cask xmind
 
 tap caskroom/fonts
@@ -66,7 +67,6 @@ brew bash-completion
 brew bash-git-prompt
 brew bison
 brew boost
-brew brew-cask-completion
 brew caddy
 brew cheat
 brew cmake
@@ -89,7 +89,6 @@ brew gmp
 brew gnu-getopt
 brew go
 brew graphviz
-brew gron
 brew highlight
 brew httpie
 brew hubflow
@@ -114,8 +113,10 @@ brew lua
 brew lz4
 brew m-cli
 brew mas
+brew mcrypt
 brew mecab
 brew mecab-ipadic
+brew mhash
 brew mycli
 brew nkf
 brew nmap
@@ -131,6 +132,7 @@ brew pcre
 brew perl
 brew pkg-config
 brew plantuml
+brew postgresql
 brew python
 brew python3
 brew rbenv
@@ -147,6 +149,7 @@ brew ssh-copy-id
 brew supervisor
 brew terraform
 brew terraform-inventory
+brew terraform-provisioner-ansible
 brew the_silver_searcher
 brew thrift
 brew tig
@@ -172,10 +175,13 @@ brew composer
 brew pdepend
 brew phing
 brew php-cs-fixer
-brew php71
-brew php71-mecab
-brew php71-opcache
-brew php71-yaml
+brew php70
+brew php70-mcrypt
+brew php70-mecab
+brew php70-opcache
+brew php70-pdo-pgsql
+brew php70-phalcon
+brew php70-yaml
 brew phpcpd
 brew phpdocumentor
 brew phpdox
@@ -189,11 +195,8 @@ tap homebrew/services
 tap rcmdnk/file
 brew brew-file
 
-# gem packages
-gem completion
-
 # App Store applications
-appstore 1024640650 CotEditor (3.1.3)
+appstore 1024640650 CotEditor (3.1.5)
 appstore 412448059 ForkLift (2.6.6)
 appstore 445770608 Go2Shell (1.2.2)
 appstore 467939042 Growl (2.1.3)
@@ -201,7 +204,7 @@ appstore 1127487414 Install macOS Sierra (12.2.06)
 appstore 409183694 Keynote (6.6.2)
 appstore 692867256 Simplenote (1.1.8)
 appstore 425955336 Skitch (2.8)
-appstore 803453959 Slack (2.4.1)
+appstore 803453959 Slack (2.5.1)
 appstore 1122008420 Table Tool (1.1.2)
 appstore 557168941 Tweetbot (2.4.6)
 appstore 497799835 Xcode (8.2.1)
