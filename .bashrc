@@ -15,10 +15,6 @@ BREW_PREFIX=$(brew --prefix)
 if [ -f "${BREW_PREFIX}"/etc/bash_completion.d/brew_bash_completion.sh ]; then
     source "${BREW_PREFIX}"/etc/bash_completion.d/brew_bash_completion.sh
 fi
-# brew-cask
-if [ -f "${BREW_PREFIX}"/etc/bash_completion.d/brew-cask ]; then
-    source "${BREW_PREFIX}"/etc/bash_completion.d/brew-cask
-fi
 # brew-file
 if [ -f "${BREW_PREFIX}"/etc/bash_completion.d/brew-file ]; then
     source "${BREW_PREFIX}"/etc/bash_completion.d/brew-file
@@ -37,9 +33,9 @@ if [ -f "${BREW_PREFIX}"/etc/bash_completion.d/vagrant ]; then
 fi
 # rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-# gem
-if [ -f "${BREW_PREFIX}"/etc/bash_completion.d/gem ]; then
-    source "${BREW_PREFIX}"/etc/bash_completion.d/gem
+# nodebrew
+if [ -f "${BREW_PREFIX}"/etc/bash_completion.d/nodebrew ]; then
+    source "${BREW_PREFIX}"/etc/bash_completion.d/nodebrew
 fi
 # tig
 if [ -f "${BREW_PREFIX}"/etc/bash_completion.d/tig-completion.bash ]; then
@@ -48,10 +44,6 @@ fi
 # packer
 if [ -f "${BREW_PREFIX}"/etc/bash_completion.d/packer ]; then
     source "${BREW_PREFIX}"/etc/bash_completion.d/packer
-fi
-# pandoc
-if [ -f "${BREW_PREFIX}"/etc/bash_completion.d/pandoc ]; then
-    source "${BREW_PREFIX}"/etc/bash_completion.d/pandoc
 fi
 # composer
 if [ -f "${BREW_PREFIX}"/etc/bash_completion.d/composer-completion.sh ]; then
