@@ -132,7 +132,6 @@ brew pcre
 brew perl
 brew pkg-config
 brew plantuml
-brew postgresql
 brew python
 brew python3
 brew rbenv
@@ -179,7 +178,6 @@ brew php70
 brew php70-mcrypt
 brew php70-mecab
 brew php70-opcache
-brew php70-pdo-pgsql
 brew php70-phalcon
 brew php70-yaml
 brew phpcpd
