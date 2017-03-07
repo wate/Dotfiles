@@ -9,52 +9,30 @@ function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 if [ -f "$(brew --prefix bash-git-prompt)/share/gitprompt.sh" ]; then
   source "$(brew --prefix bash-git-prompt)/share/gitprompt.sh"
 fi
-
 BREW_PREFIX=$(brew --prefix)
+
+[ -f "${BREW_PREFIX}"/etc/bash_completion ] && source /usr/local/etc/bash_completion
 # brew
-if [ -f "${BREW_PREFIX}"/etc/bash_completion.d/brew_bash_completion.sh ]; then
-    source "${BREW_PREFIX}"/etc/bash_completion.d/brew_bash_completion.sh
-fi
+[ -f "${BREW_PREFIX}"/etc/bash_completion.d/brew_bash_completion.sh ] && source "${BREW_PREFIX}"/etc/bash_completion.d/brew_bash_completion.sh
 # brew-file
-if [ -f "${BREW_PREFIX}"/etc/bash_completion.d/brew-file ]; then
-    source "${BREW_PREFIX}"/etc/bash_completion.d/brew-file
-fi
+[ -f "${BREW_PREFIX}"/etc/bash_completion.d/brew-file ] && source "${BREW_PREFIX}"/etc/bash_completion.d/brew-file
 # Git
-if [ -f "${BREW_PREFIX}"/etc/bash_completion.d/git-completion.bash ]; then
-    source "${BREW_PREFIX}"/etc/bash_completion.d/git-completion.bash
-fi
+[ -f "${BREW_PREFIX}"/etc/bash_completion.d/git-completion.bash ] && source "${BREW_PREFIX}"/etc/bash_completion.d/git-completion.bash
 # Git Flow
-if [ -f "${BREW_PREFIX}"/etc/bash_completion.d/git-flow-completion.bash ]; then
-    source "${BREW_PREFIX}"/etc/bash_completion.d/git-flow-completion.bash
-fi
+[ -f "${BREW_PREFIX}"/etc/bash_completion.d/git-flow-completion.bash ] && source "${BREW_PREFIX}"/etc/bash_completion.d/git-flow-completion.bash
 # Vagrant
-if [ -f "${BREW_PREFIX}"/etc/bash_completion.d/vagrant ]; then
-    source "${BREW_PREFIX}"/etc/bash_completion.d/vagrant
-fi
+[ -f "${BREW_PREFIX}"/etc/bash_completion.d/vagrant ] && source "${BREW_PREFIX}"/etc/bash_completion.d/vagrant
 # rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 # nodebrew
-if [ -f "${BREW_PREFIX}"/etc/bash_completion.d/nodebrew ]; then
-    source "${BREW_PREFIX}"/etc/bash_completion.d/nodebrew
-fi
+[ -f "${BREW_PREFIX}"/etc/bash_completion.d/nodebrew ] && source "${BREW_PREFIX}"/etc/bash_completion.d/nodebrew
 # tig
-if [ -f "${BREW_PREFIX}"/etc/bash_completion.d/tig-completion.bash ]; then
-    source "${BREW_PREFIX}"/etc/bash_completion.d/tig-completion.bash
-fi
+[ -f "${BREW_PREFIX}"/etc/bash_completion.d/tig-completion.bash ] && source "${BREW_PREFIX}"/etc/bash_completion.d/tig-completion.bash
 # packer
-if [ -f "${BREW_PREFIX}"/etc/bash_completion.d/packer ]; then
-    source "${BREW_PREFIX}"/etc/bash_completion.d/packer
-fi
+[ -f "${BREW_PREFIX}"/etc/bash_completion.d/packer ] && source "${BREW_PREFIX}"/etc/bash_completion.d/packer
 # composer
-if [ -f "${BREW_PREFIX}"/etc/bash_completion.d/composer-completion.sh ]; then
-    source "${BREW_PREFIX}"/etc/bash_completion.d/composer-completion.sh
-fi
+[ -f "${BREW_PREFIX}"/etc/bash_completion.d/composer-completion.sh ] && source "${BREW_PREFIX}"/etc/bash_completion.d/composer-completion.sh
 # Phalcon Developer Tools
-if [ -f ~/phalcon-devtools/phalcon-completion.bash ]; then
-    source ~/phalcon-devtools/phalcon-completion.bash
-fi
+[ -f ~/phalcon-devtools/phalcon-completion.bash ] && source ~/phalcon-devtools/phalcon-completion.bash
 # aws
-if [ -f "${BREW_PREFIX}"/etc/bash_completion.d/aws_bash_completer ]; then
-    source "${BREW_PREFIX}"/etc/bash_completion.d/aws_bash_completer
-fi
-
+[ -f "${BREW_PREFIX}"/etc/bash_completion.d/aws_bash_completer ] && source "${BREW_PREFIX}"/etc/bash_completion.d/aws_bash_completer
