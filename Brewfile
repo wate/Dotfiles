@@ -16,10 +16,11 @@ cask exa
 cask geektool
 cask gimp
 cask google-chrome
+cask google-cloud-sdk
 cask hipchat
 cask iterm2
 cask karabiner
-cask keepassx
+cask keepassxc
 cask keka
 cask keycastr
 cask launchy
@@ -60,6 +61,7 @@ tap homebrew/completions
 tap homebrew/core
 brew android-sdk
 brew ansible
+brew assh
 brew autoconf
 brew aws-shell
 brew awscli
@@ -135,6 +137,7 @@ brew plantuml
 brew python
 brew python3
 brew rbenv
+brew rclone
 brew readline
 brew remarshal
 brew rename
@@ -194,7 +197,7 @@ tap rcmdnk/file
 brew brew-file
 
 # App Store applications
-appstore 1024640650 CotEditor (3.1.5)
+appstore 1024640650 CotEditor (3.1.8)
 appstore 412448059 ForkLift (2.6.6)
 appstore 445770608 Go2Shell (1.2.2)
 appstore 467939042 Growl (2.1.3)
@@ -202,7 +205,7 @@ appstore 1127487414 Install macOS Sierra (12.2.06)
 appstore 409183694 Keynote (6.6.2)
 appstore 692867256 Simplenote (1.1.8)
 appstore 425955336 Skitch (2.8)
-appstore 803453959 Slack (2.5.1)
+appstore 803453959 Slack (2.5.2)
 appstore 1122008420 Table Tool (1.1.2)
 appstore 557168941 Tweetbot (2.4.6)
 appstore 497799835 Xcode (8.2.1)
