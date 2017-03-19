@@ -30,9 +30,15 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 [ -f "${BREW_PREFIX}"/etc/bash_completion.d/tig-completion.bash ] && source "${BREW_PREFIX}"/etc/bash_completion.d/tig-completion.bash
 # packer
 [ -f "${BREW_PREFIX}"/etc/bash_completion.d/packer ] && source "${BREW_PREFIX}"/etc/bash_completion.d/packer
+# rclone
+[ -f "${BREW_PREFIX}"/etc/bash_completion.d/rclone ] && source "${BREW_PREFIX}"/etc/bash_completion.d/rclone
 # composer
 [ -f "${BREW_PREFIX}"/etc/bash_completion.d/composer-completion.sh ] && source "${BREW_PREFIX}"/etc/bash_completion.d/composer-completion.sh
 # Phalcon Developer Tools
 [ -f ~/phalcon-devtools/phalcon-completion.bash ] && source ~/phalcon-devtools/phalcon-completion.bash
-# aws
+# AWS CLI
 [ -f "${BREW_PREFIX}"/etc/bash_completion.d/aws_bash_completer ] && source "${BREW_PREFIX}"/etc/bash_completion.d/aws_bash_completer
+# Google Cloud SDK
+[ -f /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc ] && source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc
+[ -f /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc ] && source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc
+
