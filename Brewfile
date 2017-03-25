@@ -131,6 +131,7 @@ brew packer
 brew packer-completion
 brew pandoc
 brew pcre
+brew peco
 brew perl
 brew pkg-config
 brew plantuml
@@ -192,6 +193,9 @@ brew phpmetrics
 brew phpunit-skeleton-generator
 
 tap homebrew/services
+
+tap knqyf263/pet
+brew pet
 
 tap rcmdnk/file
 brew brew-file
