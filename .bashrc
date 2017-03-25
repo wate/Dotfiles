@@ -1,6 +1,7 @@
 alias ls='exa'
 alias ll='exa -l --git'
 alias la='exa -la --git'
+alias ssh="assh wrapper ssh"
 
 function command_exists { command -v "$1" > /dev/null; }
 # gitignore.io
