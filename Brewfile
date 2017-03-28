@@ -2,7 +2,6 @@
 # tap repositories and their packages
 
 tap caskroom/cask
-cask android-sdk
 cask appcleaner
 cask atom
 cask betterzipql
