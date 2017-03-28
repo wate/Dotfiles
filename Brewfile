@@ -2,6 +2,7 @@
 # tap repositories and their packages
 
 tap caskroom/cask
+cask android-sdk
 cask appcleaner
 cask atom
 cask betterzipql
@@ -53,13 +54,9 @@ cask font-ricty-diminished
 cask font-source-han-code-jp
 cask font-source-han-sans
 
-tap git-time-metric/gtm
-brew gtm
-
 tap homebrew/completions
 
 tap homebrew/core
-brew android-sdk
 brew ansible
 brew assh
 brew autoconf
@@ -199,6 +196,9 @@ brew pet
 
 tap rcmdnk/file
 brew brew-file
+
+tap sacloud/usacloud
+brew usacloud
 
 # App Store applications
 appstore 1024640650 CotEditor (3.1.8)
