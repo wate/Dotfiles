@@ -45,3 +45,4 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 # added by travis gem
 [ -f ~/.travis/travis.sh ] && source ~/.travis/travis.sh
 
+[ -f /usr/local/etc/bash_completion.d/usacloud ] && source /usr/local/etc/bash_completion.d/usacloud
