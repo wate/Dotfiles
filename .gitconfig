@@ -1,6 +1,5 @@
-[user]
-  name = wate
-  email = pc.poisoning@gmail.com
+[include]
+path = ~/.gitconfig.local
 [core]
   editor = vim
   autocrlf = input
@@ -9,32 +8,31 @@
   attributesfile = ~/.gitattributes
 [fetch]
   prune = true
-[push]
-  default = current
 [pull]
   rebase = true
+[push]
+  default = simple
 [alias]
   au = add --update
   aa = add --all
   ap = add --patch
-  ai = add --interactive
   br = branch
   co = checkout
   ci = commit
   ca = commit --amend
   st = status -s
-  sba = "!f() { git subtree add --prefix=$2 $1 master --squash ;}; f"
-  sbu = "!f() { git subtree pull --prefix=$2 $1 master --squash ;}; f"
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue<%an>%Creset' --abbrev-commit --date=relative --all --decorate
   ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
-  lsw = log --pretty=format:'%Cgreen(%ci) %Cblue<%an>%Creset %Cred%h%Creset %s' --grep
-  lsf = log --pretty=format:'%Cgreen(%ci) %Cblue<%an>%Creset %Cred%h%Creset %s' --follow
-  lsfp = log --pretty=format:'%Cgreen(%ci) %Cblue<%an>%Creset %Cred%h%Creset %s' --follow --patch
+  logg = log --stat --decorate=short --pretty=format:'%C(yellow)%h %Cgreen%cr %Cblue%cn%Cred%d %Creset%s %C(cyan)%b'
+  lws = log --pretty=format:'%Cgreen(%ci) %Cblue<%an>%Creset %Cred%h%Creset %s' --grep
+  lfs = log --pretty=format:'%Cgreen(%ci) %Cblue<%an>%Creset %Cred%h%Creset %s' --follow
+  lfsp = log --pretty=format:'%Cgreen(%ci) %Cblue<%an>%Creset %Cred%h%Creset %s' --follow --patch
   cp = cherry-pick
+  df = diff
   dc = diff --cached
   dw = diff --word-diff
-  last = log -1 --stat
-  unstage = reset HEAD --
+  sba = "!f() { git subtree add --prefix=$2 $1 master --squash ;}; f"
+  sbu = "!f() { git subtree pull --prefix=$2 $1 master --squash ;}; f"
   ignore = "!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi"
   assume = update-index --assume-unchanged
   assumed = !git ls-files -v | grep "^[[:lower:]]"

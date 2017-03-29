@@ -44,5 +44,4 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 [ -f /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc ] && source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc
 # added by travis gem
 [ -f ~/.travis/travis.sh ] && source ~/.travis/travis.sh
-
-[ -f /usr/local/etc/bash_completion.d/usacloud ] && source /usr/local/etc/bash_completion.d/usacloud
+[ -f "${BREW_PREFIX}"/etc/bash_completion.d/usacloud ] && source "${BREW_PREFIX}"/etc/bash_completion.d/usacloud
