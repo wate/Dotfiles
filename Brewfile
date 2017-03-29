@@ -196,6 +196,9 @@ brew pet
 tap rcmdnk/file
 brew brew-file
 
+tap sacloud/terraform-provider-sakuracloud
+brew terraform-provider-sakuracloud
+
 tap sacloud/usacloud
 brew usacloud
 
