@@ -23,7 +23,7 @@
   st = status -s
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue<%an>%Creset' --abbrev-commit --date=relative --all --decorate
   ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
-  logg = log --stat --decorate=short --pretty=format:'%C(yellow)%h %Cgreen%cr %Cblue%cn%Cred%d %Creset%s %C(cyan)%b'
+  lgg = log --stat --decorate=short --pretty=format:'%C(yellow)%h %Cgreen%cr %Cblue%cn%Cred%d %Creset%s %C(cyan)%b'
   lws = log --pretty=format:'%Cgreen(%ci) %Cblue<%an>%Creset %Cred%h%Creset %s' --grep
   lfs = log --pretty=format:'%Cgreen(%ci) %Cblue<%an>%Creset %Cred%h%Creset %s' --follow
   lfsp = log --pretty=format:'%Cgreen(%ci) %Cblue<%an>%Creset %Cred%h%Creset %s' --follow --patch
