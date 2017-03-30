@@ -12,7 +12,6 @@ cask ccleaner
 cask clipy
 cask cyberduck
 cask dash
-cask exa
 cask geektool
 cask gimp
 cask google-chrome
@@ -72,6 +71,7 @@ brew ctags
 brew curl
 brew duck
 brew editorconfig
+brew exa
 brew fontconfig
 brew freetype
 brew gd
@@ -196,11 +196,17 @@ brew pet
 tap rcmdnk/file
 brew brew-file
 
+tap sacloud/packer-builder-sakuracloud
+brew packer-builder-sakuracloud
+
 tap sacloud/terraform-provider-sakuracloud
 brew terraform-provider-sakuracloud
 
 tap sacloud/usacloud
 brew usacloud
+
+# Cask applications
+cask exa
 
 # App Store applications
 appstore 1024640650 CotEditor (3.1.8)
