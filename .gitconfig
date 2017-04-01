@@ -7,9 +7,9 @@
   excludesfile = ~/.gitignore
   attributesfile = ~/.gitattributes
 [fetch]
-  prune = true
+  prune = True
 [pull]
-  rebase = true
+  rebase = True
 [push]
   default = simple
 [alias]
@@ -39,3 +39,9 @@
   unassume = update-index --no-assume-unchanged
   delete-merged-remote-branches = !git branch -a --merged | grep -vE \"master|develop\" | sed -e \"s% *remotes/origin/%%\" | xargs -I% git push origin :%
   delete-merged-branches = !git branch --merged | grep -vE \"master|develop\"  | xargs -I % git branch -d %
+[difftool "sourcetree"]
+	cmd = /Applications/p4merge.app/Contents/MacOS/p4merge \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/p4merge.app/Contents/MacOS/p4merge \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+	trustExitCode = true
