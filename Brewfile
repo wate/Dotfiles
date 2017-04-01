@@ -23,6 +23,7 @@ cask keepassxc
 cask keka
 cask keycastr
 cask launchy
+cask lepton
 cask libreoffice
 cask licecap
 cask macwinzipper
@@ -165,6 +166,7 @@ brew wget
 brew xz
 
 tap homebrew/dupes
+brew expect
 brew rsync
 brew zlib
 
@@ -204,9 +206,6 @@ brew terraform-provider-sakuracloud
 
 tap sacloud/usacloud
 brew usacloud
-
-# Cask applications
-cask exa
 
 # App Store applications
 appstore 1024640650 CotEditor (3.1.8)
