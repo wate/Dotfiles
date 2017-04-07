@@ -18,12 +18,12 @@ cask google-chrome
 cask google-cloud-sdk
 cask hipchat
 cask iterm2
+cask java
 cask karabiner
 cask keepassxc
 cask keka
 cask keycastr
 cask launchy
-cask lepton
 cask libreoffice
 cask licecap
 cask macwinzipper
@@ -49,9 +49,10 @@ cask xmind
 
 tap caskroom/fonts
 cask font-fira-code
+cask font-noto-sans-cjk-jp
+cask font-noto-serif-cjk-jp
 cask font-ricty-diminished
 cask font-source-han-code-jp
-cask font-source-han-sans
 
 tap homebrew/completions
 
@@ -73,6 +74,7 @@ brew curl
 brew duck
 brew editorconfig
 brew exa
+brew expect
 brew fontconfig
 brew freetype
 brew gd
@@ -139,6 +141,7 @@ brew rclone
 brew readline
 brew remarshal
 brew rename
+brew rsync
 brew ruby
 brew ruby-build
 brew s3cmd
@@ -164,11 +167,9 @@ brew vim
 brew webp
 brew wget
 brew xz
+brew zlib
 
 tap homebrew/dupes
-brew expect
-brew rsync
-brew zlib
 
 tap homebrew/php
 brew codeception
@@ -214,8 +215,8 @@ appstore 445770608 Go2Shell (1.2.2)
 appstore 467939042 Growl (2.1.3)
 appstore 1127487414 Install macOS Sierra (12.2.06)
 appstore 409183694 Keynote (6.6.2)
+appstore 540348655 Monosnap (3.3.0)
 appstore 692867256 Simplenote (1.1.8)
-appstore 425955336 Skitch (2.8)
 appstore 803453959 Slack (2.5.2)
 appstore 1122008420 Table Tool (1.1.2)
 appstore 557168941 Tweetbot (2.4.6)
