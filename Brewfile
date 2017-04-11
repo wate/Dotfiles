@@ -29,6 +29,7 @@ cask licecap
 cask macwinzipper
 cask mysqlworkbench
 cask netbeans-php
+cask ngrok
 cask owasp-zap
 cask p4merge
 cask postman
@@ -53,8 +54,6 @@ cask font-noto-sans-cjk-jp
 cask font-noto-serif-cjk-jp
 cask font-ricty-diminished
 cask font-source-han-code-jp
-
-tap homebrew/completions
 
 tap homebrew/core
 brew ansible
@@ -152,7 +151,6 @@ brew ssh-copy-id
 brew supervisor
 brew terraform
 brew terraform-inventory
-brew terraform-provisioner-ansible
 brew the_silver_searcher
 brew thrift
 brew tig
