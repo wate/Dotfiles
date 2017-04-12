@@ -65,7 +65,6 @@ brew bash-completion
 brew bash-git-prompt
 brew bison
 brew boost
-brew caddy
 brew cheat
 brew cmake
 brew ctags
