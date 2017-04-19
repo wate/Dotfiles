@@ -33,6 +33,7 @@
   dw = diff --word-diff
   sba = "!f() { git subtree add --prefix=$2 $1 master --squash ;}; f"
   sbu = "!f() { git subtree pull --prefix=$2 $1 master --squash ;}; f"
+  sbp = "!f() { git subtree push --prefix=$2 $1 master --squash ;}; f"
   ignore = "!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi"
   assume = update-index --assume-unchanged
   assumed = !git ls-files -v | grep "^[[:lower:]]"
