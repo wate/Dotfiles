@@ -136,7 +136,6 @@ brew python
 brew python3
 brew rake-completion
 brew rbenv
-brew rclone
 brew readline
 brew remarshal
 brew rename
@@ -217,7 +216,7 @@ appstore 540348655 Monosnap (3.3.0)
 appstore 692867256 Simplenote (1.1.8)
 appstore 803453959 Slack (2.5.2)
 appstore 1122008420 Table Tool (1.1.2)
-appstore 557168941 Tweetbot (2.5)
+appstore 557168941 Tweetbot (2.4.6)
 appstore 497799835 Xcode (8.2.1)
 
 # Other commands
