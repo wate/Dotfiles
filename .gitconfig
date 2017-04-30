@@ -1,10 +1,11 @@
-[include]
-  path = ~/.gitconfig.local
+[user]
+	name = wate
+	email = pc.poisoning@gmail.com
 [core]
   editor = vim
   autocrlf = input
   quotepath = false
-  excludesfile = ~/.gitignore
+	excludesfile = ~/.gitignore
   attributesfile = ~/.gitattributes
 [fetch]
   prune = True
@@ -42,7 +43,7 @@
   delete-merged-branches = !git branch --merged | grep -vE \"master|develop\"  | xargs -I % git branch -d %
 [difftool "sourcetree"]
 	cmd = /Applications/p4merge.app/Contents/MacOS/p4merge \"$LOCAL\" \"$REMOTE\"
-	path = 
+	path =
 [mergetool "sourcetree"]
 	cmd = /Applications/p4merge.app/Contents/MacOS/p4merge \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
 	trustExitCode = true
