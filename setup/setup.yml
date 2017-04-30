@@ -1,5 +1,0 @@
-- hosts: localhost
-  become: false
-  roles:
-    - base
-  tasks:
