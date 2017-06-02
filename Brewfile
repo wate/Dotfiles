@@ -5,17 +5,18 @@ tap caskroom/cask
 cask appcleaner
 cask atom
 cask betterzipql
-cask bitbar
 cask boostnote
 cask box-sync
 cask ccleaner
 cask clipy
 cask cyberduck
 cask dash
+cask dbeaver-community
 cask geektool
 cask gimp
 cask google-chrome
 cask google-cloud-sdk
+cask gravitdesigner
 cask hipchat
 cask iterm2
 cask java
@@ -32,6 +33,7 @@ cask netbeans-php
 cask ngrok
 cask owasp-zap
 cask p4merge
+cask pencil
 cask postman
 cask qlcolorcode
 cask qlmarkdown
@@ -43,6 +45,7 @@ cask sequel-pro
 cask sourcetree
 cask sqlitebrowser
 cask vagrant
+cask virtualbox-extension-pack
 cask virtualbox
 cask vlc
 cask wkhtmltopdf
@@ -57,6 +60,7 @@ cask font-source-han-code-jp
 
 tap homebrew/core
 brew ansible
+brew ansible-lint
 brew assh
 brew autoconf
 brew aws-shell
@@ -66,11 +70,14 @@ brew bash-git-prompt
 brew bison
 brew boost
 brew cheat
+brew clamav
 brew cmake
 brew ctags
 brew curl
 brew duck
 brew editorconfig
+brew elasticsearch
+brew embulk
 brew exa
 brew fontconfig
 brew freetype
@@ -96,6 +103,7 @@ brew jbig2dec
 brew jmeter
 brew jpeg
 brew jq
+brew kibana
 brew lego
 brew libgit2
 brew libpng
@@ -132,6 +140,7 @@ brew perl
 brew pkg-config
 brew plantuml
 brew pwgen
+brew pyenv
 brew python
 brew python3
 brew rake-completion
@@ -147,7 +156,6 @@ brew shellcheck
 brew snappy
 brew sqlite
 brew ssh-copy-id
-brew supervisor
 brew terraform
 brew terraform-inventory
 brew the_silver_searcher
@@ -174,12 +182,10 @@ brew composer
 brew pdepend
 brew phing
 brew php-cs-fixer
-brew php70
-brew php70-mcrypt
-brew php70-mecab
-brew php70-opcache
-brew php70-phalcon
-brew php70-yaml
+brew php71
+brew php71-opcache
+brew php71-phalcon
+brew php71-yaml
 brew phpcpd
 brew phpdocumentor
 brew phpdox
@@ -187,6 +193,7 @@ brew phploc
 brew phpmd
 brew phpmetrics
 brew phpunit-skeleton-generator
+brew wp-cli
 
 tap homebrew/services
 
@@ -214,9 +221,9 @@ appstore 1127487414 Install macOS Sierra (12.2.06)
 appstore 409183694 Keynote (6.6.2)
 appstore 540348655 Monosnap (3.3.0)
 appstore 692867256 Simplenote (1.1.8)
-appstore 803453959 Slack (2.5.2)
+appstore 803453959 Slack (2.6.2)
 appstore 1122008420 Table Tool (1.1.2)
-appstore 557168941 Tweetbot (2.4.6)
+appstore 557168941 Tweetbot (2.5.1)
 appstore 497799835 Xcode (8.2.1)
 
 # Other commands
