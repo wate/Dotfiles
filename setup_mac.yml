@@ -104,6 +104,7 @@
       - ansible_tools
       - serverspec
     npm_packages:
+      - yarn
       - typescript
       - typson
       - codeceptjs
