@@ -1,0 +1,183 @@
+---
+- hosts: localhost
+  gather_facts: no
+  become: no
+  connection: local
+  vars:
+    git_global_config:
+      - name: user.name
+        value: wate
+      - name: user.email
+        value: pc.poisoning@gmail.com
+      - name: core.autocrlf
+        value: input
+      - name: core.excludesfile
+        value: ~/.gitignore
+      - name: core.attributesfile
+        value: ~/.gitattributes
+      - name: fetch.prune
+        value: true
+      - name: pull.rebase
+        value: true
+    homebrew_taps:
+      - name: homebrew/dupes
+      - name: homebrew/php
+      - name: homebrew/services
+      - name: caskroom/cask
+      - name: caskroom/fonts
+      - name: rcmdnk/file
+      - name: knqyf263/pet
+      - name: sacloud/usacloud
+      - name: sacloud/terraform-provider-sakuracloud
+      - name: sacloud/packer-builder-sakuracloud
+    homebrew_packages:
+      - name: bash-completion
+      - name: brew-file
+      - name: peco
+      - name: pet
+        rcfile:
+          path: ~/.bashrc
+          content: |
+            function prev() {
+              PREV=$(fc -lrn | head -n 1 | awk '{$1=$1;print}')
+              sh -c "pet new `printf %q "$PREV"`"
+            }
+      - name: terraform
+      - name: packer
+      - name: usacloud
+        bash_completion: usacloud
+      - name: packer-builder-sakuracloud
+        symlink:
+          src: /usr/local/opt/packer-builder-sakuracloud/bin/packer-builder-sakuracloud
+          dest: ~/.packer.d/plugins/packer-builder-sakuracloud
+      - name: terraform-provider-sakuracloud
+        rcfile:
+          path: ~/.terraformrc
+          content: |
+            providers {
+              sakuracloud = "/usr/local/bin/terraform-provider-sakuracloud"
+            }
+      - name: terraform-inventory
+      - name: packer-completion
+        bash_completion: packer
+      - name: vagrant-completion
+        bash_completion: vagrant
+      - name: exa
+      - name: assh
+      - name: clamav
+    homebrew_cask_packages:
+      - name: vagrant
+      - name: font-ricty-diminished
+      - name: font-noto-serif-cjk-jp
+      - name: font-noto-sans-cjk-jp
+      - name: font-source-han-code-jp
+      - name: font-fira-code
+    aliases:
+      - name: ls
+        command: "exa"
+      - name: ll
+        command: "exa -l --git"
+      - name: la
+        command: "exa -la --git"
+      - name: ssh
+        command: "assh wrapper ssh"
+    gem_packages:
+      - ansible_spec
+      - ansible_tools
+      - serverspec
+    npm_packages:
+      - typescript
+      - typson
+      - codeceptjs
+      - browser-sync
+      - newman
+      - eslint
+      - stylelint
+      - textlint
+      - jsonlint
+      - tslint
+      - sass-lint
+      - js-beautify
+      - stylefmt
+      - csscomb
+  tasks:
+    - name: Ensure git global setting
+      git_config:
+        scope: global
+        name: "{{ item.name }}"
+        value: "{{ item.value }}"
+      with_items: "{{ git_global_config }}"
+    - name: Ensure brew tap is installed
+      homebrew_tap:
+        name: "{{ item.name }}"
+        state: present
+      with_items: "{{ homebrew_taps }}"
+    - name: Ensure Homebrew packages is installed
+      homebrew:
+        name: "{{ item.name }}"
+        state: latest
+      with_items: "{{ homebrew_packages }}"
+    - name: Ensure Homebrew cask packages is installed
+      homebrew_cask:
+        name: "{{ item.name }}"
+        state: present
+        update_homebrew: true
+      with_items: "{{ homebrew_cask_packages }}"
+    - name: Ensure .bashrc in BREW_PREFIX variable
+      lineinfile:
+        dest: ~/.bashrc
+        line: 'BREW_PREFIX=$(brew --prefix)'
+    - name: Ensure load bash completion file
+      lineinfile:
+        dest: ~/.bashrc
+        line: '[ -f "${BREW_PREFIX}"/etc/bash_completion.d/{{ item.bash_completion }} ] && source "${BREW_PREFIX}"/etc/bash_completion.d/{{ item.bash_completion }}'
+      when: item.bash_completion is defined
+      with_items: "{{ homebrew_packages }}"
+    - name: Ensure terraform setting
+      blockinfile:
+        create: true
+        marker: "# {mark} {{ item.name }} ANSIBLE MANAGED BLOCK"
+        dest: "{{ item.rcfile.path }}"
+        block: "{{ item.rcfile.content }}"
+      when: item.rcfile is defined
+      with_items: "{{ homebrew_packages }}"
+    - name: Ensure packer plugin directory
+      file:
+        path: ~/.packer.d/plugins
+        state: directory
+      when: "'packer' in homebrew_packages"
+    - name: Ensure brew package symlink
+      file:
+        src: "{{ item.symlink.src }}"
+        path: "{{ item.symlink.dest }}"
+        state: link
+      when: item.symlink is defined
+      with_items: "{{ homebrew_packages }}"
+    - name: Ensure .bashrc command alias
+      lineinfile:
+        dest: ~/.bashrc
+        line: 'alias {{ item.name }}="{{ item.command }}"'
+      with_items: "{{ aliases }}"
+    # ClamAV
+    - name: create clamav viruse database directory
+      file:
+        path: /usr/local/var/lib/clamav
+        state: directory
+    - name: create freshclam config file
+      lineinfile:
+        path: /usr/local/etc/clamav/freshclam.conf
+        regexp: '^#?DatabaseDirectory '
+        line: "DatabaseDirectory /usr/local/var/lib/clamav"
+        create: yes
+    - name: install gem packages
+      gem:
+        name: "{{ item }}"
+        user_install: no
+        state: latest
+      with_items: "{{ gem_packages }}"
+    - name: install npm packages
+      npm:
+        name: "{{ item }}"
+        global: yes
+        state: latest
+      with_items: "{{ npm_packages }}"
