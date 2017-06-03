@@ -34,6 +34,10 @@
       - name: bash-completion
       - name: brew-file
       - name: peco
+      - name: coreutils
+      - name: gnu-sed
+      - name: gnu-tar
+      - name: gawk
       - name: pet
         rcfile:
           path: ~/.bashrc
@@ -81,6 +85,20 @@
         command: "exa -la --git"
       - name: ssh
         command: "assh wrapper ssh"
+      - name: sed
+        command: "gsed"
+      - name: tr
+        command: "gtr"
+      - name: date
+        command: "gdate"
+      - name: ln
+        command: "gln"
+      - name: wc
+        command: "gwc"
+      - name: tar
+        command: "gtar"
+      - name: awk
+        command: "gawk"
     gem_packages:
       - ansible_spec
       - ansible_tools
