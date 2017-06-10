@@ -72,6 +72,7 @@ brew boost
 brew cheat
 brew clamav
 brew cmake
+brew coreutils
 brew ctags
 brew curl
 brew duck
@@ -81,6 +82,7 @@ brew embulk
 brew exa
 brew fontconfig
 brew freetype
+brew gawk
 brew gd
 brew gdbm
 brew gettext
@@ -92,8 +94,11 @@ brew git-lfs
 brew glog
 brew gmp
 brew gnu-getopt
+brew gnu-sed
+brew gnu-tar
 brew go
 brew graphviz
+brew heroku
 brew highlight
 brew httpie
 brew hubflow
@@ -123,6 +128,7 @@ brew mcrypt
 brew mecab
 brew mecab-ipadic
 brew mhash
+brew mpfr
 brew mycli
 brew nkf
 brew nmap
@@ -146,6 +152,7 @@ brew python3
 brew rake-completion
 brew rbenv
 brew readline
+brew redis
 brew remarshal
 brew rename
 brew rsync
