@@ -103,6 +103,11 @@
       - ansible_spec
       - ansible_tools
       - serverspec
+      - wpscan
+      - test-kitchen
+      - kitchen-ansible
+      - kitchen-vagrant
+      - kitchen-verifier-serverspec
     npm_packages:
       - yarn
       - typescript
@@ -120,6 +125,10 @@
       - stylefmt
       - csscomb
   tasks:
+    - name: Update homebrew and upgrade all packages
+      homebrew:
+        update_homebrew: yes
+        upgrade_all: yes
     - name: Ensure git global setting
       git_config:
         scope: global
