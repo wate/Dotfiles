@@ -42,8 +42,10 @@ cask qlstephen
 cask quicklook-csv
 cask quicklook-json
 cask sequel-pro
+cask skype
 cask sourcetree
 cask sqlitebrowser
+cask timecamp
 cask vagrant
 cask virtualbox-extension-pack
 cask virtualbox
