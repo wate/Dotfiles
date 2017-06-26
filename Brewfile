@@ -25,6 +25,7 @@ cask keepassxc
 cask keka
 cask keycastr
 cask launchy
+cask libreoffice-language-pack
 cask libreoffice
 cask licecap
 cask macwinzipper
