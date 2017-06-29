@@ -67,6 +67,7 @@
       - name: vagrant-completion
         bash_completion: vagrant
       - name: exa
+      - name: remarshal
       - name: assh
       - name: embulk
       - name: clamav
