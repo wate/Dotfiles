@@ -67,6 +67,7 @@
       - name: vagrant-completion
         bash_completion: vagrant
       - name: tig
+      - name: editorconfig
       - name: exa
       - name: remarshal
       - name: assh
