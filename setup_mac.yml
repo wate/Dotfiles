@@ -68,8 +68,29 @@
         bash_completion: vagrant
       - name: exa
       - name: assh
+      - name: embulk
       - name: clamav
+      # PHP
+      - name: php71
+      - name: php71-opcache
+      - name: php71-phalcon
+      - name: php71-intl
+      - name: php71-yaml
+      - name: composer
+      - name: codeception
+      - name: php-code-sniffer
+      - name: deployer
+      - name: php-cs-fixer
+      - name: pdepend
+      - name: phpcpd
+      - name: phpdocumentor
+      - name: phpmetrics
+      - name: phpmd
+      - name: phploc
+      - name: pdepend
+      - name: wp-cli
     homebrew_cask_packages:
+      - name: netbeans-php
       - name: vagrant
       - name: font-ricty-diminished
       - name: font-noto-serif-cjk-jp
