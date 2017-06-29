@@ -189,20 +189,20 @@ tap homebrew/dupes
 tap homebrew/php
 brew codeception
 brew composer
+brew deployer
 brew pdepend
-brew phing
+brew php-code-sniffer
 brew php-cs-fixer
 brew php71
+brew php71-intl
 brew php71-opcache
 brew php71-phalcon
 brew php71-yaml
 brew phpcpd
 brew phpdocumentor
-brew phpdox
 brew phploc
 brew phpmd
 brew phpmetrics
-brew phpunit-skeleton-generator
 brew wp-cli
 
 tap homebrew/services
