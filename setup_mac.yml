@@ -125,7 +125,6 @@
         command: "gawk"
     gem_packages:
       - ansible_spec
-      - ansible_tools
       - serverspec
       - wpscan
       - test-kitchen
