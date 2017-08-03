@@ -55,12 +55,9 @@
           src: /usr/local/opt/packer-builder-sakuracloud/bin/packer-builder-sakuracloud
           dest: ~/.packer.d/plugins/packer-builder-sakuracloud
       - name: terraform-provider-sakuracloud
-        rcfile:
-          path: ~/.terraformrc
-          content: |
-            providers {
-              sakuracloud = "/usr/local/bin/terraform-provider-sakuracloud"
-            }
+        symlink:
+          src: /usr/local/bin/terraform-provider-sakuracloud
+          dest: ~/.terraform.d/plugins/terraform-provider-sakuracloud
       - name: terraform-inventory
       - name: packer-completion
         bash_completion: packer
@@ -140,10 +137,10 @@
       - newman
       - eslint
       - stylelint
+      - stylelint-scss
       - textlint
       - jsonlint
       - tslint
-      - sass-lint
       - js-beautify
       - stylefmt
       - csscomb
@@ -174,6 +171,8 @@
         state: present
         update_homebrew: true
       with_items: "{{ homebrew_cask_packages }}"
+    - name: update brew cask packages
+      command: brew-file cask_upgrade -C
     - name: Ensure .bashrc in BREW_PREFIX variable
       lineinfile:
         dest: ~/.bashrc
@@ -197,6 +196,11 @@
         path: ~/.packer.d/plugins
         state: directory
       when: "'packer' in homebrew_packages"
+    - name: Ensure terraform plugin directory
+      file:
+        path: ~/.terraform.d/plugins
+        state: directory
+      when: "'terraform' in homebrew_packages"
     - name: Ensure brew package symlink
       file:
         src: "{{ item.symlink.src }}"
@@ -220,6 +224,8 @@
         regexp: '^#?DatabaseDirectory '
         line: "DatabaseDirectory /usr/local/var/lib/clamav"
         create: yes
+    - name: update viruse database
+      command: freshclam
     - name: install gem packages
       gem:
         name: "{{ item }}"
