@@ -12,11 +12,9 @@ cask clipy
 cask cyberduck
 cask dash
 cask dbeaver-community
-cask geektool
 cask gimp
 cask google-chrome
 cask google-cloud-sdk
-cask gravitdesigner
 cask hipchat
 cask iterm2
 cask java
@@ -101,7 +99,6 @@ brew gnu-sed
 brew gnu-tar
 brew go
 brew graphviz
-brew heroku
 brew highlight
 brew httpie
 brew hubflow
@@ -135,6 +132,7 @@ brew mpfr
 brew mycli
 brew nkf
 brew nmap
+brew node
 brew nodebrew
 brew oniguruma
 brew openssl
@@ -222,17 +220,19 @@ brew terraform-provider-sakuracloud
 tap sacloud/usacloud
 brew usacloud
 
+# Cask applications
+cask gravitdesigner
+
 # App Store applications
-appstore 1024640650 CotEditor (3.1.8)
+appstore 1024640650 CotEditor (3.2.0)
 appstore 412448059 ForkLift (2.6.6)
 appstore 445770608 Go2Shell (1.2.2)
 appstore 467939042 Growl (2.1.3)
 appstore 1127487414 Install macOS Sierra (12.2.06)
 appstore 409183694 Keynote (6.6.2)
-appstore 540348655 Monosnap (3.3.0)
 appstore 692867256 Simplenote (1.1.8)
 appstore 803453959 Slack (2.6.2)
-appstore 1122008420 Table Tool (1.1.2)
+appstore 1122008420 Table Tool (1.2.1)
 appstore 557168941 Tweetbot (2.5.1)
 appstore 497799835 Xcode (8.2.1)
 
