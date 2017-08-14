@@ -46,9 +46,3 @@ npm-debug.log*
 
 # Dependency directory
 node_modules
-
-### Bower ###
-bower_components
-.bower-cache
-.bower-registry
-.bower-tmp
