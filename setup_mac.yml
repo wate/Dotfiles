@@ -45,6 +45,15 @@
           if [ -f ~/.secret ]; then
               source ~/.secret
           fi
+    - name: include secret environment variables file
+      include_vars: secret_env.yml
+    - name: add secret environment variable
+      lineinfile:
+        path: ~/.secret
+        regexp: "^export {{ item.key }}=.*"
+        line: 'export {{ item.key }}="{{ item.value }}"'
+        create: yes
+      with_dict: "{{ secret_env|default({}) }}"
     - name: Ensure .bashrc in load bash-completion
       lineinfile:
         dest: ~/.bashrc
