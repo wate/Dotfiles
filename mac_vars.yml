@@ -1,0 +1,176 @@
+---
+git_global_config:
+  - name: user.name
+    value: wate
+  - name: user.email
+    value: pc.poisoning@gmail.com
+  - name: core.autocrlf
+    value: input
+  - name: core.excludesfile
+    value: ~/.gitignore
+  - name: core.attributesfile
+    value: ~/.gitattributes
+  - name: fetch.prune
+    value: true
+  - name: pull.rebase
+    value: true
+
+homebrew_taps:
+  - name: homebrew/dupes
+  - name: homebrew/php
+  - name: homebrew/services
+  - name: caskroom/cask
+  - name: caskroom/fonts
+  - name: rcmdnk/file
+  - name: knqyf263/pet
+  - name: sacloud/usacloud
+  - name: sacloud/terraform-provider-sakuracloud
+  - name: sacloud/packer-builder-sakuracloud
+
+homebrew_packages:
+  - name: bash-completion
+  - name: git
+    bash_completion: git-completion.bash
+  - name: git-flow-avh
+    bash_completion: git-flow-completion.bash
+  - name: tig
+    bash_completion: tig-completion.bash
+  - name: bash-git-prompt
+    rcfile:
+      content: |
+        if [ -f "/usr/local/opt/bash-git-prompt/share/gitprompt.sh" ]; then
+          __GIT_PROMPT_DIR="/usr/local/opt/bash-git-prompt/share"
+          source "/usr/local/opt/bash-git-prompt/share/gitprompt.sh"
+        fi
+  - name: brew-file
+    bash_completion: brew-file
+  - name: peco
+  - name: coreutils
+  - name: gnu-sed
+  - name: gnu-tar
+  - name: gawk
+  - name: pet
+    rcfile:
+      content: |
+        function prev() {
+          PREV=$(fc -lrn | head -n 1 | awk '{$1=$1;print}')
+          sh -c "pet new `printf %q "$PREV"`"
+        }
+  - name: terraform
+    directory: ~/.terraform.d/plugins
+  - name: packer
+    directory: ~/.packer.d/plugins
+  - name: usacloud
+    bash_completion: usacloud
+  - name: packer-builder-sakuracloud
+    symlink:
+      src: /usr/local/opt/packer-builder-sakuracloud/bin/packer-builder-sakuracloud
+      dest: ~/.packer.d/plugins/packer-builder-sakuracloud
+  - name: terraform-provider-sakuracloud
+    symlink:
+      src: /usr/local/bin/terraform-provider-sakuracloud
+      dest: ~/.terraform.d/plugins/terraform-provider-sakuracloud
+  - name: terraform-inventory
+  - name: packer-completion
+    bash_completion: packer
+  - name: vagrant-completion
+    bash_completion: vagrant
+  - name: awscli
+    bash_completion: aws_bash_completer
+  - name: editorconfig
+  - name: exa
+  - name: remarshal
+  - name: assh
+  - name: embulk
+  - name: clamav
+  # *env/*brew
+  - name: nodebrew
+    bash_completion: nodebrew
+  - name: rbenv
+    rcfile:
+      content: eval "$(rbenv init -)";
+  - name: pyenv
+    rcfile:
+      content: eval "$(pyenv init -)";
+  # PHP
+  - name: php71
+  - name: php71-opcache
+  - name: php71-phalcon
+  - name: php71-intl
+  - name: php71-yaml
+  - name: composer
+    bash_completion: composer-completion.sh
+  - name: codeception
+  - name: php-code-sniffer
+  - name: deployer
+  - name: php-cs-fixer
+  - name: pdepend
+  - name: phpcpd
+  - name: phpdocumentor
+  - name: phpmetrics
+  - name: phpmd
+  - name: phploc
+  - name: pdepend
+  - name: wp-cli
+    bash_completion: wp-completion.bash
+
+homebrew_cask_packages:
+  - name: vagrant
+  - name: virtualbox
+  - name: netbeans-php
+  - name: postman
+  - name: font-ricty-diminished
+  - name: font-noto-serif-cjk-jp
+  - name: font-noto-sans-cjk-jp
+  - name: font-source-han-code-jp
+  - name: font-fira-code
+
+aliases:
+  - name: ls
+    command: "exa"
+  - name: ll
+    command: "exa -l --git"
+  - name: la
+    command: "exa -la --git"
+  - name: ssh
+    command: "assh wrapper ssh"
+  - name: sed
+    command: "gsed"
+  - name: tr
+    command: "gtr"
+  - name: date
+    command: "gdate"
+  - name: ln
+    command: "gln"
+  - name: wc
+    command: "gwc"
+  - name: tar
+    command: "gtar"
+  - name: awk
+    command: "gawk"
+
+gem_packages:
+  - ansible_spec
+  - serverspec
+  - wpscan
+  # - test-kitchen
+  # - kitchen-ansible
+  # - kitchen-vagrant
+  # - kitchen-verifier-serverspec
+
+npm_packages:
+  - typescript
+  - typson
+  - codeceptjs
+  - newman
+  - eslint
+  - stylelint
+  - stylelint-scss
+  - textlint
+  - jsonlint
+  - tslint
+  - js-beautify
+  - stylefmt
+  - csscomb
+  # - browser-sync
+  # - yarn
