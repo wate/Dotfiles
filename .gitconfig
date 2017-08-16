@@ -5,7 +5,7 @@
   editor = vim
   autocrlf = input
   quotepath = false
-	excludesfile = ~/.gitignore
+	excludesfile = /Users/wate/.gitignore
   attributesfile = ~/.gitattributes
 [fetch]
   prune = True
@@ -51,3 +51,5 @@
 [mergetool "sourcetree"]
 	cmd = /Applications/p4merge.app/Contents/MacOS/p4merge \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
 	trustExitCode = true
+[commit]
+	template = /Users/wate/.stCommitMsg
