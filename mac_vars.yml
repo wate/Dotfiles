@@ -98,6 +98,8 @@ homebrew_packages:
   - name: php71-phalcon
   - name: php71-intl
   - name: php71-yaml
+  - name: php71-xdebug
+  - name: php71-imagick
   - name: composer
     bash_completion: composer-completion.sh
   - name: codeception
