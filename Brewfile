@@ -71,6 +71,7 @@ brew bash-git-prompt
 brew bison
 brew boost
 brew cheat
+brew chromedriver
 brew clamav
 brew cmake
 brew coreutils
@@ -86,6 +87,7 @@ brew freetype
 brew gawk
 brew gd
 brew gdbm
+brew geckodriver
 brew gettext
 brew gflags
 brew ghostscript
@@ -160,6 +162,7 @@ brew rsync
 brew ruby
 brew ruby-build
 brew s3cmd
+brew selenium-server-standalone
 brew shellcheck
 brew snappy
 brew sqlite
@@ -231,7 +234,7 @@ appstore 467939042 Growl (2.1.3)
 appstore 1127487414 Install macOS Sierra (12.2.06)
 appstore 409183694 Keynote (6.6.2)
 appstore 692867256 Simplenote (1.1.8)
-appstore 803453959 Slack (2.6.2)
+appstore 803453959 Slack (2.7.1)
 appstore 1122008420 Table Tool (1.2.1)
 appstore 557168941 Tweetbot (2.5.1)
 appstore 497799835 Xcode (8.2.1)
