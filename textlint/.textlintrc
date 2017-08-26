@@ -1,0 +1,9 @@
+{
+  "rules": {
+    "ja-yahoo-kousei": {
+      ignores: {
+        "用字": "*"
+      }
+    }
+  }
+}
