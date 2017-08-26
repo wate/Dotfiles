@@ -25,6 +25,8 @@
         name: "{{ item.name }}"
         state: latest
       with_items: "{{ homebrew_packages }}"
+    - name: cleanup brew packages
+      command: brew cleanup
     - name: Ensure Homebrew cask packages is installed
       homebrew_cask:
         name: "{{ item.name }}"

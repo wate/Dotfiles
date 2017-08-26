@@ -6,8 +6,6 @@ git_global_config:
     value: pc.poisoning@gmail.com
   - name: core.autocrlf
     value: input
-  - name: core.excludesfile
-    value: ~/.gitignore
   - name: core.attributesfile
     value: ~/.gitattributes
   - name: fetch.prune
@@ -44,6 +42,7 @@ homebrew_packages:
         fi
   - name: brew-file
     bash_completion: brew-file
+  - name: vim
   - name: peco
   - name: coreutils
   - name: gnu-sed
