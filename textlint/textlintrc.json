@@ -1,7 +1,7 @@
 {
   "rules": {
     "ja-yahoo-kousei": {
-      ignores: {
+      "ignores": {
         "用字": "*",
         "略語": "*"
       }
