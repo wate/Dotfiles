@@ -35,6 +35,8 @@
     - name: update brew cask packages
       command: brew-file cask_upgrade -C
       when: "'brew-file' in homebrew_packages|map(attribute='name')|list"
+    - name: cleanup brew cask packages
+      command: brew cask cleanup
     - name: Ensure .bashrc in BREW_PREFIX variable
       lineinfile:
         dest: ~/.bashrc
