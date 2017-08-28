@@ -12,6 +12,7 @@ cask clipy
 cask cyberduck
 cask dash
 cask dbeaver-community
+cask ganttproject
 cask gimp
 cask google-chrome
 cask google-cloud-sdk
@@ -24,7 +25,6 @@ cask keka
 cask keycastr
 cask launchy
 cask libreoffice-language-pack
-cask libreoffice
 cask licecap
 cask macwinzipper
 cask mysqlworkbench
@@ -44,7 +44,6 @@ cask sequel-pro
 cask skype
 cask sourcetree
 cask sqlitebrowser
-cask timecamp
 cask vagrant
 cask virtualbox-extension-pack
 cask virtualbox
@@ -195,9 +194,11 @@ brew pdepend
 brew php-code-sniffer
 brew php-cs-fixer
 brew php71
+brew php71-imagick
 brew php71-intl
 brew php71-opcache
 brew php71-phalcon
+brew php71-xdebug
 brew php71-yaml
 brew phpcpd
 brew phpdocumentor
@@ -227,7 +228,7 @@ brew usacloud
 cask gravitdesigner
 
 # App Store applications
-appstore 1024640650 CotEditor (3.2.0)
+appstore 1024640650 CotEditor (3.2.1)
 appstore 412448059 ForkLift (2.6.6)
 appstore 445770608 Go2Shell (1.2.2)
 appstore 467939042 Growl (2.1.3)
