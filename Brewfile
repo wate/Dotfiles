@@ -4,6 +4,7 @@
 tap caskroom/cask
 cask appcleaner
 cask atom
+cask avira-antivirus
 cask betterzipql
 cask boostnote
 cask box-sync
@@ -48,6 +49,7 @@ cask vagrant
 cask virtualbox-extension-pack
 cask virtualbox
 cask vlc
+cask wireframe-sketcher
 cask wkhtmltopdf
 cask xmind
 
