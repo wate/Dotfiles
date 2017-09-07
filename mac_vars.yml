@@ -155,10 +155,6 @@ gem_packages:
   - ansible_spec
   - serverspec
   - wpscan
-  # - test-kitchen
-  # - kitchen-ansible
-  # - kitchen-vagrant
-  # - kitchen-verifier-serverspec
 
 npm_packages:
   - typescript
@@ -166,13 +162,14 @@ npm_packages:
   - codeceptjs
   - newman
   - eslint
-  - stylelint
-  - stylelint-scss
+  - tslint
   - textlint
   - jsonlint
-  - tslint
+  - stylelint
+  - stylelint-scss
+  - webpack
   - js-beautify
   - stylefmt
   - csscomb
-  # - browser-sync
-  # - yarn
+  - browser-sync
+  - gulp
