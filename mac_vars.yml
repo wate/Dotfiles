@@ -132,9 +132,9 @@ aliases:
   - name: ls
     command: "exa"
   - name: ll
-    command: "exa -l --git"
+    command: "exa -lg --git"
   - name: la
-    command: "exa -la --git"
+    command: "exa -lag --git"
   - name: ssh
     command: "assh wrapper ssh"
   - name: sed
