@@ -117,6 +117,7 @@ homebrew_packages:
 homebrew_cask_packages:
   - name: vagrant
   - name: virtualbox
+  - name: virtualbox-extension-pack
   - name: netbeans-php
   - name: postman
   - name: font-ricty-diminished
