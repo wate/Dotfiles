@@ -6,6 +6,7 @@ cask appcleaner
 cask atom
 cask avira-antivirus
 cask betterzipql
+cask blisk
 cask boostnote
 cask box-sync
 cask ccleaner
@@ -26,6 +27,7 @@ cask keka
 cask keycastr
 cask launchy
 cask libreoffice-language-pack
+cask libreoffice
 cask licecap
 cask macwinzipper
 cask mysqlworkbench
@@ -45,8 +47,8 @@ cask sequel-pro
 cask skype
 cask sourcetree
 cask sqlitebrowser
+cask timecamp
 cask vagrant
-cask virtualbox-extension-pack
 cask virtualbox
 cask vlc
 cask wireframe-sketcher
@@ -156,7 +158,6 @@ brew python3
 brew rake-completion
 brew rbenv
 brew readline
-brew redis
 brew remarshal
 brew rename
 brew rsync
@@ -196,7 +197,6 @@ brew pdepend
 brew php-code-sniffer
 brew php-cs-fixer
 brew php71
-brew php71-imagick
 brew php71-intl
 brew php71-opcache
 brew php71-phalcon
