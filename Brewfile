@@ -49,6 +49,7 @@ cask sourcetree
 cask sqlitebrowser
 cask timecamp
 cask vagrant
+cask virtualbox-extension-pack
 cask virtualbox
 cask vlc
 cask wireframe-sketcher
