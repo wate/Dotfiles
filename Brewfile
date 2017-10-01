@@ -58,6 +58,7 @@ cask xmind
 
 tap caskroom/fonts
 cask font-fira-code
+cask font-hack
 cask font-noto-sans-cjk-jp
 cask font-noto-serif-cjk-jp
 cask font-ricty-diminished
@@ -158,6 +159,7 @@ brew python
 brew python3
 brew rake-completion
 brew rbenv
+brew rclone
 brew readline
 brew remarshal
 brew rename
@@ -238,9 +240,9 @@ appstore 467939042 Growl (2.1.3)
 appstore 1127487414 Install macOS Sierra (12.2.06)
 appstore 409183694 Keynote (6.6.2)
 appstore 692867256 Simplenote (1.1.8)
-appstore 803453959 Slack (2.7.1)
+appstore 803453959 Slack (2.8.0)
 appstore 1122008420 Table Tool (1.2.1)
-appstore 557168941 Tweetbot (2.5.1)
+appstore 557168941 Tweetbot (2.5.3)
 appstore 497799835 Xcode (8.2.1)
 
 # Other commands
