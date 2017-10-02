@@ -13,7 +13,6 @@ cask ccleaner
 cask clipy
 cask cyberduck
 cask dash
-cask dbeaver-community
 cask ganttproject
 cask gimp
 cask google-chrome
