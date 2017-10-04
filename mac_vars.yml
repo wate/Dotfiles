@@ -125,6 +125,7 @@ homebrew_cask_packages:
   - name: font-noto-sans-cjk-jp
   - name: font-source-han-code-jp
   - name: font-fira-code
+  - name: font-hack
   - name: libreoffice
   - name: libreoffice-language-pack
   - name: avira-antivirus
@@ -154,9 +155,9 @@ aliases:
     command: "gawk"
 
 gem_packages:
-  - ansible_spec
   - serverspec
-  - wpscan
+  - rubocop
+  - ansible_spec
 
 npm_packages:
   - typescript

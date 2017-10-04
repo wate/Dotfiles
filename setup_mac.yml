@@ -23,14 +23,14 @@
     - name: Ensure Homebrew packages is installed
       homebrew:
         name: "{{ item.name }}"
-        state: latest
+        state: "{{ item.state|default('latest') }}"
       with_items: "{{ homebrew_packages }}"
     - name: cleanup brew packages
       command: brew cleanup
     - name: Ensure Homebrew cask packages is installed
       homebrew_cask:
         name: "{{ item.name }}"
-        update_homebrew: true
+        state: "{{ item.state|default('present') }}"
       with_items: "{{ homebrew_cask_packages }}"
     - name: update brew cask packages
       command: brew-file cask_upgrade -C
@@ -109,14 +109,18 @@
     # gem
     - name: install gem packages
       gem:
-        name: "{{ item }}"
+        name: "{{ item.name if item is mapping else item }}"
         user_install: no
-        state: latest
+        state: "{{ item.state if item is mapping and item.state is defined else 'latest' }}"
       with_items: "{{ gem_packages }}"
+      register: result
+    - name: cleanup gem packages
+      command: gem cleanup
+      when: result|changed
     # npm
     - name: install npm packages
       npm:
-        name: "{{ item }}"
+        name: "{{ item.name if item is mapping else item }}"
         global: yes
-        state: latest
+        state: "{{ item.state if item is mapping and item.state is defined else 'latest' }}"
       with_items: "{{ npm_packages }}"
