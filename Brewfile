@@ -232,14 +232,14 @@ brew usacloud
 cask gravitdesigner
 
 # App Store applications
-appstore 1024640650 CotEditor (3.2.1)
+appstore 1024640650 CotEditor (3.2.2)
 appstore 412448059 ForkLift (2.6.6)
 appstore 445770608 Go2Shell (1.2.2)
 appstore 467939042 Growl (2.1.3)
 appstore 1127487414 Install macOS Sierra (12.2.06)
 appstore 409183694 Keynote (6.6.2)
 appstore 692867256 Simplenote (1.1.8)
-appstore 803453959 Slack (2.8.0)
+appstore 803453959 Slack (2.8.1)
 appstore 1122008420 Table Tool (1.2.1)
 appstore 557168941 Tweetbot (2.5.3)
 appstore 497799835 Xcode (8.2.1)
