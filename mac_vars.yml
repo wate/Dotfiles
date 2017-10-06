@@ -128,7 +128,6 @@ homebrew_cask_packages:
   - name: font-hack
   - name: libreoffice
   - name: libreoffice-language-pack
-  - name: avira-antivirus
 
 aliases:
   - name: ls
