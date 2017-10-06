@@ -4,7 +4,6 @@
 tap caskroom/cask
 cask appcleaner
 cask atom
-cask avira-antivirus
 cask betterzipql
 cask blisk
 cask boostnote
@@ -45,7 +44,6 @@ cask quicklook-json
 cask sequel-pro
 cask skype
 cask sourcetree
-cask sqlitebrowser
 cask timecamp
 cask vagrant
 cask virtualbox-extension-pack
@@ -230,6 +228,7 @@ brew usacloud
 
 # Cask applications
 cask gravitdesigner
+cask sqlitebrowser
 
 # App Store applications
 appstore 1024640650 CotEditor (3.2.2)
