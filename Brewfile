@@ -150,6 +150,7 @@ brew peco
 brew perl
 brew pkg-config
 brew plantuml
+brew pre-commit
 brew pwgen
 brew pyenv
 brew python
