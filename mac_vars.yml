@@ -153,25 +153,36 @@ aliases:
   - name: awk
     command: "gawk"
 
+pip_packages:
+  - name: cs
+  - name: boto
+  - name: shade
+  - name: dns-lexicon
+  - name: molecule
+  - name: python-vagrant
+  - name: apache-libcloud
+  - name: pre-commit
+
 gem_packages:
-  - serverspec
-  - rubocop
-  - ansible_spec
+  - name: serverspec
+  - name: liquid
+  - name: ansible_spec
+  - name: wpscan
 
 npm_packages:
-  - typescript
-  - typson
-  - codeceptjs
-  - newman
-  - eslint
-  - tslint
-  - textlint
-  - jsonlint
-  - stylelint
-  - stylelint-scss
-  - webpack
-  - js-beautify
-  - stylefmt
-  - csscomb
-  - browser-sync
-  - gulp
+  - name: typescript
+  - name: typson
+  - name: codeceptjs
+  - name: newman
+  - name: eslint
+  - name: tslint
+  - name: textlint
+  - name: jsonlint
+  - name: stylelint
+  - name: stylelint-scss
+  - name: webpack
+  - name: js-beautify
+  - name: stylefmt
+  - name: csscomb
+  - name: browser-sync
+  - name: gulp
