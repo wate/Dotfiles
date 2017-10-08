@@ -43,6 +43,7 @@ homebrew_packages:
   - name: brew-file
     bash_completion: brew-file
   - name: vim
+  - name: pre-commit
   - name: peco
   - name: coreutils
   - name: gnu-sed
@@ -115,6 +116,7 @@ homebrew_packages:
     bash_completion: wp-completion.bash
 
 homebrew_cask_packages:
+  - name: atom
   - name: vagrant
   - name: virtualbox
   - name: virtualbox-extension-pack
@@ -161,7 +163,6 @@ pip_packages:
   - name: molecule
   - name: python-vagrant
   - name: apache-libcloud
-  - name: pre-commit
 
 gem_packages:
   - name: serverspec

@@ -138,3 +138,12 @@
         global: yes
         state: "{{ item.state|default('latest') }}"
       with_items: "{{ npm_packages }}"
+    - block:
+      - name: dump brew install packages
+        command: brew-file init
+      - name: push Brewfile
+        command: brew-file push
+      when: "'brew-file' in homebrew_packages|map(attribute='name')|list"
+    - name: dump atom install packages
+      shell: apm list --installed --bare>./atom-packages.txt
+      when: "'atom' in homebrew_cask_packages|map(attribute='name')|list"
