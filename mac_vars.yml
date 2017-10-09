@@ -156,19 +156,52 @@ aliases:
     command: "gawk"
 
 pip_packages:
+  - name: pip
   - name: cs
-  - name: boto
-  - name: shade
   - name: dns-lexicon
+  - name: pip-autoremove
+  - name: testinfra
+    state: absent
+  - name: boto
+    state: absent
+  - name: shade
+    state: absent
   - name: molecule
+    state: absent
   - name: python-vagrant
+    state: absent
   - name: apache-libcloud
+    state: absent
 
 gem_packages:
   - name: serverspec
   - name: liquid
   - name: ansible_spec
   - name: wpscan
+  - name: kitchen-vagrant
+    state: absent
+  - name: kitchen-ec2
+    state: absent
+  - name: kitchen-google
+    state: absent
+  - name: kitchen-cloudstack
+    state: absent
+  - name: kitchen-openstack
+    state: absent
+  - name: kitchen-driver-sakuracloud
+    state: absent
+  - name: kitchen-ansible
+    state: absent
+  - name: kitchen-verifier-serverspec
+    state: absent
+  - name: kitchen-goss
+    state: absent
+  - name: kitchen-inspec
+    state: absent
+  - name: kitchen-terraform
+    state: absent
+  - name: test-kitchen
+    state: absent
 
 npm_packages:
   - name: typescript
