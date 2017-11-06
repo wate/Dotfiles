@@ -181,6 +181,7 @@ cask launchy
 cask libreoffice-language-pack
 cask libreoffice
 cask licecap
+cask limechat
 cask macwinzipper
 cask mysqlworkbench
 cask netbeans-php
