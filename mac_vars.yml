@@ -174,12 +174,12 @@ pip_packages:
     state: absent
 
 gem_packages:
+  - name: bundler
   - name: serverspec
   - name: liquid
   - name: ansible_spec
   - name: wpscan
   - name: kitchen-vagrant
-    state: absent
   - name: kitchen-ec2
     state: absent
   - name: kitchen-google
@@ -188,12 +188,8 @@ gem_packages:
     state: absent
   - name: kitchen-openstack
     state: absent
-  - name: kitchen-driver-sakuracloud
-    state: absent
   - name: kitchen-ansible
-    state: absent
   - name: kitchen-verifier-serverspec
-    state: absent
   - name: kitchen-goss
     state: absent
   - name: kitchen-inspec
@@ -201,7 +197,6 @@ gem_packages:
   - name: kitchen-terraform
     state: absent
   - name: test-kitchen
-    state: absent
 
 npm_packages:
   - name: typescript
