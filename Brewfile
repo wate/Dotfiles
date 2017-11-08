@@ -235,7 +235,7 @@ cask gravitdesigner
 cask sqlitebrowser
 
 # App Store applications
-appstore 1024640650 CotEditor (3.2.3)
+appstore 1024640650 CotEditor (3.2.4)
 appstore 412448059 ForkLift (2.6.6)
 appstore 445770608 Go2Shell (1.2.2)
 appstore 467939042 Growl (2.1.3)
