@@ -1,15 +1,13 @@
 atom-beautify@0.30.6
 atom-typescript@11.0.10
 busy-signal@1.4.3
-docblockr@0.12.1
+docblockr@0.13.2
 dracula-syntax@2.0.5
 editorconfig@2.2.2
 emmet@2.4.3
 file-icons@2.1.13
 file-types@0.5.5
 git-plus@7.10.0
-ide-php@0.6.9
-ide-typescript@0.6.2
 intentions@1.1.5
 language-ansible@0.2.1
 language-apache@1.7.0

@@ -130,6 +130,7 @@ homebrew_cask_packages:
   - name: font-hack
   - name: libreoffice
   - name: libreoffice-language-pack
+  - name: mucommander
 
 aliases:
   - name: ls
