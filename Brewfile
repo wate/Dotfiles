@@ -27,6 +27,7 @@ brew embulk
 brew exa
 brew fontconfig
 brew freetype
+brew fzf
 brew gawk
 brew gd
 brew gdbm
@@ -183,6 +184,7 @@ cask libreoffice
 cask licecap
 cask limechat
 cask macwinzipper
+cask mucommander
 cask mysqlworkbench
 cask netbeans-php
 cask ngrok
@@ -244,7 +246,7 @@ appstore 409183694 Keynote (6.6.2)
 appstore 692867256 Simplenote (1.1.8)
 appstore 803453959 Slack (2.8.2)
 appstore 1122008420 Table Tool (1.2.1)
-appstore 557168941 Tweetbot (2.5.3)
+appstore 557168941 Tweetbot (2.5.4)
 appstore 497799835 Xcode (8.2.1)
 
 # Other commands
