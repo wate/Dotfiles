@@ -46,5 +46,6 @@ plantuml-preview@0.12.9
 platformio-ide-terminal@2.7.0
 project-manager@3.3.5
 tablr@1.8.3
+teletype@0.1.2
 zephir@0.1.0
 
