@@ -20,6 +20,7 @@ brew cmake
 brew coreutils
 brew ctags
 brew curl
+brew direnv
 brew duck
 brew editorconfig
 brew elasticsearch
@@ -162,10 +163,12 @@ cask betterzipql
 cask blisk
 cask boostnote
 cask box-sync
+cask cacher
 cask ccleaner
 cask clipy
 cask cyberduck
 cask dash
+cask firefox
 cask ganttproject
 cask gimp
 cask google-chrome
