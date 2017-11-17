@@ -15,7 +15,6 @@ brew bison
 brew boost
 brew cheat
 brew chromedriver
-brew clamav
 brew cmake
 brew coreutils
 brew ctags
@@ -115,7 +114,6 @@ brew snappy
 brew sqlite
 brew ssh-copy-id
 brew terraform
-brew terraform-inventory
 brew the_silver_searcher
 brew thrift
 brew tig
@@ -188,7 +186,6 @@ cask licecap
 cask limechat
 cask macwinzipper
 cask mucommander
-cask mysqlworkbench
 cask netbeans-php
 cask ngrok
 cask owasp-zap
