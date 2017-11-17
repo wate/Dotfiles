@@ -188,7 +188,6 @@ cask licecap
 cask limechat
 cask macwinzipper
 cask mucommander
-cask mysqlworkbench
 cask netbeans-php
 cask ngrok
 cask owasp-zap
