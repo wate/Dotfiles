@@ -91,21 +91,6 @@
         dest: ~/.bashrc
         line: 'alias {{ item.name }}="{{ item.command }}"'
       with_items: "{{ aliases }}"
-    # # ClamAV
-    - block:
-      - name: create clamav viruse database directory
-        file:
-          path: /usr/local/var/lib/clamav
-          state: directory
-      - name: create freshclam config file
-        lineinfile:
-          path: /usr/local/etc/clamav/freshclam.conf
-          regexp: '^#?DatabaseDirectory '
-          line: "DatabaseDirectory /usr/local/var/lib/clamav"
-          create: yes
-      - name: update viruse database
-        command: freshclam
-      when: "'clamav' in homebrew_packages|map(attribute='name')|list"
     # pip
     - name: orverwrite ansible python path
       set_fact:

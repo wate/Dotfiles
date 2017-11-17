@@ -70,7 +70,6 @@ homebrew_packages:
     symlink:
       src: /usr/local/bin/terraform-provider-sakuracloud
       dest: ~/.terraform.d/plugins/terraform-provider-sakuracloud
-  - name: terraform-inventory
   - name: packer-completion
     bash_completion: packer
   - name: vagrant-completion
@@ -82,7 +81,6 @@ homebrew_packages:
   - name: remarshal
   - name: assh
   - name: embulk
-  - name: clamav
   # *env/*brew
   - name: nodebrew
     bash_completion: nodebrew
@@ -211,6 +209,7 @@ npm_packages:
   - name: stylelint
   - name: stylelint-scss
   - name: webpack
+  - name: vue-cli
   - name: js-beautify
   - name: stylefmt
   - name: csscomb
