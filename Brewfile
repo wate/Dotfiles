@@ -191,6 +191,7 @@ cask ngrok
 cask owasp-zap
 cask p4merge
 cask pencil
+cask pgadmin4
 cask postman
 cask qlcolorcode
 cask qlmarkdown
