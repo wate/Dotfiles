@@ -24,6 +24,7 @@ homebrew_taps:
   - name: sacloud/usacloud
   - name: sacloud/terraform-provider-sakuracloud
   - name: sacloud/packer-builder-sakuracloud
+  - name: sacloud/docker-machine-sakuracloud
 
 homebrew_packages:
   - name: bash-completion
@@ -62,14 +63,15 @@ homebrew_packages:
     directory: ~/.packer.d/plugins
   - name: usacloud
     bash_completion: usacloud
+  - name: docker-machine-sakuracloud
   - name: packer-builder-sakuracloud
     symlink:
       src: /usr/local/opt/packer-builder-sakuracloud/bin/packer-builder-sakuracloud
       dest: ~/.packer.d/plugins/packer-builder-sakuracloud
   - name: terraform-provider-sakuracloud
-    symlink:
-      src: /usr/local/bin/terraform-provider-sakuracloud
-      dest: ~/.terraform.d/plugins/terraform-provider-sakuracloud
+    # symlink:
+    #   src: /usr/local/bin/terraform-provider-sakuracloud
+    #   dest: ~/.terraform.d/plugins/terraform-provider-sakuracloud
   - name: packer-completion
     bash_completion: packer
   - name: vagrant-completion
@@ -156,9 +158,13 @@ aliases:
 
 pip_packages:
   - name: pip
+  - name: requests
   - name: cs
   - name: dns-lexicon
   - name: pip-autoremove
+  - name: uritemplate
+  - name: github3.py
+    args: '--pre'
   - name: testinfra
     state: absent
   - name: boto
@@ -177,6 +183,7 @@ gem_packages:
   - name: serverspec
   - name: liquid
   - name: ansible_spec
+    state: absent
   - name: wpscan
   - name: kitchen-vagrant
   - name: kitchen-ec2

@@ -100,6 +100,8 @@
       pip:
         name: "{{ item.name }}"
         state: "{{ item.state|default('latest') }}"
+        version: "{{ item.version|default(omit) }}"
+        extra_args: "{{ item.args|default(omit) }}"
       with_items: "{{ pip_packages }}"
       register: result
     - name: execute pyenv rehash
