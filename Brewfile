@@ -20,9 +20,9 @@ brew coreutils
 brew ctags
 brew curl
 brew direnv
+brew docker-machine
 brew duck
 brew editorconfig
-brew elasticsearch
 brew embulk
 brew exa
 brew fontconfig
@@ -54,7 +54,6 @@ brew jbig2dec
 brew jmeter
 brew jpeg
 brew jq
-brew kibana
 brew lego
 brew libgit2
 brew libpng
@@ -158,6 +157,7 @@ tap caskroom/cask
 cask appcleaner
 cask atom
 cask betterzipql
+cask bitbar
 cask blisk
 cask boostnote
 cask box-sync
@@ -191,6 +191,7 @@ cask ngrok
 cask owasp-zap
 cask p4merge
 cask pencil
+cask pgadmin4
 cask postman
 cask qlcolorcode
 cask qlmarkdown
@@ -201,9 +202,7 @@ cask quicklook-json
 cask sequel-pro
 cask skype
 cask sourcetree
-cask timecamp
 cask vagrant
-cask virtualbox-extension-pack
 cask virtualbox
 cask vlc
 cask wireframe-sketcher
@@ -222,6 +221,9 @@ brew pet
 
 tap rcmdnk/file
 brew brew-file
+
+tap sacloud/docker-machine-sakuracloud
+brew docker-machine-sakuracloud
 
 tap sacloud/packer-builder-sakuracloud
 brew packer-builder-sakuracloud
@@ -244,7 +246,7 @@ appstore 467939042 Growl (2.1.3)
 appstore 1127487414 Install macOS Sierra (12.2.06)
 appstore 409183694 Keynote (6.6.2)
 appstore 692867256 Simplenote (1.1.8)
-appstore 803453959 Slack (2.8.2)
+appstore 803453959 Slack (2.9.0)
 appstore 1122008420 Table Tool (1.2.1)
 appstore 557168941 Tweetbot (2.5.4)
 appstore 497799835 Xcode (8.2.1)
