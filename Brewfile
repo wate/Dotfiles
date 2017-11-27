@@ -20,9 +20,9 @@ brew coreutils
 brew ctags
 brew curl
 brew direnv
+brew docker-machine
 brew duck
 brew editorconfig
-brew elasticsearch
 brew embulk
 brew exa
 brew fontconfig
@@ -54,7 +54,6 @@ brew jbig2dec
 brew jmeter
 brew jpeg
 brew jq
-brew kibana
 brew lego
 brew libgit2
 brew libpng
@@ -158,6 +157,7 @@ tap caskroom/cask
 cask appcleaner
 cask atom
 cask betterzipql
+cask bitbar
 cask blisk
 cask boostnote
 cask box-sync
@@ -202,9 +202,7 @@ cask quicklook-json
 cask sequel-pro
 cask skype
 cask sourcetree
-cask timecamp
 cask vagrant
-cask virtualbox-extension-pack
 cask virtualbox
 cask vlc
 cask wireframe-sketcher
@@ -223,6 +221,9 @@ brew pet
 
 tap rcmdnk/file
 brew brew-file
+
+tap sacloud/docker-machine-sakuracloud
+brew docker-machine-sakuracloud
 
 tap sacloud/packer-builder-sakuracloud
 brew packer-builder-sakuracloud
