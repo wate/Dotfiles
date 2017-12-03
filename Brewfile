@@ -20,7 +20,10 @@ brew coreutils
 brew ctags
 brew curl
 brew direnv
+brew docker
+brew docker-compose
 brew docker-machine
+brew docker-machine-driver-vultr
 brew duck
 brew editorconfig
 brew embulk
@@ -73,6 +76,7 @@ brew mcrypt
 brew mecab
 brew mecab-ipadic
 brew mhash
+brew mkdocs
 brew molecule
 brew mpfr
 brew mycli
@@ -170,7 +174,6 @@ cask firefox
 cask ganttproject
 cask gimp
 cask google-chrome
-cask google-cloud-sdk
 cask hipchat
 cask iterm2
 cask java
@@ -203,6 +206,7 @@ cask sequel-pro
 cask skype
 cask sourcetree
 cask vagrant
+cask virtualbox-extension-pack
 cask virtualbox
 cask vlc
 cask wireframe-sketcher
@@ -215,6 +219,8 @@ cask font-noto-sans-cjk-jp
 cask font-noto-serif-cjk-jp
 cask font-ricty-diminished
 cask font-source-han-code-jp
+
+tap buo/cask-upgrade
 
 tap knqyf263/pet
 brew pet
@@ -234,12 +240,8 @@ brew terraform-provider-sakuracloud
 tap sacloud/usacloud
 brew usacloud
 
-# Cask applications
-cask gravitdesigner
-cask sqlitebrowser
-
 # App Store applications
-appstore 1024640650 CotEditor (3.2.4)
+appstore 1024640650 CotEditor (3.2.5)
 appstore 412448059 ForkLift (2.6.6)
 appstore 445770608 Go2Shell (1.2.2)
 appstore 467939042 Growl (2.1.3)
