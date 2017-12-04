@@ -4,6 +4,9 @@
   become: no
   connection: local
   tasks:
+    - name: Ensure homebrew-cask-upgrade is installed
+      homebrew_tap:
+        name: buo/cask-upgrade
     - name: include variable file
       include_vars: mac_vars.yml
     - name: Update homebrew and upgrade all packages
@@ -25,6 +28,29 @@
         name: "{{ item.name }}"
         state: "{{ item.state|default('latest') }}"
       with_items: "{{ homebrew_packages }}"
+    - block:
+        - name: find terraform-provider-sakuracloud symlinks
+          find:
+            paths: ~/.terraform.d/plugins
+            patterns: terraform-provider-sakuracloud*
+            file_type: link
+          register: find_symlink_result
+        - name: remove terraform-provider-sakuracloud version old symlinks
+          file:
+            path: "{{ item.path }}"
+            state: absent
+          with_items: "{{ find_symlink_result.files }}"
+        - name: find terraform-provider-sakuracloud binary file
+          find:
+            paths: /usr/local/opt/terraform-provider-sakuracloud/bin
+            file_type: file
+          register: find_binary_result
+        - name: create plugin symlink
+          file:
+            src: "{{ find_binary_result.files[0].path }}"
+            dest: ~/.terraform.d/plugins/{{ find_binary_result.files[0].path|basename }}
+            state: link
+      when: "'terraform-provider-sakuracloud' in homebrew_packages|map(attribute='name')|list"
     - name: cleanup brew packages
       command: brew cleanup
     - name: Ensure Homebrew cask packages is installed
@@ -33,10 +59,7 @@
         state: "{{ item.state|default('present') }}"
       with_items: "{{ homebrew_cask_packages }}"
     - name: update brew cask packages
-      command: brew-file cask_upgrade -C
-      when: "'brew-file' in homebrew_packages|map(attribute='name')|list"
-    - name: cleanup brew cask packages
-      command: brew cask cleanup
+      command: brew cu --all --yes --quiet --cleanup
     - name: Ensure .bashrc in BREW_PREFIX variable
       lineinfile:
         dest: ~/.bashrc

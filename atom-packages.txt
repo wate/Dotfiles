@@ -30,7 +30,7 @@ linter-ruby@1.2.6
 linter-sass-lint@1.8.3
 linter-shellcheck@1.4.6
 linter-stylelint@4.0.2
-linter-textlint@2.4.0
+linter-textlint@3.0.0
 linter-tslint@1.9.0
 linter-ui-default@1.6.10
 markdown-preview-plus@2.4.16
