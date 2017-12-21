@@ -13,6 +13,7 @@ brew bash-completion
 brew bash-git-prompt
 brew bison
 brew boost
+brew cdrtools
 brew cheat
 brew chromedriver
 brew cmake
@@ -59,10 +60,12 @@ brew jpeg
 brew jq
 brew lego
 brew libgit2
+brew libidn2
 brew libpng
 brew libssh2
 brew libtiff
 brew libtool
+brew libunistring
 brew libxml2
 brew libyaml
 brew libzip
@@ -160,7 +163,6 @@ tap homebrew/services
 tap caskroom/cask
 cask appcleaner
 cask atom
-cask betterzipql
 cask bitbar
 cask blisk
 cask boostnote
@@ -241,14 +243,17 @@ brew terraform-provider-sakuracloud
 tap sacloud/usacloud
 brew usacloud
 
+# Cask applications
+cask betterzipql
+
 # App Store applications
-appstore 1024640650 CotEditor (3.2.5)
+appstore 1024640650 CotEditor (3.2.6)
 appstore 445770608 Go2Shell (1.2.2)
 appstore 467939042 Growl (2.1.3)
 appstore 1127487414 Install macOS Sierra (12.2.06)
 appstore 409183694 Keynote (6.6.2)
 appstore 692867256 Simplenote (1.1.8)
-appstore 803453959 Slack (2.9.0)
+appstore 803453959 Slack (3.0.0)
 appstore 1122008420 Table Tool (1.2.1)
 appstore 557168941 Tweetbot (2.5.4)
 appstore 497799835 Xcode (8.2.1)
