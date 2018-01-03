@@ -133,6 +133,7 @@ brew vault
 brew vim
 brew webp
 brew wget
+brew wpscan
 brew xz
 brew zlib
 
