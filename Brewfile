@@ -13,6 +13,7 @@ brew bash-completion
 brew bash-git-prompt
 brew bison
 brew boost
+brew caddy
 brew cdrtools
 brew cheat
 brew chromedriver
@@ -42,6 +43,7 @@ brew ghostscript
 brew git
 brew git-flow-avh
 brew git-lfs
+brew glide
 brew glog
 brew gmp
 brew gnu-getopt
@@ -131,6 +133,7 @@ brew unrar
 brew vagrant-completion
 brew vault
 brew vim
+brew vultr
 brew webp
 brew wget
 brew wpscan
