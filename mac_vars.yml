@@ -164,6 +164,13 @@ pip_packages:
   - name: dns-lexicon
   - name: pip-autoremove
   - name: uritemplate
+  # OpenStack CLI Client
+  - name: python-openstackclient
+  - name: python-novaclient
+  - name: python-cinderclient
+  - name: python-glanceclient
+  - name: python-neutronclient
+  - name: python-swiftclient
   - name: github3.py
     args: '--pre'
   - name: testinfra
