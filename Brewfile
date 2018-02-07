@@ -110,7 +110,6 @@ brew p7zip
 brew packer
 brew packer-completion
 brew pandoc
-brew pass
 brew pcre
 brew peco
 brew perl
