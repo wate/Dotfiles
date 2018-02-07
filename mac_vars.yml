@@ -84,6 +84,10 @@ homebrew_packages:
   - name: remarshal
   - name: assh
   - name: embulk
+  # Golang
+  - name: go
+  - name: dep
+  - name: glide
   # *env/*brew
   - name: nodebrew
     bash_completion: nodebrew
@@ -104,7 +108,6 @@ homebrew_packages:
     bash_completion: composer-completion.sh
   - name: codeception
   - name: php-code-sniffer
-  - name: deployer
   - name: php-cs-fixer
   - name: pdepend
   - name: phpcpd
