@@ -3,6 +3,7 @@
 
 tap homebrew/core
 brew ack
+brew adns
 brew ansible
 brew ansible-lint
 brew assh
@@ -21,6 +22,7 @@ brew cmake
 brew coreutils
 brew ctags
 brew curl
+brew dep
 brew direnv
 brew docker
 brew docker-compose
@@ -28,7 +30,6 @@ brew docker-machine
 brew docker-machine-driver-vultr
 brew duck
 brew editorconfig
-brew embulk
 brew exa
 brew fontconfig
 brew freetype
@@ -49,6 +50,8 @@ brew gmp
 brew gnu-getopt
 brew gnu-sed
 brew gnu-tar
+brew gnupg
+brew gnutls
 brew go
 brew graphviz
 brew highlight
@@ -61,13 +64,20 @@ brew jmeter
 brew jpeg
 brew jq
 brew lego
+brew libassuan
+brew libffi
+brew libgcrypt
 brew libgit2
+brew libgpg-error
 brew libidn2
+brew libksba
 brew libpng
 brew libssh2
+brew libtasn1
 brew libtiff
 brew libtool
 brew libunistring
+brew libusb
 brew libxml2
 brew libyaml
 brew libzip
@@ -85,20 +95,25 @@ brew mkdocs
 brew molecule
 brew mpfr
 brew mycli
+brew nettle
 brew nkf
 brew nmap
 brew node
 brew nodebrew
+brew npth
 brew oniguruma
 brew openssl
 brew openssl@1.1
+brew p11-kit
 brew p7zip
 brew packer
 brew packer-completion
 brew pandoc
+brew pass
 brew pcre
 brew peco
 brew perl
+brew pinentry
 brew pkg-config
 brew plantuml
 brew pre-commit
@@ -106,6 +121,7 @@ brew pwgen
 brew pyenv
 brew python
 brew python3
+brew qrencode
 brew rake-completion
 brew rbenv
 brew rclone
@@ -145,7 +161,6 @@ tap homebrew/dupes
 tap homebrew/php
 brew codeception
 brew composer
-brew deployer
 brew pdepend
 brew php-code-sniffer
 brew php-cs-fixer
@@ -195,7 +210,6 @@ cask libreoffice
 cask licecap
 cask limechat
 cask macwinzipper
-cask mucommander
 cask netbeans-php
 cask ngrok
 cask owasp-zap
@@ -250,7 +264,7 @@ brew usacloud
 cask betterzipql
 
 # App Store applications
-appstore 1024640650 CotEditor (3.2.8)
+appstore 1024640650 CotEditor (3.3.0)
 appstore 445770608 Go2Shell (1.2.2)
 appstore 467939042 Growl (2.1.3)
 appstore 1127487414 Install macOS Sierra (12.2.06)
