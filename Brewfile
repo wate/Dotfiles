@@ -266,7 +266,7 @@ brew usacloud
 cask betterzipql
 
 # App Store applications
-appstore 1024640650 CotEditor (3.2.8)
+appstore 1024640650 CotEditor (3.3.0)
 appstore 445770608 Go2Shell (1.2.2)
 appstore 467939042 Growl (2.1.3)
 appstore 1127487414 Install macOS Sierra (12.2.06)
