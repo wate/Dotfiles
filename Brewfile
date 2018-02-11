@@ -30,7 +30,6 @@ brew docker-machine
 brew docker-machine-driver-vultr
 brew duck
 brew editorconfig
-brew embulk
 brew exa
 brew fontconfig
 brew freetype
@@ -211,7 +210,6 @@ cask libreoffice
 cask licecap
 cask limechat
 cask macwinzipper
-cask mucommander
 cask netbeans-php
 cask ngrok
 cask owasp-zap
