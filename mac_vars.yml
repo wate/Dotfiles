@@ -63,6 +63,8 @@ homebrew_packages:
     directory: ~/.packer.d/plugins
   - name: usacloud
     bash_completion: usacloud
+  - name: pass
+    bash_completion: pass
   - name: vultr
   - name: docker-machine
   - name: docker-machine-sakuracloud
@@ -83,7 +85,6 @@ homebrew_packages:
   - name: exa
   - name: remarshal
   - name: assh
-  - name: embulk
   # Golang
   - name: go
   - name: dep
@@ -97,6 +98,11 @@ homebrew_packages:
   - name: pyenv
     rcfile:
       content: eval "$(pyenv init -)";
+  - name: direnv
+    rcfile:
+      content: |
+        export EDITOR=atom
+        eval "$(direnv hook bash)"
   # PHP
   - name: php71
   - name: php71-opcache
@@ -134,7 +140,6 @@ homebrew_cask_packages:
   - name: font-hack
   - name: libreoffice
   - name: libreoffice-language-pack
-  - name: mucommander
 
 aliases:
   - name: ls
@@ -176,40 +181,14 @@ pip_packages:
   - name: python-swiftclient
   - name: github3.py
     args: '--pre'
-  - name: testinfra
-    state: absent
-  - name: boto
-    state: absent
-  - name: shade
-    state: absent
-  - name: molecule
-    state: absent
-  - name: python-vagrant
-    state: absent
-  - name: apache-libcloud
-    state: absent
 
 gem_packages:
   - name: bundler
   - name: serverspec
   - name: liquid
   - name: kitchen-vagrant
-  - name: kitchen-ec2
-    state: absent
-  - name: kitchen-google
-    state: absent
-  - name: kitchen-cloudstack
-    state: absent
-  - name: kitchen-openstack
-    state: absent
   - name: kitchen-ansible
   - name: kitchen-verifier-serverspec
-  - name: kitchen-goss
-    state: absent
-  - name: kitchen-inspec
-    state: absent
-  - name: kitchen-terraform
-    state: absent
   - name: test-kitchen
 
 npm_packages:
