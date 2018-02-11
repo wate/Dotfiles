@@ -63,8 +63,8 @@ homebrew_packages:
     directory: ~/.packer.d/plugins
   - name: usacloud
     bash_completion: usacloud
-  - name: pass
-    bash_completion: pass
+  - name: rclone
+  - name: m-cli
   - name: vultr
   - name: docker-machine
   - name: docker-machine-sakuracloud
@@ -89,6 +89,11 @@ homebrew_packages:
   - name: go
   - name: dep
   - name: glide
+  - name: direnv
+    rcfile:
+      content: |
+        export EDITOR=atom
+        eval "$(direnv hook bash)"
   # *env/*brew
   - name: nodebrew
     bash_completion: nodebrew
@@ -98,11 +103,6 @@ homebrew_packages:
   - name: pyenv
     rcfile:
       content: eval "$(pyenv init -)";
-  - name: direnv
-    rcfile:
-      content: |
-        export EDITOR=atom
-        eval "$(direnv hook bash)"
   # PHP
   - name: php71
   - name: php71-opcache
@@ -185,7 +185,6 @@ pip_packages:
 gem_packages:
   - name: bundler
   - name: serverspec
-  - name: liquid
   - name: kitchen-vagrant
   - name: kitchen-ansible
   - name: kitchen-verifier-serverspec
@@ -193,7 +192,7 @@ gem_packages:
 
 npm_packages:
   - name: typescript
-  - name: typson
+  - name: typescript-json-schema
   - name: codeceptjs
   - name: newman
   - name: eslint
