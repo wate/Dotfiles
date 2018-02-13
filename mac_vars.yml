@@ -84,6 +84,7 @@ homebrew_packages:
   - name: editorconfig
   - name: exa
   - name: remarshal
+  - name: nmap
   - name: assh
   # Golang
   - name: go
@@ -150,6 +151,8 @@ aliases:
     command: "exa -lag --git"
   - name: ssh
     command: "assh wrapper ssh"
+  - name: nmap
+    command: "nmap -Pn"
   - name: sed
     command: "gsed"
   - name: tr
