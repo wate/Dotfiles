@@ -8,10 +8,13 @@ emmet@2.4.3
 file-icons@2.1.16
 file-types@0.5.5
 git-plus@7.10.0
+graphviz-preview-plus@1.5.3
 intentions@1.1.5
 language-ansible@0.2.2
 language-apache@1.8.0
 language-awk@0.1.12
+language-dot@1.7.0
+language-dots@0.0.4
 language-lua@0.9.11
 language-nginx@0.8.0
 language-nunjucks@4.2.1

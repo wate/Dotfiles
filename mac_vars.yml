@@ -171,10 +171,12 @@ aliases:
 pip_packages:
   - name: pip
   - name: requests
-  - name: cs
   - name: dns-lexicon
   - name: pip-autoremove
   - name: uritemplate
+  - name: ansible-cmdb
+  # CloudStack CLI client
+  - name: cs
   # OpenStack CLI Client
   - name: python-openstackclient
   - name: python-novaclient
@@ -188,10 +190,6 @@ pip_packages:
 gem_packages:
   - name: bundler
   - name: serverspec
-  - name: kitchen-vagrant
-  - name: kitchen-ansible
-  - name: kitchen-verifier-serverspec
-  - name: test-kitchen
 
 npm_packages:
   - name: typescript
