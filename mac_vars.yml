@@ -90,12 +90,15 @@ homebrew_packages:
   - name: go
   - name: dep
   - name: glide
+  # tmux
+  - name: tmux
+  - name: tmux-xpanes
+  # *env/*brew
   - name: direnv
     rcfile:
       content: |
         export EDITOR=atom
         eval "$(direnv hook bash)"
-  # *env/*brew
   - name: nodebrew
     bash_completion: nodebrew
   - name: rbenv
@@ -104,6 +107,7 @@ homebrew_packages:
   - name: pyenv
     rcfile:
       content: eval "$(pyenv init -)";
+  - name: pyenv-pip-migrate
   # PHP
   - name: php71
   - name: php71-opcache
@@ -127,6 +131,7 @@ homebrew_packages:
     bash_completion: wp-completion.bash
 
 homebrew_cask_packages:
+  - name: karabiner-elements
   - name: atom
   - name: vagrant
   - name: virtualbox
