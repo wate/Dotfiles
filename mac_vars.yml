@@ -142,10 +142,6 @@ homebrew_cask_packages:
   - name: font-noto-serif-cjk-jp
   - name: font-noto-sans-cjk-jp
   - name: font-source-han-code-jp
-  - name: font-fira-code
-    state: absent
-  - name: font-hack
-    state: absent
   - name: libreoffice
   - name: libreoffice-language-pack
 
