@@ -239,8 +239,6 @@ cask font-noto-serif-cjk-jp
 cask font-source-han-code-jp
 cask font-noto-sans-cjk-jp
 cask font-ricty-diminished
-cask font-fira-code
-cask font-hack
 
 tap buo/cask-upgrade
 
@@ -269,6 +267,7 @@ cask betterzipql
 appstore 1024640650 CotEditor (3.3.2)
 appstore 445770608 Go2Shell (1.2.2)
 appstore 467939042 Growl (2.1.3)
+appstore 0 Install macOS High Sierra (13.3.02)
 appstore 409183694 Keynote (7.3.1)
 appstore 692867256 Simplenote (1.2)
 appstore 803453959 Slack (3.0.5)
