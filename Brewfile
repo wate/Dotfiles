@@ -65,6 +65,7 @@ brew jpeg
 brew jq
 brew lego
 brew libassuan
+brew libevent
 brew libffi
 brew libgcrypt
 brew libgit2
@@ -118,6 +119,7 @@ brew plantuml
 brew pre-commit
 brew pwgen
 brew pyenv
+brew pyenv-pip-migrate
 brew python
 brew python3
 brew qrencode
@@ -140,6 +142,8 @@ brew terraform
 brew the_silver_searcher
 brew thrift
 brew tig
+brew tmux
+brew tmux-xpanes
 brew trash
 brew tree
 brew unar
@@ -179,63 +183,64 @@ brew wp-cli
 tap homebrew/services
 
 tap caskroom/cask
-cask appcleaner
-cask atom
-cask bitbar
-cask boostnote
-cask box-sync
-cask cacher
-cask ccleaner
-cask clipy
-cask cyberduck
-cask dash
-cask firefox
-cask forklift
-cask ganttproject
-cask gimp
-cask google-chrome
-cask hipchat
-cask iterm2
-cask java
-cask josm
-cask karabiner
-cask keepassxc
-cask keka
 cask launchy
-cask libreoffice-language-pack
-cask libreoffice
-cask licecap
+cask atom
+cask ganttproject
 cask limechat
+cask bitbar
 cask macwinzipper
-cask netbeans-php
-cask ngrok
-cask owasp-zap
-cask p4merge
-cask pencil
-cask pgadmin4
-cask postman
-cask qlcolorcode
+cask ccleaner
+cask box-sync
 cask qlmarkdown
-cask qlprettypatch
-cask qlstephen
-cask quicklook-csv
-cask quicklook-json
-cask sequel-pro
-cask skype
-cask sourcetree
-cask vagrant
-cask virtualbox-extension-pack
+cask netbeans-php
 cask virtualbox
 cask vlc
+cask skype
+cask appcleaner
+cask karabiner-elements
+cask keepassxc
+cask pgadmin4
+cask postman
+cask iterm2
 cask xmind
+cask josm
+cask p4merge
+cask dash
+cask vagrant
+cask libreoffice
+cask clipy
+cask gimp
+cask qlprettypatch
+cask virtualbox-extension-pack
+cask libreoffice-language-pack
+cask hipchat
+cask quicklook-json
+cask qlstephen
+cask karabiner
+cask sequel-pro
+cask qlcolorcode
+cask cyberduck
+cask owasp-zap
+cask firefox
+cask boostnote
+cask google-chrome
+cask cacher
+cask quicklook-csv
+cask ngrok
+cask forklift
+cask pencil
+cask java
+cask sourcetree
+cask licecap
+cask keka
 
 tap caskroom/fonts
+cask font-noto-serif-cjk-jp
+cask font-source-han-code-jp
+cask font-noto-sans-cjk-jp
+cask font-ricty-diminished
 cask font-fira-code
 cask font-hack
-cask font-noto-sans-cjk-jp
-cask font-noto-serif-cjk-jp
-cask font-ricty-diminished
-cask font-source-han-code-jp
 
 tap buo/cask-upgrade
 
@@ -261,16 +266,15 @@ brew usacloud
 cask betterzipql
 
 # App Store applications
-appstore 1024640650 CotEditor (3.2.8)
+appstore 1024640650 CotEditor (3.3.2)
 appstore 445770608 Go2Shell (1.2.2)
 appstore 467939042 Growl (2.1.3)
-appstore 1127487414 Install macOS Sierra (12.2.06)
-appstore 409183694 Keynote (6.6.2)
+appstore 409183694 Keynote (7.3.1)
 appstore 692867256 Simplenote (1.2)
 appstore 803453959 Slack (3.0.5)
 appstore 1122008420 Table Tool (1.2.1)
 appstore 557168941 Tweetbot (2.5.4)
-appstore 497799835 Xcode (8.2.1)
+appstore 497799835 Xcode (9.2)
 
 # Other commands
 but not corresponding casks were found.
