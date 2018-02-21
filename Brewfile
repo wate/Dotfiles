@@ -216,11 +216,11 @@ cask libreoffice-language-pack
 cask hipchat
 cask quicklook-json
 cask qlstephen
-cask karabiner
 cask sequel-pro
 cask qlcolorcode
 cask cyberduck
 cask owasp-zap
+cask vagrant-manager
 cask firefox
 cask boostnote
 cask google-chrome
