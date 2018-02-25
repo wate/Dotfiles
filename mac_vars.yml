@@ -189,6 +189,7 @@ pip_packages:
   - name: python-swiftclient
   - name: github3.py
     args: '--pre'
+  - name: yamllint
 
 gem_packages:
   - name: bundler
