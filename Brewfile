@@ -50,7 +50,6 @@ brew gmp
 brew gnu-getopt
 brew gnu-sed
 brew gnu-tar
-brew gnupg
 brew gnutls
 brew go
 brew graphviz
@@ -229,7 +228,6 @@ cask quicklook-csv
 cask ngrok
 cask forklift
 cask pencil
-cask java
 cask sourcetree
 cask licecap
 cask keka
@@ -267,9 +265,8 @@ cask betterzipql
 appstore 1024640650 CotEditor (3.3.2)
 appstore 445770608 Go2Shell (1.2.2)
 appstore 467939042 Growl (2.1.3)
-appstore 0 Install macOS High Sierra (13.3.02)
 appstore 409183694 Keynote (7.3.1)
-appstore 692867256 Simplenote (1.2)
+appstore 692867256 Simplenote (1.3.1)
 appstore 803453959 Slack (3.0.5)
 appstore 1122008420 Table Tool (1.2.1)
 appstore 557168941 Tweetbot (2.5.4)
