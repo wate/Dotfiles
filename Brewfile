@@ -24,10 +24,6 @@ brew ctags
 brew curl
 brew dep
 brew direnv
-brew docker
-brew docker-compose
-brew docker-machine
-brew docker-machine-driver-vultr
 brew duck
 brew editorconfig
 brew exa
@@ -191,6 +187,7 @@ cask macwinzipper
 cask ccleaner
 cask box-sync
 cask qlmarkdown
+cask stride
 cask netbeans-php
 cask virtualbox
 cask vlc
@@ -245,9 +242,6 @@ brew pet
 
 tap rcmdnk/file
 brew brew-file
-
-tap sacloud/docker-machine-sakuracloud
-brew docker-machine-sakuracloud
 
 tap sacloud/packer-builder-sakuracloud
 brew packer-builder-sakuracloud
