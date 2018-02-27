@@ -24,7 +24,6 @@ homebrew_taps:
   - name: sacloud/usacloud
   - name: sacloud/terraform-provider-sakuracloud
   - name: sacloud/packer-builder-sakuracloud
-  - name: sacloud/docker-machine-sakuracloud
 
 homebrew_packages:
   - name: bash-completion
@@ -66,9 +65,6 @@ homebrew_packages:
   - name: rclone
   - name: m-cli
   - name: vultr
-  - name: docker-machine
-  - name: docker-machine-sakuracloud
-  - name: docker-machine-driver-vultr
   - name: packer-builder-sakuracloud
     symlink:
       src: /usr/local/opt/packer-builder-sakuracloud/bin/packer-builder-sakuracloud

@@ -157,9 +157,3 @@
     - name: dump atom install packages
       shell: apm list --installed --bare>./atom-packages.txt
       when: "'atom' in homebrew_cask_packages|map(attribute='name')|list"
-  post_tasks:
-    - name: install rarukas
-      get_url:
-        url: https://github.com/rarukas/rarukas/releases/download/0.0.2/rarukas_darwin-amd64
-        dest: /usr/local/bin/rarukas
-        mode: 0755

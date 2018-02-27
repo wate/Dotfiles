@@ -38,7 +38,7 @@ linter-ui-default@1.6.10
 markdown-preview-enhanced@0.15.2
 markdown-preview-plus@2.5.5
 markdown-scroll-sync@2.1.2
-markdown-table-editor@1.0.2
+markdown-table-editor@1.1.0
 merge-conflicts@1.4.5
 minimap@4.29.8
 minimap-git-diff@4.3.1
