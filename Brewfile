@@ -256,7 +256,7 @@ brew usacloud
 cask betterzipql
 
 # App Store applications
-appstore 1024640650 CotEditor (3.3.2)
+appstore 1024640650 CotEditor (3.3.3)
 appstore 445770608 Go2Shell (1.2.2)
 appstore 467939042 Growl (2.1.3)
 appstore 409183694 Keynote (7.3.1)
