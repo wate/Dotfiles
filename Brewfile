@@ -5,6 +5,7 @@ tap homebrew/core
 brew ack
 brew adns
 brew ansible
+brew ansible-cmdb
 brew ansible-lint
 brew assh
 brew autoconf
@@ -116,7 +117,7 @@ brew pwgen
 brew pyenv
 brew pyenv-pip-migrate
 brew python
-brew python3
+brew python@2
 brew qrencode
 brew rake-completion
 brew rbenv
@@ -131,6 +132,7 @@ brew s3cmd
 brew selenium-server-standalone
 brew shellcheck
 brew snappy
+brew sphinx-doc
 brew sqlite
 brew ssh-copy-id
 brew terraform
@@ -188,6 +190,7 @@ cask ccleaner
 cask box-sync
 cask qlmarkdown
 cask stride
+cask cheatsheet
 cask netbeans-php
 cask virtualbox
 cask vlc
@@ -196,6 +199,7 @@ cask appcleaner
 cask karabiner-elements
 cask keepassxc
 cask pgadmin4
+cask db-browser-for-sqlite
 cask postman
 cask iterm2
 cask xmind
@@ -208,6 +212,7 @@ cask clipy
 cask gimp
 cask qlprettypatch
 cask virtualbox-extension-pack
+cask rescuetime
 cask libreoffice-language-pack
 cask hipchat
 cask quicklook-json
@@ -222,6 +227,7 @@ cask boostnote
 cask google-chrome
 cask cacher
 cask quicklook-csv
+cask dbeaver-community
 cask ngrok
 cask forklift
 cask pencil
@@ -252,16 +258,16 @@ brew terraform-provider-sakuracloud
 tap sacloud/usacloud
 brew usacloud
 
-# Cask applications
+# Other Cask applications
 cask betterzipql
 
 # App Store applications
-appstore 1024640650 CotEditor (3.3.3)
+appstore 1024640650 CotEditor (3.3.5)
 appstore 445770608 Go2Shell (1.2.2)
 appstore 467939042 Growl (2.1.3)
 appstore 409183694 Keynote (7.3.1)
-appstore 692867256 Simplenote (1.3.1)
-appstore 803453959 Slack (3.0.5)
+appstore 692867256 Simplenote (1.3.2)
+appstore 803453959 Slack (3.1.0)
 appstore 1122008420 Table Tool (1.2.1)
 appstore 557168941 Tweetbot (2.5.4)
 appstore 497799835 Xcode (9.2)
