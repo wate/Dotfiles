@@ -17,7 +17,6 @@ homebrew_taps:
   - name: homebrew/dupes
   - name: homebrew/php
   - name: homebrew/services
-  - name: caskroom/cask
   - name: caskroom/fonts
   - name: rcmdnk/file
   - name: knqyf263/pet
@@ -77,7 +76,7 @@ homebrew_packages:
     bash_completion: vagrant
   - name: awscli
     bash_completion: aws_bash_completer
-  - name: editorconfig
+  - name: ansible-cmdb
   - name: exa
   - name: remarshal
   - name: nmap
@@ -173,7 +172,6 @@ pip_packages:
   - name: dns-lexicon
   - name: pip-autoremove
   - name: uritemplate
-  - name: ansible-cmdb
   # CloudStack CLI client
   - name: cs
   # OpenStack CLI Client
