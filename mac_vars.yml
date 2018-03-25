@@ -92,7 +92,7 @@ homebrew_packages:
   - name: direnv
     rcfile:
       content: |
-        export EDITOR=atom
+        export EDITOR=vim
         eval "$(direnv hook bash)"
   - name: nodebrew
     bash_completion: nodebrew
