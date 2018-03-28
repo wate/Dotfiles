@@ -102,6 +102,9 @@ homebrew_packages:
   - name: pyenv
     rcfile:
       content: eval "$(pyenv init -)";
+  - name: pyenv-virtualenv
+    rcfile:
+      content: eval "$(pyenv virtualenv-init -)";
   - name: pyenv-pip-migrate
   # PHP
   - name: php71
@@ -187,7 +190,10 @@ pip_packages:
 
 gem_packages:
   - name: bundler
+  - name: rake
+  - name: rubocop
   - name: serverspec
+  - name: deep_merge
 
 npm_packages:
   - name: typescript

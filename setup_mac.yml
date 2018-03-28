@@ -129,7 +129,7 @@
       register: result
     - name: execute pyenv rehash
       command: pyenv rehash
-      when: "'pyenv' in homebrew_packages|map(attribute='name')|list and result|changed"
+      when: "'pyenv' in homebrew_packages|map(attribute='name')|list and result is changed"
     # gem
     - name: Ensure gem packages
       gem:
@@ -140,7 +140,7 @@
       register: result
     - name: cleanup gem packages
       command: gem cleanup
-      when: result|changed
+      when: result is changed
     # npm
     - name: Ensure npm packages
       npm:
