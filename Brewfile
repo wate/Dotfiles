@@ -20,6 +20,7 @@ brew cdrtools
 brew cheat
 brew chromedriver
 brew cmake
+brew composer
 brew coreutils
 brew ctags
 brew curl
@@ -109,6 +110,7 @@ brew pandoc
 brew pcre
 brew peco
 brew perl
+brew php-cs-fixer
 brew pinentry
 brew pkg-config
 brew plantuml
@@ -116,6 +118,7 @@ brew pre-commit
 brew pwgen
 brew pyenv
 brew pyenv-pip-migrate
+brew pyenv-virtualenv
 brew python
 brew python@2
 brew qrencode
@@ -152,6 +155,7 @@ brew vim
 brew vultr
 brew webp
 brew wget
+brew wp-cli
 brew wpscan
 brew xz
 brew zlib
@@ -160,10 +164,8 @@ tap homebrew/dupes
 
 tap homebrew/php
 brew codeception
-brew composer
 brew pdepend
 brew php-code-sniffer
-brew php-cs-fixer
 brew php71
 brew php71-intl
 brew php71-opcache
@@ -175,70 +177,71 @@ brew phpdocumentor
 brew phploc
 brew phpmd
 brew phpmetrics
-brew wp-cli
 
 tap homebrew/services
 
 tap caskroom/cask
-cask launchy
-cask atom
-cask ganttproject
-cask limechat
-cask bitbar
-cask macwinzipper
-cask ccleaner
-cask box-sync
-cask qlmarkdown
-cask stride
-cask cheatsheet
-cask netbeans-php
-cask virtualbox
-cask vlc
-cask skype
 cask appcleaner
+cask atom
+cask bitbar
+cask boostnote
+cask box-sync
+cask cacher
+cask ccleaner
+cask cheatsheet
+cask clipy
+cask cyberduck
+cask dash
+cask db-browser-for-sqlite
+cask dbeaver-community
+cask firefox
+cask forklift
+cask ganttproject
+cask gimp
+cask google-chrome
+cask hipchat
+cask iterm2
+cask josm
 cask karabiner-elements
 cask keepassxc
-cask pgadmin4
-cask db-browser-for-sqlite
-cask postman
-cask iterm2
-cask xmind
-cask josm
-cask p4merge
-cask dash
-cask vagrant
-cask libreoffice
-cask clipy
-cask gimp
-cask qlprettypatch
-cask virtualbox-extension-pack
-cask rescuetime
-cask libreoffice-language-pack
-cask hipchat
-cask quicklook-json
-cask qlstephen
-cask sequel-pro
-cask qlcolorcode
-cask cyberduck
-cask owasp-zap
-cask firefox
-cask boostnote
-cask google-chrome
-cask cacher
-cask quicklook-csv
-cask dbeaver-community
-cask ngrok
-cask forklift
-cask pencil
-cask sourcetree
-cask licecap
 cask keka
+cask krita
+cask launchy
+cask libreoffice
+cask libreoffice-language-pack
+cask licecap
+cask limechat
+cask macwinzipper
+cask netbeans-php
+cask ngrok
+cask owasp-zap
+cask p4merge
+cask pencil
+cask pgadmin4
+cask postman
+cask qlcolorcode
+cask qlmarkdown
+cask qlprettypatch
+cask qlstephen
+cask quicklook-csv
+cask quicklook-json
+cask rescuetime
+cask sequel-pro
+cask skype
+cask sourcetree
+cask stride
+cask vagrant
+cask vagrant-manager
+cask virtualbox
+cask virtualbox-extension-pack
+cask vlc
+cask xmind
 
 tap caskroom/fonts
-cask font-noto-serif-cjk-jp
-cask font-source-han-code-jp
 cask font-noto-sans-cjk-jp
+cask font-noto-serif-cjk-jp
 cask font-ricty-diminished
+cask font-source-han-code-jp
 
 tap buo/cask-upgrade
 
@@ -270,6 +273,3 @@ appstore 803453959 Slack (3.1.0)
 appstore 1122008420 Table Tool (1.2.1)
 appstore 557168941 Tweetbot (2.5.4)
 appstore 497799835 Xcode (9.2)
-
-# Other commands
-but not corresponding casks were found.
