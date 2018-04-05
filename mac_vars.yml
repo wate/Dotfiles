@@ -15,7 +15,6 @@ git_global_config:
 
 homebrew_taps:
   - name: homebrew/dupes
-  - name: homebrew/php
   - name: homebrew/services
   - name: caskroom/fonts
   - name: rcmdnk/file
