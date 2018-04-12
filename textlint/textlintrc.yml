@@ -1,0 +1,3 @@
+rules:
+  "ja-unnatural-alphabet": true
+  "preset-ja-technical-writing": true
