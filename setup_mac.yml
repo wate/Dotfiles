@@ -22,6 +22,7 @@
     - name: Ensure brew tap is installed
       homebrew_tap:
         name: "{{ item.name }}"
+        state: "{{ 'present' if item.state|default(true) else 'absent' }}"
       with_items: "{{ homebrew_taps }}"
     - name: Ensure Homebrew packages is installed
       homebrew:
@@ -114,17 +115,25 @@
         dest: ~/.bashrc
         line: 'alias {{ item.name }}="{{ item.command }}"'
       with_items: "{{ aliases }}"
+    # composer
+    - name: Ensure composer packages
+      composer:
+        command: require
+        global_command: yes
+        arguments: "{{ item.name }}"
+      with_items: "{{ composer_packages }}"
+    - name: Update composer packages
+      composer:
+        command: update
+        global_command: yes
     # pip
-    - name: orverwrite ansible python path
-      set_fact:
-        ansible_python_interpreter: "{{ ansible_user_dir }}/.pyenv/shims/python"
-      when: "'pyenv' in homebrew_packages|map(attribute='name')|list"
     - name: Ensure pip packages
       pip:
         name: "{{ item.name }}"
         state: "{{ item.state|default('latest') }}"
         version: "{{ item.version|default(omit) }}"
         extra_args: "{{ item.args|default(omit) }}"
+        executable: "{{ '~/.pyenv/shims/pip' if 'pyenv' in homebrew_packages|map(attribute='name')|list else omit }}"
       with_items: "{{ pip_packages }}"
       register: result
     - name: execute pyenv rehash
@@ -136,6 +145,7 @@
         name: "{{ item.name }}"
         user_install: no
         state: "{{ item.state|default('latest') }}"
+        executable: "{{ '~/.rbenv/shims/gem' if 'rbenv' in homebrew_packages|map(attribute='name')|list else omit }}"
       with_items: "{{ gem_packages }}"
       register: result
     - name: cleanup gem packages
@@ -147,6 +157,7 @@
         name: "{{ item.name }}"
         global: yes
         state: "{{ item.state|default('latest') }}"
+        executable: "{{ '~/.nodebrew/current/bin/npm' if 'nodebrew' in homebrew_packages|map(attribute='name')|list else omit }}"
       with_items: "{{ npm_packages }}"
     - name: dump atom install packages
       shell: apm list --installed --bare>./atom-packages.txt

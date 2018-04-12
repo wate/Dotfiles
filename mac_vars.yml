@@ -107,23 +107,10 @@ homebrew_packages:
   - name: pyenv-pip-migrate
   # PHP
   - name: php71
-  - name: php71-opcache
-  - name: php71-phalcon
-  - name: php71-intl
-  - name: php71-yaml
-  - name: php71-xdebug
   - name: composer
     bash_completion: composer-completion.sh
-  - name: codeception
   - name: php-code-sniffer
   - name: php-cs-fixer
-  - name: pdepend
-  - name: phpcpd
-  - name: phpdocumentor
-  - name: phpmetrics
-  - name: phpmd
-  - name: phploc
-  - name: pdepend
   - name: wp-cli
     bash_completion: wp-completion.bash
 
@@ -168,6 +155,15 @@ aliases:
   - name: awk
     command: "gawk"
 
+composer_packages:
+  - name: codeception/codeception
+  - name: phpmetrics/phpmetrics
+  - name: phpmd/phpmd
+  - name: sebastian/phpcpd
+  - name: phploc/phploc
+  - name: pdepend/pdepend
+  # - name: phpdocumentor/phpdocumentor
+
 pip_packages:
   - name: pip
   - name: requests
@@ -180,9 +176,13 @@ pip_packages:
   - name: python-openstackclient
   - name: python-novaclient
   - name: python-cinderclient
+    state: absent
   - name: python-glanceclient
+    state: absent
   - name: python-neutronclient
+    state: absent
   - name: python-swiftclient
+    state: absent
   - name: github3.py
     args: '--pre'
   - name: yamllint

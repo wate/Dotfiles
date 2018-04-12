@@ -30,13 +30,13 @@ linter-php@1.5.1
 linter-phpmd@2.0.0
 linter-ruby@1.2.6
 linter-sass-lint@1.8.3
-linter-shellcheck@1.4.6
+linter-shellcheck@1.4.7
 linter-stylelint@4.2.0
 linter-textlint@4.1.0
 linter-tslint@1.9.0
 linter-ui-default@1.7.1
 markdown-preview-enhanced@0.15.5
-markdown-preview-plus@2.5.6
+markdown-preview-plus@2.5.7
 markdown-scroll-sync@2.1.2
 markdown-table-editor@1.1.0
 merge-conflicts@1.4.5
