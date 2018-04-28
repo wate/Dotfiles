@@ -8,9 +8,9 @@
     "textlint-rule-no-doubled-joshi": "^3.*",
     "textlint-rule-no-mixed-zenkaku-and-hankaku-alphabet": "^1.*",
     "textlint-rule-preset-ja-technical-writing": "^2.*",
+    "textlint-rule-no-nfd": "^1.*",
     "textlint-rule-prh": "^5.*"
   },
-  "devDependencies": {},
   "author": "wate",
   "license": "MIT"
 }
