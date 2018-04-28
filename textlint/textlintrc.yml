@@ -1,4 +1,5 @@
 rules:
-  "ja-unnatural-alphabet": true
   "preset-ja-technical-writing": true
   "no-nfd": true
+  "no-mixed-zenkaku-and-hankaku-alphabet": true
+  editorconfig: true
