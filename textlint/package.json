@@ -3,8 +3,6 @@
   "description": "my textlint rules",
   "dependencies": {
     "textlint": "^10.*",
-    "textlint-rule-editorconfig": "^1.*",
-    "textlint-rule-no-mixed-zenkaku-and-hankaku-alphabet": "^1.*",
     "textlint-rule-no-nfd": "^1.*",
     "textlint-rule-preset-ja-technical-writing": "^2.*"
   },
