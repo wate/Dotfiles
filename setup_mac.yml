@@ -43,21 +43,24 @@
           with_items: "{{ find_symlink_result.files }}"
         - name: find terraform-provider-sakuracloud binary file
           find:
-            paths: /usr/local/opt/terraform-provider-sakuracloud/bin
+            paths: /usr/local/Cellar/terraform-provider-sakuracloud/
+            patterns: terraform-provider-sakuracloud_v*
             file_type: file
+            recurse: yes
           register: find_binary_result
         - name: create plugin symlink
           file:
-            src: "{{ find_binary_result.files[0].path }}"
-            dest: ~/.terraform.d/plugins/{{ find_binary_result.files[0].path|basename }}
+            src: "{{ item.path }}"
+            dest: ~/.terraform.d/plugins/{{ item.path|basename }}
             state: link
+          with_items: "{{ find_binary_result.files }}"
       when: "'terraform-provider-sakuracloud' in homebrew_packages|map(attribute='name')|list"
     - name: cleanup brew packages
       command: brew cleanup
     - name: Ensure Homebrew cask packages is installed
       homebrew_cask:
         name: "{{ item.name }}"
-        state: "{{ item.state|default('present') }}"
+        state: "{{ item.state|default('upgraded') }}"
       with_items: "{{ homebrew_cask_packages }}"
     - name: update brew cask packages
       command: brew cu --all --yes --quiet --cleanup

@@ -62,7 +62,7 @@ homebrew_packages:
     bash_completion: usacloud
   - name: rclone
   - name: m-cli
-  - name: vultr
+  - name: terraform-provider-sakuracloud
   - name: packer-builder-sakuracloud
     symlink:
       src: /usr/local/opt/packer-builder-sakuracloud/bin/packer-builder-sakuracloud
@@ -106,7 +106,7 @@ homebrew_packages:
       content: eval "$(pyenv virtualenv-init -)";
   - name: pyenv-pip-migrate
   # PHP
-  - name: php71
+  - name: php
   - name: composer
     bash_completion: composer-completion.sh
   - name: php-code-sniffer
