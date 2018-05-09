@@ -172,17 +172,6 @@ pip_packages:
   - name: uritemplate
   # CloudStack CLI client
   - name: cs
-  # OpenStack CLI Client
-  - name: python-openstackclient
-  - name: python-novaclient
-  - name: python-cinderclient
-    state: absent
-  - name: python-glanceclient
-    state: absent
-  - name: python-neutronclient
-    state: absent
-  - name: python-swiftclient
-    state: absent
   - name: github3.py
     args: '--pre'
   - name: yamllint
