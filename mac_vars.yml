@@ -125,6 +125,7 @@ homebrew_cask_packages:
   - name: virtualbox
   - name: virtualbox-extension-pack
   - name: netbeans-php
+  - name: owasp-zap
   - name: postman
   - name: font-ricty-diminished
   - name: font-noto-serif-cjk-jp
