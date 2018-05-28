@@ -30,6 +30,7 @@ brew ctags
 brew curl
 brew dep
 brew direnv
+brew docker
 brew docker-machine
 brew duck
 brew editorconfig
