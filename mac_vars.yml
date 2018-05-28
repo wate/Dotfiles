@@ -76,8 +76,6 @@ homebrew_packages:
     bash_completion: vagrant
   - name: packer-completion
     bash_completion: packer
-  - name: vagrant-completion
-    bash_completion: vagrant
   - name: docker-machine
   - name: docker
   - name: awscli
@@ -93,7 +91,9 @@ homebrew_packages:
   - name: glide
   # tmux
   - name: tmux
+    state: absent
   - name: tmux-xpanes
+    state: absent
   # *env/*brew
   - name: direnv
     rcfile:
