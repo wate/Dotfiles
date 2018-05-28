@@ -156,8 +156,6 @@ brew terraform
 brew the_silver_searcher
 brew thrift
 brew tig
-brew tmux
-brew tmux-xpanes
 brew trash
 brew tree
 brew unar
