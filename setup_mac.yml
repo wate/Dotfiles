@@ -67,23 +67,6 @@
                 state: link
               with_items: "{{ find_binary_result.files }}"
           when: "'terraform-provider-sakuracloud' in homebrew_packages|map(attribute='name')|list"
-        - name: Upgrade all homebrew packages
-          homebrew:
-            upgrade_all: yes
-          when: brew_all_upgrade
-        - name: Cleanup homebrew packages
-          command: brew cleanup
-          when: brew_cleanup
-      tags:
-        - brew
-        - homebrew
-    - name: homebrew
-      block:
-        - name: Ensure Homebrew cask packages is installed
-          homebrew_cask:
-            name: "{{ item.name }}"
-            state: "{{ item.state|default('present') }}"
-          with_items: "{{ homebrew_cask_packages }}"
         - name: Ensure .bashrc in load bash-completion
           lineinfile:
             dest: ~/.bashrc
@@ -112,6 +95,23 @@
             path: "{{ item.symlink.dest }}"
             state: link
           with_items: "{{ homebrew_packages|selectattr('symlink', 'defined')|selectattr('state', 'undefined')|list }}"
+        - name: Upgrade all homebrew packages
+          homebrew:
+            upgrade_all: yes
+          when: brew_all_upgrade
+        - name: Cleanup homebrew packages
+          command: brew cleanup
+          when: brew_cleanup
+      tags:
+        - brew
+        - homebrew
+    - name: homebrew cask
+      block:
+        - name: Ensure Homebrew cask packages is installed
+          homebrew_cask:
+            name: "{{ item.name }}"
+            state: "{{ item.state|default('present') }}"
+          with_items: "{{ homebrew_cask_packages }}"
         - name: Upgrade all homebrew cask packages
           homebrew_cask:
             upgrade_all: yes

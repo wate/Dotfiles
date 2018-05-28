@@ -77,6 +77,8 @@ homebrew_packages:
   - name: packer-completion
     bash_completion: packer
   - name: docker-machine
+    rcfile:
+      content: eval "$(docker-machine env default)";
   - name: docker
   - name: awscli
     bash_completion: aws_bash_completer
@@ -89,11 +91,6 @@ homebrew_packages:
   - name: go
   - name: dep
   - name: glide
-  # tmux
-  - name: tmux
-    state: absent
-  - name: tmux-xpanes
-    state: absent
   # *env/*brew
   - name: direnv
     rcfile:
@@ -163,6 +160,7 @@ aliases:
     command: "gawk"
 
 composer_packages:
+  - name: hirak/prestissimo
   - name: codeception/codeception
   - name: phpmetrics/phpmetrics
   - name: phpmd/phpmd
