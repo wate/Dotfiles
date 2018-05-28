@@ -3,165 +3,211 @@
   gather_facts: yes
   become: no
   connection: local
-  tasks:
-    - name: Ensure homebrew-cask-upgrade is installed
-      homebrew_tap:
-        name: buo/cask-upgrade
+  pre_tasks:
     - name: include variable file
       include_vars: mac_vars.yml
-    - name: Update homebrew and upgrade all packages
+      tags: always
+    - name: include secret environment variables file
+      include_vars: secret_env.yml
+      tags: always
+  tasks:
+    - name: Update homebrew
       homebrew:
         update_homebrew: yes
-        upgrade_all: yes
     - name: Ensure git global setting
       git_config:
         scope: global
         name: "{{ item.name }}"
         value: "{{ item.value }}"
       with_items: "{{ git_global_config }}"
-    - name: Ensure brew tap is installed
-      homebrew_tap:
-        name: "{{ item.name }}"
-        state: "{{ 'present' if item.state|default(true) else 'absent' }}"
-      with_items: "{{ homebrew_taps }}"
-    - name: Ensure Homebrew packages is installed
-      homebrew:
-        name: "{{ item.name }}"
-        state: "{{ item.state|default('latest') }}"
-      with_items: "{{ homebrew_packages }}"
-    - block:
-        - name: find terraform-provider-sakuracloud symlinks
-          find:
-            paths: ~/.terraform.d/plugins
-            patterns: terraform-provider-sakuracloud*
-            file_type: link
-          register: find_symlink_result
-        - name: remove terraform-provider-sakuracloud version old symlinks
-          file:
-            path: "{{ item.path }}"
-            state: absent
-          with_items: "{{ find_symlink_result.files }}"
-        - name: find terraform-provider-sakuracloud binary file
-          find:
-            paths: /usr/local/Cellar/terraform-provider-sakuracloud/
-            patterns: terraform-provider-sakuracloud_v*
-            file_type: file
-            recurse: yes
-          register: find_binary_result
-        - name: create plugin symlink
-          file:
-            src: "{{ item.path }}"
-            dest: ~/.terraform.d/plugins/{{ item.path|basename }}
-            state: link
-          with_items: "{{ find_binary_result.files }}"
-      when: "'terraform-provider-sakuracloud' in homebrew_packages|map(attribute='name')|list"
-    - name: cleanup brew packages
-      command: brew cleanup
-    - name: Ensure Homebrew cask packages is installed
-      homebrew_cask:
-        name: "{{ item.name }}"
-        state: "{{ item.state|default('upgraded') }}"
-      with_items: "{{ homebrew_cask_packages }}"
-    - name: update brew cask packages
-      command: brew cu --all --yes --quiet --cleanup
+      tags:
+        - git
     - name: Ensure .bashrc in BREW_PREFIX variable
       lineinfile:
         dest: ~/.bashrc
         line: 'BREW_PREFIX=$(brew --prefix)'
-    - name: Ensure load secret environment variable setting
-      blockinfile:
-        marker: "# {mark} secret environment variables ANSIBLE MANAGED BLOCK"
-        dest: ~/.bashrc
-        block: |
-          if [ -f ~/.secret ]; then
-              source ~/.secret
-          fi
-    - name: include secret environment variables file
-      include_vars: secret_env.yml
-    - name: add secret environment variable
-      lineinfile:
-        path: ~/.secret
-        regexp: "^export {{ item.key }}=.*"
-        line: 'export {{ item.key }}="{{ item.value }}"'
-        create: yes
-      with_dict: "{{ secret_env|default({}) }}"
-    - name: Ensure .bashrc in load bash-completion
-      lineinfile:
-        dest: ~/.bashrc
-        line: '[ -f "${BREW_PREFIX}"/etc/bash_completion ] && source /usr/local/etc/bash_completion'
-      when: "'bash-completion' in homebrew_packages|map(attribute='name')|list"
-    - name: Ensure load bash completion file
-      lineinfile:
-        dest: ~/.bashrc
-        line: '[ -f "${BREW_PREFIX}"/etc/bash_completion.d/{{ item.bash_completion }} ] && source "${BREW_PREFIX}"/etc/bash_completion.d/{{ item.bash_completion }}'
-      with_items: "{{ homebrew_packages|selectattr('bash_completion', 'defined')|selectattr('state', 'undefined')|list }}"
-    - name: Ensure rcfile setting
-      blockinfile:
-        create: true
-        marker: "# {mark} {{ item.name }} ANSIBLE MANAGED BLOCK"
-        dest: "{{ item.rcfile.path|default('~/.bashrc') }}"
-        block: "{{ item.rcfile.content }}"
-      with_items: "{{ homebrew_packages|selectattr('rcfile', 'defined')|selectattr('state', 'undefined')|list }}"
-    - name: Ensure brew package directory
-      file:
-        path: "{{ item.directory }}"
-        state: directory
-      with_items: "{{ homebrew_packages|selectattr('directory', 'defined')|selectattr('state', 'undefined')|list }}"
-    - name: Ensure brew package symlink
-      file:
-        src: "{{ item.symlink.src }}"
-        path: "{{ item.symlink.dest }}"
-        state: link
-      with_items: "{{ homebrew_packages|selectattr('symlink', 'defined')|selectattr('state', 'undefined')|list }}"
+    - name: Ensure brew tap is installed
+      homebrew_tap:
+        name: "{{ item.name }}"
+        state: "{{ item.state|default('present') }}"
+      with_items: "{{ homebrew_taps }}"
+      tags:
+        - brew
+        - homebrew_tap
+    - name: homebrew
+      block:
+        - name: Ensure Homebrew packages is installed
+          homebrew:
+            name: "{{ item.name }}"
+            state: "{{ item.state|default('present') }}"
+          with_items: "{{ homebrew_packages }}"
+        - block:
+            - name: Find terraform-provider-sakuracloud symlinks
+              find:
+                paths: ~/.terraform.d/plugins
+                patterns: terraform-provider-sakuracloud*
+                file_type: link
+              register: find_symlink_result
+            - name: Remove terraform-provider-sakuracloud version old symlinks
+              file:
+                path: "{{ item.path }}"
+                state: absent
+              with_items: "{{ find_symlink_result.files }}"
+            - name: Find terraform-provider-sakuracloud binary file
+              find:
+                paths: /usr/local/Cellar/terraform-provider-sakuracloud/
+                patterns: terraform-provider-sakuracloud_v*
+                file_type: file
+                recurse: yes
+              register: find_binary_result
+            - name: Create plugin symlink
+              file:
+                src: "{{ item.path }}"
+                dest: ~/.terraform.d/plugins/{{ item.path|basename }}
+                state: link
+              with_items: "{{ find_binary_result.files }}"
+          when: "'terraform-provider-sakuracloud' in homebrew_packages|map(attribute='name')|list"
+        - name: Upgrade all homebrew packages
+          homebrew:
+            upgrade_all: yes
+          when: brew_all_upgrade
+        - name: Cleanup homebrew packages
+          command: brew cleanup
+          when: brew_cleanup
+      tags:
+        - brew
+        - homebrew
+    - name: homebrew
+      block:
+        - name: Ensure Homebrew cask packages is installed
+          homebrew_cask:
+            name: "{{ item.name }}"
+            state: "{{ item.state|default('present') }}"
+          with_items: "{{ homebrew_cask_packages }}"
+        - name: Ensure .bashrc in load bash-completion
+          lineinfile:
+            dest: ~/.bashrc
+            line: '[ -f "${BREW_PREFIX}"/etc/bash_completion ] && source /usr/local/etc/bash_completion'
+          when: "'bash-completion' in homebrew_packages|map(attribute='name')|list"
+        - name: Ensure load bash completion file
+          lineinfile:
+            dest: ~/.bashrc
+            line: '[ -f "${BREW_PREFIX}"/etc/bash_completion.d/{{ item.bash_completion }} ] && source "${BREW_PREFIX}"/etc/bash_completion.d/{{ item.bash_completion }}'
+          with_items: "{{ homebrew_packages|json_query('bash_completion', 'defined')|selectattr('state', 'undefined')|list }}"
+        - name: Ensure rcfile setting
+          blockinfile:
+            create: true
+            marker: "# {mark} {{ item.name }} ANSIBLE MANAGED BLOCK"
+            dest: "{{ item.rcfile.path|default('~/.bashrc') }}"
+            block: "{{ item.rcfile.content }}"
+          with_items: "{{ homebrew_packages|selectattr('rcfile', 'defined')|selectattr('state', 'undefined')|list }}"
+        - name: Ensure brew package directory
+          file:
+            path: "{{ item.directory }}"
+            state: directory
+          with_items: "{{ homebrew_packages|selectattr('directory', 'defined')|selectattr('state', 'undefined')|list }}"
+        - name: Ensure brew package symlink
+          file:
+            src: "{{ item.symlink.src }}"
+            path: "{{ item.symlink.dest }}"
+            state: link
+          with_items: "{{ homebrew_packages|selectattr('symlink', 'defined')|selectattr('state', 'undefined')|list }}"
+        - name: Upgrade all homebrew cask packages
+          homebrew_cask:
+            upgrade_all: yes
+          when: brew_cask_all_upgrade
+        - name: Cleanup homebrew cask packages
+          command: brew cask cleanup
+          when: brew_cask_cleanup
+      tags:
+        - brew
+        - homebrew_cask
+    - name: environment variable
+      block:
+        - name: Ensure load secret environment variable setting
+          blockinfile:
+            marker: "# {mark} secret environment variables ANSIBLE MANAGED BLOCK"
+            dest: ~/.bashrc
+            block: |
+              if [ -f ~/.secret ]; then
+                  source ~/.secret
+              fi
+        - name: add secret environment variable
+          lineinfile:
+            path: ~/.secret
+            regexp: "^export {{ item.key }}=.*"
+            line: 'export {{ item.key }}="{{ item.value }}"'
+            create: yes
+          with_dict: "{{ secret_env|default({}) }}"
+      tags:
+        - env
+        - env_var
+        - env_variable
+        - environment_var
+        - environment_variable
     - name: Ensure .bashrc command alias
       lineinfile:
         dest: ~/.bashrc
         line: 'alias {{ item.name }}="{{ item.command }}"'
       with_items: "{{ aliases }}"
-    # composer
-    - name: Ensure composer packages
-      composer:
-        command: require
-        global_command: yes
-        arguments: "{{ item.name }}"
-      with_items: "{{ composer_packages }}"
-    - name: Update composer packages
-      composer:
-        command: update
-        global_command: yes
-    # pip
-    - name: Ensure pip packages
-      pip:
-        name: "{{ item.name }}"
-        state: "{{ item.state|default('latest') }}"
-        version: "{{ item.version|default(omit) }}"
-        extra_args: "{{ item.args|default(omit) }}"
-        executable: "{{ '~/.pyenv/shims/pip' if 'pyenv' in homebrew_packages|map(attribute='name')|list else omit }}"
-      with_items: "{{ pip_packages }}"
-      register: result
-    - name: execute pyenv rehash
-      command: pyenv rehash
-      when: "'pyenv' in homebrew_packages|map(attribute='name')|list and result is changed"
-    # gem
-    - name: Ensure gem packages
-      gem:
-        name: "{{ item.name }}"
-        user_install: no
-        state: "{{ item.state|default('latest') }}"
-        executable: "{{ '~/.rbenv/shims/gem' if 'rbenv' in homebrew_packages|map(attribute='name')|list else omit }}"
-      with_items: "{{ gem_packages }}"
-      register: result
-    - name: cleanup gem packages
-      command: gem cleanup
-      when: result is changed
-    # npm
-    - name: Ensure npm packages
-      npm:
-        name: "{{ item.name }}"
-        global: yes
-        state: "{{ item.state|default('latest') }}"
-        executable: "{{ '~/.nodebrew/current/bin/npm' if 'nodebrew' in homebrew_packages|map(attribute='name')|list else omit }}"
-      with_items: "{{ npm_packages }}"
-    - name: dump atom install packages
-      shell: apm list --installed --bare>./atom-packages.txt
-      when: "'atom' in homebrew_cask_packages|map(attribute='name')|list"
+      tags:
+        - aliase
+    - name: composer
+      block:
+        - name: Ensure composer packages
+          composer:
+            command: require
+            global_command: yes
+            arguments: "{{ item.name }}"
+          with_items: "{{ composer_packages }}"
+        - name: Update composer packages
+          composer:
+            command: update
+            global_command: yes
+      tags:
+        - composer
+    - name: pip
+      block:
+        - name: Ensure pip packages
+          pip:
+            name: "{{ item.name }}"
+            state: "{{ item.state|default('latest') }}"
+            version: "{{ item.version|default(omit) }}"
+            extra_args: "{{ item.args|default(omit) }}"
+            executable: "{{ '~/.pyenv/shims/pip' if 'pyenv' in homebrew_packages|map(attribute='name')|list else omit }}"
+          with_items: "{{ pip_packages }}"
+          register: result
+        - name: execute pyenv rehash
+          command: pyenv rehash
+          when: "'pyenv' in homebrew_packages|map(attribute='name')|list and result is changed"
+      tags:
+        - pip
+    - name: gem
+      block:
+        - name: Ensure gem packages
+          gem:
+            name: "{{ item.name }}"
+            user_install: no
+            state: "{{ item.state|default('latest') }}"
+            executable: "{{ '~/.rbenv/shims/gem' if 'rbenv' in homebrew_packages|map(attribute='name')|list else omit }}"
+          with_items: "{{ gem_packages }}"
+          register: result
+        - name: cleanup gem packages
+          command: gem cleanup
+          when: result is changed
+      tags:
+        - gem
+    - name: npm
+      block:
+        - name: Ensure npm packages
+          npm:
+            name: "{{ item.name }}"
+            global: yes
+            state: "{{ item.state|default('latest') }}"
+            executable: "{{ '~/.nodebrew/current/bin/npm' if 'nodebrew' in homebrew_packages|map(attribute='name')|list else omit }}"
+          with_items: "{{ npm_packages }}"
+        - name: dump atom install packages
+          shell: apm list --installed --bare>./atom-packages.txt
+          when: "'atom' in homebrew_cask_packages|map(attribute='name')|list"
+      tags:
+        - npm

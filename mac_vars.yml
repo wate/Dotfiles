@@ -13,10 +13,15 @@ git_global_config:
   - name: pull.rebase
     value: true
 
+brew_all_upgrade: yes
+brew_cleanup: yes
+brew_cask_all_upgrade: yes
+brew_cask_cleanup: yes
+
 homebrew_taps:
   - name: homebrew/dupes
   - name: homebrew/services
-  - name: caskroom/fonts
+  - name: homebrew/cask-fonts
   - name: rcmdnk/file
   - name: knqyf263/pet
   - name: sacloud/usacloud
@@ -73,6 +78,8 @@ homebrew_packages:
     bash_completion: packer
   - name: vagrant-completion
     bash_completion: vagrant
+  - name: docker-machine
+  - name: docker
   - name: awscli
     bash_completion: aws_bash_completer
   - name: ansible-cmdb
@@ -162,7 +169,6 @@ composer_packages:
   - name: sebastian/phpcpd
   - name: phploc/phploc
   - name: pdepend/pdepend
-  # - name: phpdocumentor/phpdocumentor
 
 pip_packages:
   - name: pip
