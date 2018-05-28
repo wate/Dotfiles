@@ -76,10 +76,11 @@ homebrew_packages:
     bash_completion: vagrant
   - name: packer-completion
     bash_completion: packer
+  - name: docker
   - name: docker-machine
     rcfile:
       content: eval "$(docker-machine env default)";
-  - name: docker
+  - name: docker-compose
   - name: awscli
     bash_completion: aws_bash_completer
   - name: ansible-cmdb
