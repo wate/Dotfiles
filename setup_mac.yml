@@ -26,11 +26,23 @@
       lineinfile:
         dest: ~/.bashrc
         line: 'BREW_PREFIX=$(brew --prefix)'
-    - name: Ensure brew tap is installed
-      homebrew_tap:
-        name: "{{ item.name }}"
-        state: "{{ item.state|default('present') }}"
-      with_items: "{{ homebrew_taps }}"
+    - name: homebrew tap
+      block:
+        - name: Ensure brew tap is installed
+          homebrew_tap:
+            name: "{{ item.name }}"
+            state: "{{ item.state|default('present') }}"
+          with_items: "{{ homebrew_taps }}"
+        - name: Ensure brew tap is installed(Homebrew)
+          homebrew_tap:
+            name: "{{ item.tap }}"
+            state: "{{ item.state|default('present') }}"
+          with_items: "{{ homebrew_packages|selectattr('tap', 'defined')|list }}"
+        - name: Ensure brew tap is installed(HomebrewCask)
+          homebrew_tap:
+            name: "{{ item.tap }}"
+            state: "{{ item.state|default('present') }}"
+          with_items: "{{ homebrew_cask_packages|selectattr('tap', 'defined')|list }}"
       tags:
         - brew
         - homebrew_tap

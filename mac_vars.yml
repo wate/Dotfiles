@@ -21,12 +21,6 @@ brew_cask_cleanup: yes
 homebrew_taps:
   - name: homebrew/dupes
   - name: homebrew/services
-  - name: homebrew/cask-fonts
-  - name: rcmdnk/file
-  - name: knqyf263/pet
-  - name: sacloud/usacloud
-  - name: sacloud/terraform-provider-sakuracloud
-  - name: sacloud/packer-builder-sakuracloud
 
 homebrew_packages:
   - name: bash-completion
@@ -44,6 +38,7 @@ homebrew_packages:
           source "/usr/local/opt/bash-git-prompt/share/gitprompt.sh"
         fi
   - name: brew-file
+    tap: rcmdnk/file
     bash_completion: brew-file
   - name: vim
   - name: pre-commit
@@ -53,6 +48,7 @@ homebrew_packages:
   - name: gnu-tar
   - name: gawk
   - name: pet
+    tap: moncho/dry
     rcfile:
       content: |
         function prev() {
@@ -63,12 +59,15 @@ homebrew_packages:
     directory: ~/.terraform.d/plugins
   - name: packer
     directory: ~/.packer.d/plugins
-  - name: usacloud
-    bash_completion: usacloud
   - name: rclone
   - name: m-cli
+  - name: usacloud
+    tap: sacloud/usacloud
+    bash_completion: usacloud
   - name: terraform-provider-sakuracloud
+    tap: sacloud/terraform-provider-sakuracloud
   - name: packer-builder-sakuracloud
+    tap: sacloud/packer-builder-sakuracloud
     symlink:
       src: /usr/local/opt/packer-builder-sakuracloud/bin/packer-builder-sakuracloud
       dest: ~/.packer.d/plugins/packer-builder-sakuracloud
@@ -81,6 +80,8 @@ homebrew_packages:
     rcfile:
       content: eval "$(docker-machine env default)";
   - name: docker-compose
+  - name: dry
+    tap: moncho/dry
   - name: awscli
     bash_completion: aws_bash_completer
   - name: ansible-cmdb
@@ -129,9 +130,13 @@ homebrew_cask_packages:
   - name: owasp-zap
   - name: postman
   - name: font-ricty-diminished
+    tap: homebrew/cask-fonts
   - name: font-noto-serif-cjk-jp
+    tap: homebrew/cask-fonts
   - name: font-noto-sans-cjk-jp
+    tap: homebrew/cask-fonts
   - name: font-source-han-code-jp
+    tap: homebrew/cask-fonts
   - name: libreoffice
   - name: libreoffice-language-pack
 
