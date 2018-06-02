@@ -59,7 +59,6 @@ syntax on
 " 検索語句のハイライト
 set hlsearch
 
-
-if filereadable(expand('~/.vim/dein.vim'))
-  source ~/.vim/dein.vim
-endif
+" テーマにmolokaiを設定
+" mkdir -p ~/.vim/colors && wget https://raw.githubusercontent.com/tomasr/molokai/master/colors/molokai.vim -O ~/.vim/colors/molokai.vim
+colorscheme molokai

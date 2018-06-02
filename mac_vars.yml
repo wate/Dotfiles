@@ -48,7 +48,7 @@ homebrew_packages:
   - name: gnu-tar
   - name: gawk
   - name: pet
-    tap: moncho/dry
+    tap: knqyf263/pet
     rcfile:
       content: |
         function prev() {
@@ -77,8 +77,6 @@ homebrew_packages:
     bash_completion: packer
   - name: docker
   - name: docker-machine
-    rcfile:
-      content: eval "$(docker-machine env default)";
   - name: docker-compose
   - name: dry
     tap: moncho/dry
