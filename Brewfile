@@ -35,6 +35,7 @@ brew docker-compose
 brew docker-machine
 brew duck
 brew editorconfig
+brew embulk
 brew exa
 brew fontconfig
 brew freetds
@@ -129,7 +130,6 @@ brew php-cs-fixer
 brew pinentry
 brew pkg-config
 brew plantuml
-brew pre-commit
 brew pwgen
 brew pyenv
 brew pyenv-pip-migrate
@@ -171,26 +171,33 @@ brew wp-cli
 brew xz
 brew zlib
 
+tap homebrew/cask-fonts
+cask font-noto-sans-cjk-jp
+cask font-ricty-diminished
+
+tap homebrew/dupes
+
+tap homebrew/services
+
 tap homebrew/cask
 cask appcleaner
 cask bitbar
 cask box-sync
-cask ccleaner
-cask clipy
-cask dash
-cask discord
+cask chatwork
+cask cyberduck
+cask dbeaver-community
+cask firefox
 cask forklift
-cask gimp
-cask google-chrome
-cask insomnia
-cask josm
-cask keepassxc
-cask krita
+cask ganttproject
+cask gnucash
+cask inkscape
+cask iterm2
+cask karabiner-elements
+cask keka
 cask libreoffice
 cask licecap
 cask macwinzipper
 cask ngrok
-cask owasp-zap
 cask pencil
 cask qlcolorcode
 cask qlprettypatch
@@ -202,21 +209,8 @@ cask virtualbox-extension-pack
 cask vlc
 cask xmind
 
-tap homebrew/cask-fonts
-cask font-noto-sans-cjk-jp
-cask font-ricty-diminished
-
-tap homebrew/dupes
-
-tap homebrew/services
-
-tap caskroom/cask
-
 tap knqyf263/pet
 brew pet
-
-tap moncho/dry
-brew dry
 
 tap rcmdnk/file
 brew brew-file
@@ -237,24 +231,23 @@ brew chromedriver
 cask atom
 cask betterzipql
 cask boostnote
-cask cacher
-cask chatwork
-cask cyberduck
-cask dbeaver-community
-cask firefox
+cask ccleaner
+cask clipy
+cask dash
+cask discord
 cask font-noto-serif-cjk-jp
 cask font-source-han-code-jp
-cask ganttproject
-cask gnucash
-cask inkscape
-cask iterm2
-cask karabiner-elements
-cask keka
+cask funter
+cask gimp
+cask google-chrome
+cask insomnia
+cask josm
+cask keepassxc
 cask launchy
 cask libreoffice-language-pack
 cask limechat
 cask netbeans-php
-cask onyx
+cask owasp-zap
 cask p4merge
 cask postman
 cask qlmarkdown
@@ -268,13 +261,13 @@ cask wireshark
 cask xquartz
 
 # App Store applications
-appstore 1024640650 CotEditor (3.4.1)
+appstore 1024640650 CotEditor (3.4.2)
 appstore 445770608 Go2Shell (1.2.2)
-appstore 1207744923 GravitDesigner (3.3.2)
 appstore 467939042 Growl (2.1.3)
-appstore 409183694 Keynote (8.0.1)
-appstore 692867256 Simplenote (1.3.3)
-appstore 803453959 Slack (3.1.1)
+appstore 409183694 Keynote (8.1)
+appstore 692867256 Simplenote (1.3.4)
+appstore 803453959 Slack (3.2.0)
 appstore 1122008420 Table Tool (1.2.1)
-appstore 1384080005 Tweetbot (3.0.2)
-appstore 497799835 Xcode (9.4)
+appstore 1384080005 Tweetbot (3.0.4)
+appstore 1200445649 VirusBarrier Scanner (1.0.3)
+appstore 497799835 Xcode (9.4.1)
