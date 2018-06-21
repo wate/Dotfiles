@@ -41,7 +41,6 @@ homebrew_packages:
     tap: rcmdnk/file
     bash_completion: brew-file
   - name: vim
-  - name: pre-commit
   - name: peco
   - name: coreutils
   - name: gnu-sed
