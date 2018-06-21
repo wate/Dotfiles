@@ -212,6 +212,9 @@ cask xmind
 tap knqyf263/pet
 brew pet
 
+tap moncho/dry
+brew dry
+
 tap rcmdnk/file
 brew brew-file
 
