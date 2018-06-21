@@ -188,26 +188,20 @@ cask cyberduck
 cask dbeaver-community
 cask firefox
 cask forklift
-cask ganttproject
-cask gnucash
-cask inkscape
+cask gimp
+cask google-chrome
 cask iterm2
 cask karabiner-elements
 cask keka
 cask libreoffice
-cask licecap
 cask macwinzipper
 cask ngrok
-cask pencil
-cask qlcolorcode
-cask qlprettypatch
-cask quicklook-csv
-cask sequel-pro
-cask sourcetree
-cask vagrant
-cask virtualbox-extension-pack
+cask postman
+cask skype
+cask stride
+cask virtualbox
 cask vlc
-cask xmind
+cask xquartz
 
 tap knqyf263/pet
 brew pet
@@ -241,9 +235,8 @@ cask discord
 cask font-noto-serif-cjk-jp
 cask font-source-han-code-jp
 cask funter
-cask gimp
-cask google-chrome
-cask insomnia
+cask gnucash
+cask inkscape
 cask josm
 cask keepassxc
 cask launchy
@@ -252,16 +245,11 @@ cask limechat
 cask netbeans-php
 cask owasp-zap
 cask p4merge
-cask postman
-cask qlmarkdown
-cask qlstephen
-cask quicklook-json
-cask skype
-cask stride
-cask virtualbox
-cask visual-studio-code
+cask sequel-pro
+cask sourcetree
+cask vagrant
+cask virtualbox-extension-pack
 cask wireshark
-cask xquartz
 
 # App Store applications
 appstore 1024640650 CotEditor (3.4.2)
