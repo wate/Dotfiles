@@ -13,10 +13,10 @@ git_global_config:
   - name: pull.rebase
     value: true
 
-brew_all_upgrade: yes
-brew_cleanup: yes
-brew_cask_all_upgrade: yes
-brew_cask_cleanup: yes
+brew_all_upgrade: true
+brew_cleanup: true
+brew_cask_all_upgrade: true
+brew_cask_cleanup: true
 
 homebrew_taps:
   - name: homebrew/dupes

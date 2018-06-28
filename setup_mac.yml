@@ -196,6 +196,26 @@
           when: "'pyenv' in homebrew_packages|map(attribute='name')|list and result is changed"
       tags:
         - pip
+    - name: test
+      block:
+        - name: check installed ansible version
+          command:   ansible --version
+          register: result
+          changed_when: no
+        - name: set variable installed ansible version
+          set_fact:
+            installed_ansible_version: "{{ result.stdout_lines[0].split(' ')[1] }}"
+        - name: Ensure ansible dependency packages
+          pip:
+            name: "{{ item.name }}"
+            state: "{{ item.state|default('latest') }}"
+            version: "{{ item.version|default(omit) }}"
+            extra_args: "{{ item.args|default(omit) }}"
+            executable: /usr/local/Cellar/ansible/{{ installed_ansible_version }}/libexec/bin/pip
+          with_items: "{{ ansible_dependency_packages }}"
+      tags:
+        - ansible
+        - pip
     - name: gem
       block:
         - name: Ensure gem packages
