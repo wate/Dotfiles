@@ -144,6 +144,8 @@
               if [ -f ~/.secret ]; then
                   source ~/.secret
               fi
+              # Ansible issue https://github.com/ansible/ansible/issues/31869
+              export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
         - name: add secret environment variable
           lineinfile:
             path: ~/.secret

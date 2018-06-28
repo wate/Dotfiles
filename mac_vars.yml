@@ -174,15 +174,19 @@ composer_packages:
 
 pip_packages:
   - name: pip
+  # lexicon
   - name: requests
-  - name: dns-lexicon
-  - name: pip-autoremove
   - name: uritemplate
+  - name: dns-lexicon
+  # pip-autoremove
+  - name: pip-autoremove
   # CloudStack CLI client
-  - name: cs
-  - name: github3.py
-    args: '--pre'
+  - name: pbr
+  - name: cs[async,highlight]
   - name: yamllint
+
+ansible_dependency_packages:
+  - name: hvac
 
 gem_packages:
   - name: bundler
