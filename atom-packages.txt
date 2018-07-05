@@ -1,11 +1,11 @@
 atom-beautify@0.32.5
-atom-typescript@12.6.1
+atom-typescript@12.6.2
 busy-signal@1.4.3
 docblockr@0.13.7
 dracula-syntax@2.0.7
 editorconfig@2.2.2
 emmet@2.4.3
-file-icons@2.1.21
+file-icons@2.1.22
 file-types@0.5.5
 git-plus@7.12.0
 graphviz-preview-plus@1.5.5
@@ -31,7 +31,7 @@ linter-phpmd@2.0.0
 linter-ruby@1.2.6
 linter-sass-lint@1.8.3
 linter-shellcheck@1.4.7
-linter-stylelint@4.3.0
+linter-stylelint@4.3.2
 linter-textlint@4.1.0
 linter-tslint@1.9.1
 linter-ui-default@1.7.1

@@ -182,7 +182,7 @@ pip_packages:
   - name: pip-autoremove
   # CloudStack CLI client
   - name: pbr
-  - name: cs[async,highlight]
+  - name: cs
   - name: yamllint
 
 ansible_dependency_packages:
