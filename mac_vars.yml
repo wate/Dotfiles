@@ -82,8 +82,10 @@ homebrew_packages:
   - name: awscli
     bash_completion: aws_bash_completer
   - name: ansible-cmdb
-  - name: exa
+  - name: ansible-lint
+  - name: molecule
   - name: remarshal
+  - name: exa
   - name: nmap
   - name: assh
   # Golang
@@ -115,7 +117,7 @@ homebrew_packages:
   - name: php-code-sniffer
   - name: php-cs-fixer
   - name: wp-cli
-    bash_completion: wp-completion.bash
+  - name: wp-cli-completion
 
 homebrew_cask_packages:
   - name: karabiner-elements
@@ -181,9 +183,17 @@ pip_packages:
   # pip-autoremove
   - name: pip-autoremove
   # CloudStack CLI client
-  - name: pbr
   - name: cs
   - name: yamllint
+  # remarshal
+  # - name: git+https://github.com/dbohdan/remarshal@master
+  # - name: ansible
+  # - name: jmespath
+  # - name: hvac
+  # - name: ansible-lint
+  # - name: ansible-cmdb
+  # - name: molecule
+  # - name: python-vagrant
 
 ansible_dependency_packages:
   - name: hvac
@@ -193,6 +203,7 @@ gem_packages:
   - name: rake
   - name: rubocop
   - name: serverspec
+  - name: inspec
   - name: deep_merge
 
 npm_packages:
