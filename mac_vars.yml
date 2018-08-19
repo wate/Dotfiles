@@ -30,6 +30,8 @@ homebrew_packages:
     bash_completion: git-flow-completion.bash
   - name: tig
     bash_completion: tig-completion.bash
+  - name: lazygit
+    tap: jesseduffield/lazygit
   - name: bash-git-prompt
     rcfile:
       content: |
@@ -40,6 +42,8 @@ homebrew_packages:
   - name: brew-file
     tap: rcmdnk/file
     bash_completion: brew-file
+  - name: assh
+  - name: exa
   - name: vim
   - name: peco
   - name: coreutils
@@ -58,8 +62,6 @@ homebrew_packages:
     directory: ~/.terraform.d/plugins
   - name: packer
     directory: ~/.packer.d/plugins
-  - name: rclone
-  - name: m-cli
   - name: usacloud
     tap: sacloud/usacloud
     bash_completion: usacloud
@@ -74,6 +76,8 @@ homebrew_packages:
     bash_completion: vagrant
   - name: packer-completion
     bash_completion: packer
+  - name: rclone
+  - name: m-cli
   - name: docker
   - name: docker-machine
   - name: docker-compose
@@ -81,13 +85,12 @@ homebrew_packages:
     tap: moncho/dry
   - name: awscli
     bash_completion: aws_bash_completer
+  # Ansible
   - name: ansible-cmdb
   - name: ansible-lint
   - name: molecule
   - name: remarshal
-  - name: exa
   - name: nmap
-  - name: assh
   # Golang
   - name: go
   - name: dep
@@ -146,6 +149,8 @@ aliases:
     command: "exa -lg --git"
   - name: la
     command: "exa -lag --git"
+  - name: lg
+    command: "lazygit"
   - name: ssh
     command: "assh wrapper ssh"
   - name: nmap
