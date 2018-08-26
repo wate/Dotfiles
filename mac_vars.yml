@@ -129,6 +129,7 @@ homebrew_cask_packages:
   - name: netbeans-php
   - name: owasp-zap
   - name: postman
+  - name: amethyst
   - name: font-ricty-diminished
     tap: homebrew/cask-fonts
   - name: font-noto-serif-cjk-jp
