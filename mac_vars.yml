@@ -32,6 +32,8 @@ homebrew_packages:
     bash_completion: tig-completion.bash
   - name: lazygit
     tap: jesseduffield/lazygit
+  - name: cert
+    tap: genkiroid/homebrew-cert
   - name: bash-git-prompt
     rcfile:
       content: |
