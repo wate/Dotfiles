@@ -20,8 +20,7 @@
         name: "{{ item.name }}"
         value: "{{ item.value }}"
       with_items: "{{ git_global_config }}"
-      tags:
-        - git
+      tags: git
     - name: Ensure .bashrc in BREW_PREFIX variable
       lineinfile:
         dest: ~/.bashrc
@@ -129,7 +128,7 @@
             upgrade_all: yes
           when: brew_cask_all_upgrade
         - name: Cleanup homebrew cask packages
-          command: brew cask cleanup
+          command: brew cleanup
           when: brew_cask_cleanup
       tags:
         - brew
@@ -184,38 +183,13 @@
       block:
         - name: Ensure pip packages
           pip:
-            name: "{{ item.name }}"
-            state: "{{ item.state|default('latest') }}"
-            version: "{{ item.version|default(omit) }}"
-            extra_args: "{{ item.args|default(omit) }}"
-            executable: "{{ '~/.pyenv/shims/pip' if 'pyenv' in homebrew_packages|map(attribute='name')|list else omit }}"
-          with_items: "{{ pip_packages }}"
+            name: "{{ pip_packages }}"
+            executable: ~/.pyenv/shims/pip
           register: result
         - name: execute pyenv rehash
           command: pyenv rehash
-          when: "'pyenv' in homebrew_packages|map(attribute='name')|list and result is changed"
-      tags:
-        - pip
-    - name: test
-      block:
-        - name: check installed ansible version
-          command:   ansible --version
-          register: result
-          changed_when: no
-        - name: set variable installed ansible version
-          set_fact:
-            installed_ansible_version: "{{ result.stdout_lines[0].split(' ')[1] }}"
-        - name: Ensure ansible dependency packages
-          pip:
-            name: "{{ item.name }}"
-            state: "{{ item.state|default('latest') }}"
-            version: "{{ item.version|default(omit) }}"
-            extra_args: "{{ item.args|default(omit) }}"
-            executable: /usr/local/Cellar/ansible/{{ installed_ansible_version }}/libexec/bin/pip
-          with_items: "{{ ansible_dependency_packages }}"
-      tags:
-        - ansible
-        - pip
+          when: result is changed
+      tags: pip
     - name: gem
       block:
         - name: Ensure gem packages
@@ -229,8 +203,7 @@
         - name: cleanup gem packages
           command: gem cleanup
           when: result is changed
-      tags:
-        - gem
+      tags: gem
     - name: npm
       block:
         - name: Ensure npm packages
@@ -243,5 +216,4 @@
         - name: dump atom install packages
           shell: apm list --installed --bare>./atom-packages.txt
           when: "'atom' in homebrew_cask_packages|map(attribute='name')|list"
-      tags:
-        - npm
+      tags: npm

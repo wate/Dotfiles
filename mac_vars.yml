@@ -85,10 +85,7 @@ homebrew_packages:
   - name: docker-compose
   - name: awscli
     bash_completion: aws_bash_completer
-  # Ansible
-  - name: ansible-cmdb
-  - name: ansible-lint
-  - name: molecule
+
   - name: remarshal
   - name: nmap
   # Golang
@@ -106,13 +103,6 @@ homebrew_packages:
   - name: rbenv
     rcfile:
       content: eval "$(rbenv init -)";
-  - name: pyenv
-    rcfile:
-      content: eval "$(pyenv init -)";
-  - name: pyenv-virtualenv
-    rcfile:
-      content: eval "$(pyenv virtualenv-init -)";
-  - name: pyenv-pip-migrate
   # PHP
   - name: php
   - name: composer
@@ -180,28 +170,21 @@ composer_packages:
   - name: pdepend/pdepend
 
 pip_packages:
-  - name: pip
+  - pip
   # lexicon
-  - name: requests
-  - name: uritemplate
-  - name: dns-lexicon
+  - requests
+  - uritemplate
+  - dns-lexicon
   # pip-autoremove
-  - name: pip-autoremove
+  - pip-autoremove
   # CloudStack CLI client
-  - name: cs
-  - name: yamllint
-  # remarshal
-  # - name: git+https://github.com/dbohdan/remarshal@master
-  # - name: ansible
-  # - name: jmespath
-  # - name: hvac
-  # - name: ansible-lint
-  # - name: ansible-cmdb
-  # - name: molecule
-  # - name: python-vagrant
-
-ansible_dependency_packages:
-  - name: hvac
+  - cs
+  # Ansible
+  - ansible-cmdb
+  - ansible-lint
+  - yamllint
+  - molecule>1,<2
+  - python-vagrant
 
 gem_packages:
   - name: bundler
