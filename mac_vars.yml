@@ -181,10 +181,11 @@ pip_packages:
   - cs
   # Ansible
   - ansible-cmdb
+  - passlib
   - ansible-lint
   - yamllint
-  - molecule>1,<2
-  - python-vagrant
+  # - molecule>1,<2
+  # - python-vagrant
 
 gem_packages:
   - name: bundler
