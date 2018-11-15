@@ -59,12 +59,12 @@ syntax on
 " 検索語句のハイライト
 set hlsearch
 
-" テーマにmolokaiを設定
-" mkdir -p ~/.vim/colors && wget https://raw.githubusercontent.com/tomasr/molokai/master/colors/molokai.vim -O ~/.vim/colors/molokai.vim
 augroup highlightIdegraphicSpace
   autocmd!
   autocmd Colorscheme * highlight IdeographicSpace term=underline ctermbg=Green guibg=Green
   autocmd VimEnter,WinEnter * match IdeographicSpace /　/
 augroup END
 
+" テーマにmolokaiを設定
+" mkdir -p ~/.vim/colors && wget https://raw.githubusercontent.com/tomasr/molokai/master/colors/molokai.vim -O ~/.vim/colors/molokai.vim
 colorscheme molokai
