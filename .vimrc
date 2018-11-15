@@ -61,4 +61,10 @@ set hlsearch
 
 " テーマにmolokaiを設定
 " mkdir -p ~/.vim/colors && wget https://raw.githubusercontent.com/tomasr/molokai/master/colors/molokai.vim -O ~/.vim/colors/molokai.vim
+augroup highlightIdegraphicSpace
+  autocmd!
+  autocmd Colorscheme * highlight IdeographicSpace term=underline ctermbg=Green guibg=Green
+  autocmd VimEnter,WinEnter * match IdeographicSpace /　/
+augroup END
+
 colorscheme molokai

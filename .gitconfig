@@ -19,37 +19,33 @@
   required = true
   clean = git-lfs clean -- %f
 [alias]
-  au = add --update
-  aa = add --all
-  ap = add --patch
-  br = branch
-  co = checkout
-  ci = commit
-  ca = commit --amend
-  st = status -s
-  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
-  lgg = log --stat --decorate=short --pretty=format:'%C(yellow)%h %Cgreen%cr %Cblue%cn%Cred%d %Creset%s %C(cyan)%b'
-  lws = log --pretty=format:'%Cgreen(%ci) %Cblue<%an>%Creset %Cred%h%Creset %s' --grep
-  lfs = log --pretty=format:'%Cgreen(%ci) %Cblue<%an>%Creset %Cred%h%Creset %s' --follow
-  lfsp = log --pretty=format:'%Cgreen(%ci) %Cblue<%an>%Creset %Cred%h%Creset %s' --follow --patch
-  cp = cherry-pick
-  df = diff
-  dc = diff --cached
-  dw = diff --word-diff
-  sba = "!f() { git subtree add --prefix=$2 $1 master --squash ;}; f"
-  sbu = "!f() { git subtree pull --prefix=$2 $1 master --squash ;}; f"
-  sbp = "!f() { git subtree push --prefix=$2 $1 master --squash ;}; f"
-  ignore = "!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi"
-  assume = update-index --assume-unchanged
-  assumed = !git ls-files -v | grep "^[[:lower:]]"
-  unassume = update-index --no-assume-unchanged
-  delete-merged-remote-branches = !git branch -a --merged | grep -vE \"master|develop\" | sed -e \"s% *remotes/origin/%%\" | xargs -I% git push origin :%
-  delete-merged-branches = !git branch --merged | grep -vE \"master|develop\"  | xargs -I % git branch -d %
+	au = add --update
+	aa = add --all
+	ap = add --patch
+	ai = add --interactive
+	br = branch
+	co = checkout
+	ci = commit
+	ca = commit --amend
+	st = status -s
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue<%an>%Creset' --abbrev-commit --date=relative --all --decorate
+	cp = cherry-pick
+	dc = diff --cached
+	dw = diff --word-diff
+	last = log -1 --stat
+	unstage = reset HEAD --
+	ignore = "!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi"
+	assume = update-index --assume-unchanged
+	unassume = update-index --no-assume-unchanged
+	assumed = !git ls-files -v | grep ^h | cut -c 3-
+	delete-merged-remote-branches = !git branch -a --merged | grep -vE \"master|develop\" | sed -e \"s% *remotes/origin/%%\" | xargs -I% git push origin :%
+	delete-merged-branches = !git branch --merged | grep -vE \"master|develop\"  | xargs -I % git branch -d %
 [difftool "sourcetree"]
 	cmd = /Applications/p4merge.app/Contents/MacOS/p4merge \"$LOCAL\" \"$REMOTE\"
-	path = 
+	path =
 [mergetool "sourcetree"]
 	cmd = /Applications/p4merge.app/Contents/MacOS/p4merge \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
 	trustExitCode = true
-[commit]
-	template = /Users/wate/.stCommitMsg
+[user]
+	name = wate
+	email = pc.poisoning@gmail.com
