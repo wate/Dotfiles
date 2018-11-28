@@ -4,9 +4,10 @@
 [core]
   editor = vim
   autocrlf = input
-  quotepath = false
+	quotepath = False
 	excludesfile = /Users/wate/.gitignore
   attributesfile = ~/.gitattributes
+	ignorecase = False
 [fetch]
   prune = True
 [pull]
