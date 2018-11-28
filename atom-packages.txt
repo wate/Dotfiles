@@ -1,5 +1,5 @@
 atom-beautify@0.33.4
-atom-typescript@12.7.1
+atom-typescript@12.7.2
 busy-signal@1.4.3
 dash@1.7.1
 docblockr@0.13.7
