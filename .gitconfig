@@ -5,7 +5,7 @@
   editor = vim
   autocrlf = input
 	quotepath = False
-	excludesfile = ~/.gitignore
+	excludesfile = /Users/wate/.gitignore_global
   attributesfile = ~/.gitattributes
 	ignorecase = False
 [fetch]
@@ -43,10 +43,17 @@
 	delete-merged-branches = !git branch --merged | grep -vE \"master|develop\"  | xargs -I % git branch -d %
 [difftool "sourcetree"]
 	cmd = /Applications/p4merge.app/Contents/MacOS/p4merge \"$LOCAL\" \"$REMOTE\"
-	path =
+	path = 
 [mergetool "sourcetree"]
 	cmd = /Applications/p4merge.app/Contents/MacOS/p4merge \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
 	trustExitCode = true
 [user]
 	name = wate
 	email = pc.poisoning@gmail.com
+[gitflow "prefix"]
+	feature = feature/
+	release = release/
+	hotfix = hotfix/
+	support = support/
+	versiontag = 
+	bugfix = bugfix/
