@@ -1,5 +1,5 @@
 atom-beautify@0.33.4
-atom-typescript@12.7.2
+atom-typescript@12.7.3
 busy-signal@1.4.3
 dash@1.7.1
 docblockr@0.13.7
@@ -9,7 +9,7 @@ emmet@2.4.3
 file-icons@2.1.26
 file-types@1.0.1
 git-plus@8.1.0
-graphviz-preview-plus@1.5.5
+graphviz-preview-plus@1.5.7
 intentions@1.1.5
 language-ansible@0.2.2
 language-awk@0.1.12
