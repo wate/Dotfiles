@@ -123,6 +123,15 @@
             name: "{{ item.name }}"
             state: "{{ item.state|default('present') }}"
           with_items: "{{ homebrew_cask_packages }}"
+        - name: check running virtual machine
+          shell: vagrant global-status | grep "virtualbox running" | awk '{ print $1 }'
+          args:
+            removes: /usr/local/bin/vagrant
+          ignore_errors: true
+          register: result
+        - name: stop virtual machines
+          command: vagrant halt {{ item }}
+          with_items: "{{ result.stdout_lines if result is defined else [] }}"
         - name: Upgrade all homebrew cask packages
           homebrew_cask:
             upgrade_all: yes
