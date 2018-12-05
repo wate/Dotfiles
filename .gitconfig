@@ -47,10 +47,5 @@
 [mergetool "sourcetree"]
 	cmd = /Applications/p4merge.app/Contents/MacOS/p4merge \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
 	trustExitCode = true
-[gitflow "prefix"]
-	feature = feature/
-	release = release/
-	hotfix = hotfix/
-	support = support/
-	versiontag = 
-	bugfix = bugfix/
+[commit]
+	template = ~/.stCommitMsg
