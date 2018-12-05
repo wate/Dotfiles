@@ -12,7 +12,49 @@ git_global_config:
     value: true
   - name: pull.rebase
     value: true
-
+  # エイリアス
+  - name: alias.au
+    value: add --update
+  - name: alias.aa
+    value: add --all
+  - name: alias.ap
+    value: add --patch
+  - name: alias.ai
+    value: add --interactive
+  - name: alias.br
+    value: branch
+  - name: alias.co
+    value: checkout
+  - name: alias.ci
+    value: commit
+  - name: alias.cp
+    value: cherry-pick
+  - name: alias.dc
+    value: diff --cached
+  - name: alias.dw
+    value: diff --word-diff
+  - name: alias.pr
+    value: "!pr() { git fetch origin pull/$1/head:pr_$1 ;}; pr"
+  - name: alias.st
+    value: status -s
+  - name: alias.lg
+    value: log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue<%an>%Creset' --abbrev-commit --date=relative --all --decorate
+  - name: alias.last
+    value: log -1 --stat
+  - name: alias.unstage
+    value: reset HEAD --
+  - name: alias.ignore
+    value: "!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi"
+  - name: alias.assume
+    value:  update-index --assume-unchanged
+  - name: alias.unassume
+    value: update-index --no-assume-unchanged
+  - name: alias.assumed
+    value: "!git ls-files -v | grep ^h | cut -c 3-"
+  - name: alias.delete-merged-remote-branches
+    value: '!git branch -a --merged | grep -vE "master|develop" | sed -e "s% *remotes/origin/%%" | xargs -I% git push origin :%'
+  - name: alias.delete-merged-branches
+    value: '!git branch --merged | grep -vE "master|develop"  | xargs -I % git branch -d %'
 brew_all_upgrade: true
 brew_cleanup: true
 brew_cask_all_upgrade: true
@@ -199,6 +241,10 @@ npm_packages:
   - name: typescript
   - name: typescript-json-schema
   - name: codeceptjs
+  - name: webdriverio
+  - name: selenium-server-standalone
+  - name: chromedriver
+  - name: geckodriver
   - name: newman
   - name: eslint
   - name: tslint
