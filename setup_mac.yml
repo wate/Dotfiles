@@ -170,6 +170,7 @@
     - name: Ensure .bashrc command alias
       lineinfile:
         dest: ~/.bashrc
+        regexp: "^alias {{ item.name }}="
         line: 'alias {{ item.name }}="{{ item.command }}"'
       with_items: "{{ aliases }}"
       tags:
