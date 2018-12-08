@@ -176,11 +176,11 @@ homebrew_cask_packages:
 
 aliases:
   - name: ls
-    command: "exa --git"
+    command: "exa --git --header"
   - name: ll
-    command: "exa --long --git"
+    command: "ls -l"
   - name: la
-    command: "exa --long --all --git"
+    command: "ls -la"
   - name: lg
     command: "lazygit"
   - name: ssh
