@@ -259,4 +259,4 @@ npm_packages:
   - name: stylefmt
   - name: csscomb
   - name: browser-sync
-  - name: gulp
+  - name: gulp-cli
