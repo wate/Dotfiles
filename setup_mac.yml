@@ -1,7 +1,7 @@
 ---
 - hosts: localhost
-  gather_facts: yes
-  become: no
+  gather_facts: true
+  become: false
   connection: local
   pre_tasks:
     - name: include variable file
@@ -25,6 +25,14 @@
       lineinfile:
         dest: ~/.bashrc
         line: 'BREW_PREFIX=$(brew --prefix)'
+    - name: set file discripter
+      copy:
+        src: "{{ item }}"
+        dest: /Library/LaunchDaemons/{{ item | basename }}
+        owner: root
+      with_fileglob:
+        - "files/*.plist"
+      become: true
     - name: homebrew tap
       block:
         - name: Ensure brew tap is installed
