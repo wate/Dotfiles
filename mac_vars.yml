@@ -89,6 +89,8 @@ homebrew_packages:
   - name: assh
   - name: exa
   - name: vim
+  - name: mkcert
+  - name: nss
   - name: peco
   - name: coreutils
   - name: gnu-sed
