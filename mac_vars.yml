@@ -236,7 +236,6 @@ gem_packages:
   - name: rake
   - name: rubocop
   - name: serverspec
-  - name: inspec
   - name: deep_merge
 
 npm_packages:

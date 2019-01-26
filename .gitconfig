@@ -7,7 +7,6 @@
 	quotepath = False
 	excludesfile = /Users/wate/.gitignore_global
   attributesfile = ~/.gitattributes
-	ignorecase = False
 [fetch]
   prune = True
 [pull]
