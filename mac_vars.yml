@@ -61,7 +61,6 @@ brew_cask_all_upgrade: true
 brew_cask_cleanup: true
 
 homebrew_taps:
-  - name: homebrew/dupes
   - name: homebrew/services
 
 homebrew_packages:
@@ -96,14 +95,12 @@ homebrew_packages:
   - name: gnu-sed
   - name: gnu-tar
   - name: gawk
+  - name: mycli
+  - name: pgcli
+  - name: litecli
+    tap: dbcli/tap
   - name: pet
     tap: knqyf263/pet
-    rcfile:
-      content: |
-        function prev() {
-          PREV=$(fc -lrn | head -n 1 | awk '{$1=$1;print}')
-          sh -c "pet new `printf %q "$PREV"`"
-        }
   - name: terraform
     directory: ~/.terraform.d/plugins
   - name: packer
@@ -212,6 +209,7 @@ composer_packages:
   - name: sebastian/phpcpd
   - name: phploc/phploc
   - name: pdepend/pdepend
+  - name: botman/installer
 
 pip_packages:
   - pip
