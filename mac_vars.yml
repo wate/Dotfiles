@@ -203,13 +203,13 @@ aliases:
 
 composer_packages:
   - name: hirak/prestissimo
-  - name: codeception/codeception
-  - name: phpmetrics/phpmetrics
-  - name: phpmd/phpmd
-  - name: sebastian/phpcpd
-  - name: phploc/phploc
-  - name: pdepend/pdepend
-  - name: botman/installer
+  # - name: codeception/codeception
+  # - name: phpmetrics/phpmetrics
+  # - name: phpmd/phpmd
+  # - name: sebastian/phpcpd
+  # - name: phploc/phploc
+  # - name: pdepend/pdepend
+  # - name: botman/installer
 
 pip_packages:
   - pip
