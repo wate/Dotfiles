@@ -4,17 +4,17 @@
   become: false
   connection: local
   pre_tasks:
-    - name: include variable file
+    - name: 変数ファイルの読み込む
       include_vars: mac_vars.yml
       tags: always
-    - name: include secret environment variables file
+    - name: 機密情報情報の変数を読み込む
       include_vars: secret_env.yml
       tags: always
   tasks:
-    - name: Update homebrew
+    - name: Homebrewパッケージの更新
       homebrew:
         update_homebrew: true
-    - name: Ensure git global setting
+    - name: Gitの設定
       git_config:
         scope: global
         name: "{{ item.name }}"

@@ -9,9 +9,9 @@ git_global_config:
   - name: core.attributesfile
     value: ~/.gitattributes
   - name: fetch.prune
-    value: true
+    value: "true"
   - name: pull.rebase
-    value: true
+    value: "true"
   # エイリアス
   - name: alias.au
     value: add --update
