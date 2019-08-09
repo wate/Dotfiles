@@ -172,6 +172,7 @@ homebrew_cask_packages:
     tap: homebrew/cask-fonts
   - name: libreoffice
   - name: libreoffice-language-pack
+  - name: tunnelblick
 
 aliases:
   - name: ls
