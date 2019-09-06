@@ -10,7 +10,7 @@
 [fetch]
 	prune = true
 [pull]
-  rebase = True
+	rebase = true
 [push]
   default = simple
 [filter "lfs"]
