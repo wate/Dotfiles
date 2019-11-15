@@ -7,7 +7,7 @@ docblockr@0.13.7
 dracula-syntax@2.0.7
 editorconfig@2.5.0
 emmet@2.4.3
-file-icons@2.1.35
+file-icons@2.1.36
 file-types@1.0.1
 git-plus@8.7.1
 graphviz-preview-plus@1.5.10
@@ -34,11 +34,11 @@ linter-sass-lint@1.9.0
 linter-shellcheck@1.6.0
 linter-stylelint@4.4.9
 linter-textlint@5.0.0
-linter-tslint@1.10.28
+linter-tslint@1.10.32
 linter-ui-default@1.8.0
 markdown-pdf@2.2.0
-markdown-preview-enhanced@0.16.3
-markdown-preview-plus@3.9.3
+markdown-preview-enhanced@0.17.0
+markdown-preview-plus@3.11.4
 markdown-scroll-sync@2.1.2
 markdown-table-editor@1.1.2
 merge-conflicts@1.4.5
@@ -48,7 +48,7 @@ monokai@0.24.0
 php-twig@4.0.0
 pigments@0.40.2
 plantuml-preview@0.12.9
-project-manager@3.3.7
+project-manager@3.3.8
 rainbow-csv@0.3.1
 svg-preview@0.14.0
 zephir@0.1.0

@@ -71,6 +71,7 @@ homebrew_packages:
     bash_completion: git-flow-completion.bash
   - name: tig
     bash_completion: tig-completion.bash
+  - name: jq
   - name: lazygit
     tap: jesseduffield/lazygit
   - name: cert
