@@ -120,6 +120,8 @@ homebrew_packages:
     bash_completion: vagrant
   - name: packer-completion
     bash_completion: packer
+  - name: mkr
+    tap: mackerelio/mackerel-agent
   - name: rclone
   - name: m-cli
   - name: docker

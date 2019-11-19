@@ -38,7 +38,7 @@ linter-tslint@1.10.32
 linter-ui-default@1.8.0
 markdown-pdf@2.2.0
 markdown-preview-enhanced@0.17.0
-markdown-preview-plus@3.11.4
+markdown-preview-plus@3.11.5
 markdown-scroll-sync@2.1.2
 markdown-table-editor@1.1.2
 merge-conflicts@1.4.5
