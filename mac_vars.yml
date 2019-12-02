@@ -159,7 +159,6 @@ homebrew_packages:
 homebrew_cask_packages:
   - name: karabiner-elements
   - name: atom
-  - name: google-cloud-sdk
   - name: vagrant
   - name: virtualbox
   - name: virtualbox-extension-pack
