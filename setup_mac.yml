@@ -61,9 +61,13 @@
             state: "{{ item.state | default('present') }}"
           with_items: "{{ homebrew_packages }}"
         - block:
+            - name: Create plugin directory
+              file:
+                path: ~/.terraform.d/plugins/darwin_amd64
+                state: directory
             - name: Find terraform-provider-sakuracloud symlinks
               find:
-                paths: ~/.terraform.d/plugins
+                paths: ~/.terraform.d/plugins/darwin_amd64
                 patterns: terraform-provider-sakuracloud*
                 file_type: link
               register: find_symlink_result
@@ -82,7 +86,7 @@
             - name: Create plugin symlink
               file:
                 src: "{{ item.path }}"
-                dest: ~/.terraform.d/plugins/{{ item.path | basename }}
+                dest: ~/.terraform.d/plugins/darwin_amd64/{{ item.path | basename }}
                 state: link
               with_items: "{{ find_binary_result.files }}"
           when: "'terraform-provider-sakuracloud' in homebrew_packages|map(attribute='name')|list"

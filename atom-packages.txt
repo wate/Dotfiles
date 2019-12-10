@@ -1,6 +1,6 @@
 ansible-vault@0.7.8
 atom-beautify@0.33.4
-atom-typescript@13.3.0
+atom-typescript@13.4.0
 busy-signal@2.0.1
 dash@1.7.1
 docblockr@0.13.7
@@ -49,7 +49,7 @@ php-twig@4.0.0
 pigments@0.40.2
 plantuml-preview@0.12.9
 project-manager@3.3.8
-rainbow-csv@0.4.2
+rainbow-csv@1.0.0
 svg-preview@0.14.0
 zephir@0.1.0
 
