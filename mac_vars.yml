@@ -158,6 +158,7 @@ homebrew_packages:
 
 homebrew_cask_packages:
   - name: karabiner-elements
+  - name: launchy
   - name: atom
   - name: vagrant
   - name: virtualbox
