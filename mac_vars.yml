@@ -100,6 +100,8 @@ homebrew_packages:
   - name: pgcli
   - name: litecli
     tap: dbcli/tap
+    # sshpass
+  - name: https://raw.githubusercontent.com/kadwanev/bigboybrew/master/Library/Formula/sshpass.rb
   - name: pet
     tap: knqyf263/pet
   - name: terraform
@@ -161,8 +163,8 @@ homebrew_cask_packages:
   - name: launchy
   - name: atom
   - name: vagrant
-  - name: virtualbox
-  - name: virtualbox-extension-pack
+  # - name: virtualbox
+  # - name: virtualbox-extension-pack
   - name: netbeans-php
   - name: owasp-zap
   - name: postman
