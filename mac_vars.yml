@@ -122,9 +122,8 @@ homebrew_packages:
     bash_completion: vagrant
   - name: packer-completion
     bash_completion: packer
-  - name: mkr
-    tap: mackerelio/mackerel-agent
   - name: rclone
+  - name: hugo
   - name: m-cli
   - name: docker
   - name: docker-machine
@@ -160,7 +159,6 @@ homebrew_packages:
 
 homebrew_cask_packages:
   - name: karabiner-elements
-  - name: launchy
   - name: atom
   - name: vagrant
   # - name: virtualbox
@@ -219,29 +217,16 @@ composer_packages:
   # - name: botman/installer
 
 pip_packages:
-  - pip
-  # lexicon
-  - requests
-  - uritemplate
-  - dns-lexicon
-  # pip-autoremove
-  - pip-autoremove
   # CloudStack CLI client
   - cs
   # Ansible
+  - molecule
   - ansible-cmdb
   - passlib
   - ansible-lint
   - yamllint
-  # - molecule>1,<2
-  # - python-vagrant
 
-gem_packages:
-  - name: bundler
-  - name: rake
-  - name: rubocop
-  - name: serverspec
-  - name: deep_merge
+gem_packages: []
 
 npm_packages:
   - name: typescript
