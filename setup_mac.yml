@@ -99,7 +99,7 @@
           lineinfile:
             dest: ~/.bashrc
             line: '[ -f "${BREW_PREFIX}"/etc/bash_completion.d/{{ item.bash_completion }} ] && source "${BREW_PREFIX}"/etc/bash_completion.d/{{ item.bash_completion }}'
-          with_items: "{{ homebrew_packages | selectattr('bash_completion', 'defined')|selectattr('state', 'undefined') | list }}"
+          with_items: "{{ homebrew_packages | selectattr('bash_completion', 'defined') | selectattr('state', 'undefined') | list }}"
         - name: Ensure rcfile setting
           blockinfile:
             create: true
@@ -117,7 +117,7 @@
             src: "{{ item.symlink.src }}"
             path: "{{ item.symlink.dest }}"
             state: link
-          with_items: "{{ homebrew_packages | selectattr('symlink', 'defined')|selectattr('state', 'undefined') | list }}"
+          with_items: "{{ homebrew_packages | selectattr('symlink', 'defined') | selectattr('state', 'undefined') | list }}"
         - name: Upgrade all homebrew packages
           homebrew:
             upgrade_all: true
