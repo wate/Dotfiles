@@ -161,6 +161,7 @@ homebrew_cask_packages:
   - name: karabiner-elements
   - name: atom
   - name: vagrant
+  - name: openinterminal
   # - name: virtualbox
   # - name: virtualbox-extension-pack
   - name: netbeans-php
