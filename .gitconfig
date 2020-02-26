@@ -28,7 +28,7 @@
 	ci = commit
 	ca = commit --amend
 	st = status -s
-	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd) %Cblue<%an>%Creset' --abbrev-commit --date=iso --all --decorate
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue<%an>%Creset' --abbrev-commit --date=iso --all --decorate
 	cp = cherry-pick
 	dc = diff --cached
 	dw = diff --word-diff
@@ -43,7 +43,7 @@
 	pr = "!pr() { git fetch origin pull/$1/head:pr_$1 ;}; pr"
 [difftool "sourcetree"]
 	cmd = /Applications/p4merge.app/Contents/MacOS/p4merge \"$LOCAL\" \"$REMOTE\"
-	path =
+	path = 
 [mergetool "sourcetree"]
 	cmd = /Applications/p4merge.app/Contents/MacOS/p4merge \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
 	trustExitCode = true

@@ -38,7 +38,7 @@ git_global_config:
   - name: alias.st
     value: status -s
   - name: alias.lg
-    value: log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue<%an>%Creset' --abbrev-commit --date=relative --all --decorate
+    value: log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue<%an>%Creset' --abbrev-commit --date=iso --all --decorate
   - name: alias.last
     value: log -1 --stat
   - name: alias.unstage
@@ -52,9 +52,9 @@ git_global_config:
   - name: alias.assumed
     value: "!git ls-files -v | grep ^h | cut -c 3-"
   - name: alias.delete-merged-remote-branches
-    value: '!git branch -a --merged | grep -vE "master|develop" | sed -e "s% *remotes/origin/%%" | xargs -I% git push origin :%'
+    value: '!git branch -a --merged | grep -vE "master|develop|staging|release" | sed -e "s% *remotes/origin/%%" | xargs -I% git push origin :%'
   - name: alias.delete-merged-branches
-    value: '!git branch --merged | grep -vE "master|develop"  | xargs -I % git branch -d %'
+    value: '!git branch --merged | grep -vE "master|develop|staging|release"  | xargs -I % git branch -d %'
 brew_all_upgrade: true
 brew_cleanup: true
 brew_cask_all_upgrade: true
