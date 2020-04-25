@@ -34,7 +34,7 @@ linter-stylelint@4.4.18
 linter-textlint@5.0.0
 linter-tslint@1.10.43
 linter-ui-default@1.8.1
-markdown-pdf@2.2.0
+markdown-pdf@2.3.0
 markdown-preview-enhanced@0.17.7
 markdown-preview-plus@3.11.5
 markdown-scroll-sync@2.1.2

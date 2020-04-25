@@ -175,6 +175,8 @@ homebrew_cask_packages:
     tap: homebrew/cask-fonts
   - name: font-source-han-code-jp
     tap: homebrew/cask-fonts
+  - name: openinterminal-lite
+  - name: openineditor-lite
   - name: libreoffice
   - name: libreoffice-language-pack
   - name: tunnelblick
