@@ -133,6 +133,8 @@ homebrew_packages:
 
   - name: remarshal
   - name: nmap
+  # Cyberduck for the command line interface
+  - name: duck
   # Golang
   - name: go
   - name: dep
@@ -161,6 +163,8 @@ homebrew_cask_packages:
   - name: karabiner-elements
   - name: atom
   - name: vagrant
+  - name: forklift
+  - name: transmit
   - name: openinterminal
   # - name: virtualbox
   # - name: virtualbox-extension-pack
