@@ -161,7 +161,7 @@ homebrew_packages:
 
 homebrew_cask_packages:
   - name: karabiner-elements
-  - name: atom
+  - name: visual-studio-code
   - name: vagrant
   - name: forklift
   - name: transmit
@@ -181,6 +181,7 @@ homebrew_cask_packages:
     tap: homebrew/cask-fonts
   - name: openinterminal-lite
   - name: openineditor-lite
+  - name: miro-formerly-realtimeboard
   - name: libreoffice
   - name: libreoffice-language-pack
   - name: tunnelblick
