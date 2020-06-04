@@ -125,9 +125,6 @@ homebrew_packages:
   - name: rclone
   - name: hugo
   - name: m-cli
-  - name: docker
-  - name: docker-machine
-  - name: docker-compose
   - name: awscli
     bash_completion: aws_bash_completer
 
