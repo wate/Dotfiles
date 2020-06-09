@@ -234,25 +234,4 @@ pip_packages:
 gem_packages: []
 
 npm_packages:
-  - name: typescript
-  - name: typescript-json-schema
-  - name: codeceptjs
-  - name: webdriverio
-  - name: selenium-server-standalone
-  - name: chromedriver
-  - name: geckodriver
-  - name: newman
-  - name: eslint
-  - name: tslint
-  - name: textlint
-  - name: jsonlint
-  - name: stylelint
-  - name: stylelint-scss
-  - name: webpack
-  - name: vue-cli
-  - name: yarn
-  - name: js-beautify
-  - name: stylefmt
-  - name: csscomb
-  - name: browser-sync
   - name: gulp-cli
