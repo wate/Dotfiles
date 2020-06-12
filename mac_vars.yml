@@ -160,6 +160,8 @@ homebrew_cask_packages:
   - name: karabiner-elements
   - name: visual-studio-code
   - name: vagrant
+  - name: miro
+  - name: licecap
   - name: forklift
   - name: transmit
   - name: openinterminal
@@ -167,7 +169,6 @@ homebrew_cask_packages:
   # - name: virtualbox-extension-pack
   - name: netbeans-php
   - name: owasp-zap
-  - name: postman
   - name: font-ricty-diminished
     tap: homebrew/cask-fonts
   - name: font-noto-serif-cjk-jp
@@ -178,10 +179,10 @@ homebrew_cask_packages:
     tap: homebrew/cask-fonts
   - name: openinterminal-lite
   - name: openineditor-lite
-  - name: miro-formerly-realtimeboard
+  # - name: postman
   - name: libreoffice
   - name: libreoffice-language-pack
-  - name: tunnelblick
+  # - name: tunnelblick
 
 aliases:
   - name: ls
