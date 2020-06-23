@@ -12,6 +12,9 @@ git_global_config:
     value: "true"
   - name: pull.rebase
     value: "true"
+  # 差分
+  - name: diff.submodule
+    value: log
   # エイリアス
   - name: alias.au
     value: add --update
@@ -74,6 +77,8 @@ homebrew_packages:
   - name: jq
   - name: lazygit
     tap: jesseduffield/lazygit
+  - name: lazydocker
+    tap: jesseduffield/lazydocker
   - name: cert
     tap: genkiroid/homebrew-cert
   - name: bash-git-prompt
@@ -193,6 +198,8 @@ aliases:
     command: "ls -la"
   - name: lg
     command: "lazygit"
+  - name: lzd
+    command: "lazydocker"
   - name: ssh
     command: "assh wrapper ssh"
   - name: nmap
