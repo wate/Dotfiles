@@ -54,10 +54,17 @@ git_global_config:
     value: update-index --no-assume-unchanged
   - name: alias.assumed
     value: "!git ls-files -v | grep ^h | cut -c 3-"
+  - name: alias.skip-worktree
+    value: update-index --skip-worktree
+  - name: alias.unskip-worktree
+    value: update-index --no-skip-worktree
+  - name: alias.skipped-worktree
+    value: "!git ls-files -v | grep ^s | cut -c 3-"
   - name: alias.delete-merged-remote-branches
     value: '!git branch -a --merged | grep -vE "master|develop|staging|release" | sed -e "s% *remotes/origin/%%" | xargs -I% git push origin :%'
   - name: alias.delete-merged-branches
     value: '!git branch --merged | grep -vE "master|develop|staging|release"  | xargs -I % git branch -d %'
+
 brew_all_upgrade: true
 brew_cleanup: true
 brew_cask_all_upgrade: true
@@ -76,9 +83,7 @@ homebrew_packages:
     bash_completion: tig-completion.bash
   - name: jq
   - name: lazygit
-    tap: jesseduffield/lazygit
   - name: lazydocker
-    tap: jesseduffield/lazydocker
   - name: cert
     tap: genkiroid/homebrew-cert
   - name: bash-git-prompt
@@ -105,8 +110,8 @@ homebrew_packages:
   - name: pgcli
   - name: litecli
     tap: dbcli/tap
-    # sshpass
-  - name: https://raw.githubusercontent.com/kadwanev/bigboybrew/master/Library/Formula/sshpass.rb
+  #   # sshpass
+  # - name: https://raw.githubusercontent.com/kadwanev/bigboybrew/master/Library/Formula/sshpass.rb
   - name: pet
     tap: knqyf263/pet
   - name: terraform
@@ -218,6 +223,8 @@ aliases:
     command: "gtar"
   - name: awk
     command: "gawk"
+  - name: cert
+    command: "cert -skip-verify"
 
 composer_packages:
   - name: hirak/prestissimo
@@ -238,6 +245,7 @@ pip_packages:
   - passlib
   - ansible-lint
   - yamllint
+  - docker
 
 gem_packages: []
 
