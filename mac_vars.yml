@@ -170,7 +170,7 @@ homebrew_cask_packages:
   - name: karabiner-elements
   - name: visual-studio-code
   - name: vagrant
-  - name: miro
+  - name: drawio
   - name: licecap
   - name: forklift
   - name: transmit
@@ -225,6 +225,8 @@ aliases:
     command: "gawk"
   - name: cert
     command: "cert -skip-verify"
+  - name: draw.io
+    command: "/Applications/draw.io.app/Contents/MacOS/draw.io"
 
 composer_packages:
   - name: hirak/prestissimo
