@@ -19,7 +19,7 @@
         scope: global
         name: "{{ item.name }}"
         value: "{{ item.value }}"
-      with_items: "{{ git_global_config }}"
+      loop: "{{ git_global_config }}"
       tags: git
     - name: Ensure .bashrc in BREW_PREFIX variable
       lineinfile:
@@ -39,17 +39,17 @@
           homebrew_tap:
             name: "{{ item.name }}"
             state: "{{ item.state | default('present') }}"
-          with_items: "{{ homebrew_taps }}"
+          loop: "{{ homebrew_taps }}"
         - name: Ensure brew tap is installed(Homebrew)
           homebrew_tap:
             name: "{{ item.tap }}"
             state: "{{ item.state | default('present') }}"
-          with_items: "{{ homebrew_packages | selectattr('tap', 'defined') | list }}"
+          loop: "{{ homebrew_packages | selectattr('tap', 'defined') | list }}"
         - name: Ensure brew tap is installed(HomebrewCask)
           homebrew_tap:
             name: "{{ item.tap }}"
             state: "{{ item.state | default('present') }}"
-          with_items: "{{ homebrew_cask_packages | selectattr('tap', 'defined') | list }}"
+          loop: "{{ homebrew_cask_packages | selectattr('tap', 'defined') | list }}"
       tags:
         - brew
         - homebrew_tap
@@ -59,7 +59,7 @@
           homebrew:
             name: "{{ item.name }}"
             state: "{{ item.state | default('present') }}"
-          with_items: "{{ homebrew_packages }}"
+          loop: "{{ homebrew_packages }}"
         - block:
             - name: Create plugin directory
               file:
@@ -75,7 +75,7 @@
               file:
                 path: "{{ item.path }}"
                 state: absent
-              with_items: "{{ find_symlink_result.files }}"
+              loop: "{{ find_symlink_result.files }}"
             - name: Find terraform-provider-sakuracloud binary file
               find:
                 paths: /usr/local/Cellar/terraform-provider-sakuracloud/
@@ -88,8 +88,8 @@
                 src: "{{ item.path }}"
                 dest: ~/.terraform.d/plugins/darwin_amd64/{{ item.path | basename }}
                 state: link
-              with_items: "{{ find_binary_result.files }}"
-          when: "'terraform-provider-sakuracloud' in homebrew_packages|map(attribute='name')|list"
+              loop: "{{ find_binary_result.files }}"
+          when: "'terraform-provider-sakuracloud' in homebrew_packages | map(attribute='name') | list"
         - name: Ensure .bashrc in load bash-completion
           lineinfile:
             dest: ~/.bashrc
@@ -99,25 +99,25 @@
           lineinfile:
             dest: ~/.bashrc
             line: '[ -f "${BREW_PREFIX}"/etc/bash_completion.d/{{ item.bash_completion }} ] && source "${BREW_PREFIX}"/etc/bash_completion.d/{{ item.bash_completion }}'
-          with_items: "{{ homebrew_packages | selectattr('bash_completion', 'defined') | selectattr('state', 'undefined') | list }}"
+          loop: "{{ homebrew_packages | selectattr('bash_completion', 'defined') | selectattr('state', 'undefined') | list }}"
         - name: Ensure rcfile setting
           blockinfile:
             create: true
             marker: "# {mark} {{ item.name }} ANSIBLE MANAGED BLOCK"
             dest: "{{ item.rcfile.path | default('~/.bashrc') }}"
             block: "{{ item.rcfile.content }}"
-          with_items: "{{ homebrew_packages | selectattr('rcfile', 'defined') | selectattr('state', 'undefined') | list }}"
+          loop: "{{ homebrew_packages | selectattr('rcfile', 'defined') | selectattr('state', 'undefined') | list }}"
         - name: Ensure brew package directory
           file:
             path: "{{ item.directory }}"
             state: directory
-          with_items: "{{ homebrew_packages | selectattr('directory', 'defined')|selectattr('state', 'undefined') | list }}"
+          loop: "{{ homebrew_packages | selectattr('directory', 'defined') | selectattr('state', 'undefined') | list }}"
         - name: Ensure brew package symlink
           file:
             src: "{{ item.symlink.src }}"
             path: "{{ item.symlink.dest }}"
             state: link
-          with_items: "{{ homebrew_packages | selectattr('symlink', 'defined') | selectattr('state', 'undefined') | list }}"
+          loop: "{{ homebrew_packages | selectattr('symlink', 'defined') | selectattr('state', 'undefined') | list }}"
         - name: Upgrade all homebrew packages
           homebrew:
             upgrade_all: true
@@ -130,24 +130,24 @@
         - homebrew
     - name: homebrew cask
       block:
-        - name: Ensure Homebrew cask packages is installed
-          homebrew_cask:
-            name: "{{ item.name }}"
-            state: "{{ item.state | default('present') }}"
-          with_items: "{{ homebrew_cask_packages }}"
+        # - name: Ensure Homebrew cask packages is installed
+        #   homebrew_cask:
+        #     name: "{{ item.name }}"
+        #     state: "{{ item.state | default('present') }}"
+        #   loop: "{{ homebrew_cask_packages }}"
         - name: check running virtual machine
-          shell: vagrant global-status | grep "virtualbox running" | awk '{ print $1 }'
+          shell: vagrant global-status --prune | grep "virtualbox running" | awk '{ print $1 }'
           args:
             removes: /usr/local/bin/vagrant
           ignore_errors: true
           register: result
         - name: stop virtual machines
           command: vagrant halt {{ item }}
-          with_items: "{{ result.stdout_lines if result is defined else [] }}"
-        - name: Upgrade all homebrew cask packages
-          homebrew_cask:
-            upgrade_all: true
-          when: brew_cask_all_upgrade
+          loop: "{{ result.stdout_lines if result is defined else [] }}"
+        # - name: Upgrade all homebrew cask packages
+        #   homebrew_cask:
+        #     upgrade_all: true
+        #   when: brew_cask_all_upgrade
         - name: Cleanup homebrew cask packages
           command: brew cleanup
           when: brew_cask_cleanup
@@ -184,23 +184,23 @@
         dest: ~/.bashrc
         regexp: "^alias {{ item.name }}="
         line: 'alias {{ item.name }}="{{ item.command }}"'
-      with_items: "{{ aliases }}"
+      loop: "{{ aliases }}"
       tags:
         - aliase
-    - name: composer
-      block:
-        - name: Ensure composer packages
-          composer:
-            command: require
-            global_command: true
-            arguments: "{{ item.name }}"
-          with_items: "{{ composer_packages }}"
-        - name: Update composer packages
-          composer:
-            command: update
-            global_command: true
-      tags:
-        - composer
+    # - name: composer
+    #   block:
+    #     - name: Ensure composer packages
+    #       composer:
+    #         command: require
+    #         global_command: true
+    #         arguments: "{{ item.name }}"
+    #       loop: "{{ composer_packages }}"
+    #     - name: Update composer packages
+    #       composer:
+    #         command: update
+    #         global_command: true
+    #   tags:
+    #     - composer
     - name: pip
       block:
         - name: Ensure pip packages
@@ -220,22 +220,22 @@
             user_install: false
             state: "{{ item.state | default('latest') }}"
             executable: "{{ '~/.rbenv/shims/gem' if 'rbenv' in homebrew_packages|map(attribute='name') | list else omit }}"
-          with_items: "{{ gem_packages }}"
+          loop: "{{ gem_packages }}"
           register: result
         - name: cleanup gem packages
           command: gem cleanup
           when: result is changed
       tags: gem
-    - name: npm
-      block:
-        - name: Ensure npm packages
-          npm:
-            name: "{{ item.name }}"
-            global: true
-            state: "{{ item.state | default('latest') }}"
-            executable: "{{ '~/.nodebrew/current/bin/npm' if 'nodebrew' in homebrew_packages|map(attribute='name') | list else omit }}"
-          with_items: "{{ npm_packages }}"
-        - name: dump atom install packages
-          shell: apm list --installed --bare>./atom-packages.txt
-          when: "'atom' in homebrew_cask_packages | map(attribute='name') | list"
-      tags: npm
+    # - name: npm
+    #   block:
+    #     - name: Ensure npm packages
+    #       npm:
+    #         name: "{{ item.name }}"
+    #         global: true
+    #         state: "{{ item.state | default('latest') }}"
+    #         executable: "{{ '~/.nodebrew/current/bin/npm' if 'nodebrew' in homebrew_packages|map(attribute='name') | list else omit }}"
+    #       loop: "{{ npm_packages }}"
+    #     - name: dump atom install packages
+    #       shell: apm list --installed --bare>./atom-packages.txt
+    #       when: "'atom' in homebrew_cask_packages | map(attribute='name') | list"
+    #   tags: npm
