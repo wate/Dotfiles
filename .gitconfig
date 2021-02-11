@@ -54,3 +54,5 @@
 	template = ~/.stCommitMsg
 [diff]
 	submodule = log
+[init]
+	defaultBranch = master

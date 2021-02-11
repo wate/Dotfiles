@@ -4,6 +4,8 @@ git_global_config:
     value: wate
   - name: user.email
     value: pc.poisoning@gmail.com
+  - name: init.defaultBranch
+    value: master
   - name: core.autocrlf
     value: input
   - name: core.attributesfile
