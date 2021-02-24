@@ -192,8 +192,6 @@ homebrew_cask_packages:
   - name: openinterminal-lite
   - name: openineditor-lite
   # - name: postman
-  - name: libreoffice
-  - name: libreoffice-language-pack
   # - name: tunnelblick
 
 aliases:
