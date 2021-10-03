@@ -112,8 +112,8 @@ homebrew_packages:
   - name: pgcli
   - name: litecli
     tap: dbcli/tap
-  #   # sshpass
-  # - name: https://raw.githubusercontent.com/kadwanev/bigboybrew/master/Library/Formula/sshpass.rb
+    # sshpass
+  - name: esolitos/ipa/sshpass
   - name: pet
     tap: knqyf263/pet
   - name: terraform
