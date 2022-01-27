@@ -5,7 +5,7 @@
   editor = vim
   autocrlf = input
 	quotepath = False
-	excludesfile = /Users/wate/.gitignore_global
+	excludesfile = ~/.gitignore_global
   attributesfile = ~/.gitattributes
 [fetch]
 	prune = true
