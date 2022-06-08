@@ -243,11 +243,12 @@ pip_packages:
   - cs
   # Ansible
   - molecule
+  - molecule-docker
+  - molecule-vagrant
   - ansible-cmdb
   - passlib
   - ansible-lint
   - yamllint
-  - docker
 
 gem_packages: []
 
