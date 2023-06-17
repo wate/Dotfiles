@@ -86,8 +86,6 @@ homebrew_packages:
   - name: jq
   - name: lazygit
   - name: lazydocker
-  - name: cert
-    tap: genkiroid/homebrew-cert
   - name: bash-git-prompt
     rcfile:
       content: |
@@ -95,14 +93,11 @@ homebrew_packages:
           __GIT_PROMPT_DIR="/usr/local/opt/bash-git-prompt/share"
           source "/usr/local/opt/bash-git-prompt/share/gitprompt.sh"
         fi
-  - name: brew-file
-    tap: rcmdnk/file
-    bash_completion: brew-file
   - name: assh
   - name: exa
   - name: bat
   - name: vim
-  - name: mkcert
+  # - name: mkcert
   - name: nss
   - name: peco
   - name: coreutils
@@ -110,41 +105,24 @@ homebrew_packages:
   - name: gnu-tar
   - name: gawk
   - name: mycli
-  - name: pgcli
-  - name: litecli
-    tap: dbcli/tap
     # sshpass
-  - name: esolitos/ipa/sshpass
+  # - name: esolitos/ipa/sshpass
   - name: pet
     tap: knqyf263/pet
   - name: terraform
-    directory: ~/.terraform.d/plugins
   - name: packer
-    directory: ~/.packer.d/plugins
-  - name: usacloud
-    tap: sacloud/usacloud
-    bash_completion: usacloud
-  - name: terraform-provider-sakuracloud
-    tap: sacloud/terraform-provider-sakuracloud
-  - name: packer-builder-sakuracloud
-    tap: sacloud/packer-builder-sakuracloud
-    symlink:
-      src: /usr/local/opt/packer-builder-sakuracloud/bin/packer-builder-sakuracloud
-      dest: ~/.packer.d/plugins/packer-builder-sakuracloud
   - name: vagrant-completion
     bash_completion: vagrant
   - name: packer-completion
     bash_completion: packer
   - name: rclone
-  - name: hugo
   - name: m-cli
-  - name: awscli
-    bash_completion: aws_bash_completer
 
   - name: remarshal
+  - name: jc
+    rcfile:
+      content: eval "$(jc -B)"
   - name: nmap
-  # Cyberduck for the command line interface
-  - name: duck
   # Golang
   - name: go
   - name: dep
@@ -161,38 +139,42 @@ homebrew_packages:
     rcfile:
       content: eval "$(rbenv init -)";
   - name: pyenv
+    rcfile:
+      content: eval "$(pyenv init -)"
+  - name: pyenv-virtualenv
+    rcfile:
+      content: eval "$(pyenv virtualenv-init -)"
+  - name: pipenv
   # PHP
   - name: php
   - name: composer
-    bash_completion: composer-completion.sh
-  - name: php-code-sniffer
-  - name: php-cs-fixer
-  - name: wp-cli
-  - name: wp-cli-completion
 
 homebrew_cask_packages:
   - name: karabiner-elements
   - name: visual-studio-code
   - name: vagrant
-  - name: drawio
+  # - name: drawio
   - name: licecap
   - name: forklift
   - name: transmit
   - name: openinterminal
-  # - name: virtualbox
-  # - name: virtualbox-extension-pack
-  - name: font-ricty-diminished
-    tap: homebrew/cask-fonts
-  - name: font-noto-serif-cjk-jp
-    tap: homebrew/cask-fonts
-  - name: font-noto-sans-cjk-jp
-    tap: homebrew/cask-fonts
-  - name: font-source-han-code-jp
-    tap: homebrew/cask-fonts
   - name: openinterminal-lite
   - name: openineditor-lite
-  # - name: postman
-  # - name: tunnelblick
+  # - name: virtualbox
+  # - name: virtualbox-extension-pack
+  - name: font-noto-serif-cjk-jp
+  - name: font-noto-sans-cjk-jp
+  - name: font-jetbrains-mono
+  - name: font-source-han-code-jp
+  - name: font-fontawesome
+  - name: font-biz-udgothic
+  - name: font-biz-udmincho
+  - name: font-biz-udgothic
+  - name: font-biz-udpgothic
+  - name: font-biz-udpmincho
+  - name: font-hackgen
+  - name: font-hackgen-nerd
+  - name: font-hack-nerd-font
 
 aliases:
   - name: ls
