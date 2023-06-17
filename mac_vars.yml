@@ -100,6 +100,7 @@ homebrew_packages:
     bash_completion: brew-file
   - name: assh
   - name: exa
+  - name: bat
   - name: vim
   - name: mkcert
   - name: nss
@@ -159,6 +160,7 @@ homebrew_packages:
   - name: rbenv
     rcfile:
       content: eval "$(rbenv init -)";
+  - name: pyenv
   # PHP
   - name: php
   - name: composer
@@ -179,8 +181,6 @@ homebrew_cask_packages:
   - name: openinterminal
   # - name: virtualbox
   # - name: virtualbox-extension-pack
-  - name: netbeans-php
-  - name: owasp-zap
   - name: font-ricty-diminished
     tap: homebrew/cask-fonts
   - name: font-noto-serif-cjk-jp
@@ -197,6 +197,8 @@ homebrew_cask_packages:
 aliases:
   - name: ls
     command: "exa --git --header"
+  - name: cat
+    command: bat
   - name: ll
     command: "ls -l"
   - name: la
