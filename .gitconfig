@@ -2,23 +2,31 @@
 	name = wate
 	email = pc.poisoning@gmail.com
 [core]
-  editor = vim
-  autocrlf = input
-  quotepath = False
-  excludesfile = ~/.gitignore_global
-  attributesfile = ~/.gitattributes
+    editor = vim
+    autocrlf = input
+    quotepath = False
+    excludesfile = ~/.gitignore_global
+    attributesfile = ~/.gitattributes
+    pager = delta
+[interactive]
+    diffFilter = delta --color-only
 [fetch]
 	prune = true
 [pull]
 	rebase = true
 [push]
-  default = simple
+	default = simple
 	autoSetupRemote = true
 [filter "lfs"]
-  smudge = git-lfs smudge -- %f
-  process = git-lfs filter-process
-  required = true
-  clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
+    clean = git-lfs clean -- %f
+[delta]
+    #navigate = true
+    #light = false
+    line-numbers = true
+    side-by-side = true
 [alias]
 	au = add --update
 	aa = add --all
@@ -28,9 +36,10 @@
 	co = checkout
 	ci = commit
 	ca = commit --amend
-	st = status -s
+	st = status -sb
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue<%an>%Creset' --abbrev-commit --date=iso --all --decorate
 	cp = cherry-pick
+	df = diff
 	dc = diff --cached
 	dw = diff --word-diff
 	last = log -1 --stat
@@ -47,7 +56,7 @@
 	pr = "!pr() { git fetch origin pull/$1/head:pr_$1 ;}; pr"
 [difftool "sourcetree"]
 	cmd = /Applications/p4merge.app/Contents/MacOS/p4merge \"$LOCAL\" \"$REMOTE\"
-	path =
+	path = 
 [mergetool "sourcetree"]
 	cmd = /Applications/p4merge.app/Contents/MacOS/p4merge \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
 	trustExitCode = true
@@ -55,5 +64,8 @@
 	template = ~/.stCommitMsg
 [diff]
 	submodule = log
+    colorMoved = default
+[merge]
+    conflictstyle = diff3
 [init]
 	defaultBranch = master
