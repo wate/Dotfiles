@@ -9,3 +9,6 @@ if [ -f ~/.bashrc ]; then
 fi
 
 complete -C /usr/local/bin/packer packer
+
+# Created by `pipx` on 2024-02-08 04:42:20
+export PATH="$PATH:~/.local/bin"
