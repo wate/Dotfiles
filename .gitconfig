@@ -13,7 +13,6 @@
 	prune = true
 [pull]
 	rebase = true
-	ff = only
 [push]
 	default = simple
 	autoSetupRemote = true
@@ -59,6 +58,5 @@
 	colorMoved = default
 [merge]
 	conflictstyle = diff3
-	ff = false
 [init]
 	defaultBranch = master
