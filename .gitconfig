@@ -16,6 +16,8 @@
 [push]
 	default = simple
 	autoSetupRemote = true
+[rebase]
+	autostash = true
 [filter "lfs"]
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
