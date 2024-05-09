@@ -6,8 +6,8 @@
 	autocrlf = input
 	excludesfile = ~/.gitignore_global
 	attributesfile = ~/.gitattributes
-    quotepath = false
 	pager = delta
+	quotepath = false
 [interactive]
 	diffFilter = delta --color-only
 [fetch]
@@ -28,7 +28,7 @@
 	#navigate = true
 	#light = false
 	line-numbers = true
-	#side-by-side = true
+	side-by-side = true
 	hyperlinks = true
 	hyperlinks-file-link-format = "vscode://file/{path}:{line}"
 [alias]
@@ -56,10 +56,22 @@
 	skipped-worktree = !git ls-files -v | grep ^s | cut -c 3-
 	delete-merged-remote-branches = !git branch -a --merged | grep -vE \"master|main|develop|staging|release\" | sed -e \"s% *remotes/origin/%%\" | xargs -I% git push origin :%
 	delete-merged-branches = !git branch --merged | grep -vE \"master|main|develop|staging|release\"  | xargs -I % git branch -d %
+[difftool "sourcetree"]
+	cmd = /Applications/p4merge.app/Contents/MacOS/p4merge \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/p4merge.app/Contents/MacOS/p4merge \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+	trustExitCode = true
+[commit]
+	template = ~/.stCommitMsg
 [diff]
 	submodule = log
 	colorMoved = default
 [merge]
 	conflictstyle = diff3
+	ff = false
 [init]
 	defaultBranch = master
+[filesystem "Oracle Corporation|9.0.1|/dev/disk1s1"]
+	timestampResolution = 1000 milliseconds
+	minRacyThreshold = 0 nanoseconds
